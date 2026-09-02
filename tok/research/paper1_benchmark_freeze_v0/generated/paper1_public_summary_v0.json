@@ -1,0 +1,76 @@
+{
+  "schema_version": "tok_paper1_public_summary_v0",
+  "production_effect": "none_research_only",
+  "freeze_id": "paper1_benchmark_freeze_v0",
+  "public_release_note": "Sanitized public summary. Private ground-truth files, private maps, and private scorecards are intentionally excluded.",
+  "scope": {
+    "paper_tracks": [
+      "Paper 1: Governed Mechanism Inference",
+      "Paper 3: Boundary Hygiene For Synthetic Causal Benchmarks"
+    ],
+    "primary_benchmark": "naturalistic causal-coordinate holdout",
+    "repair_ablation": "boundary-note mini-holdout"
+  },
+  "claim_boundary": {
+    "supports": [
+      "direct semantic classification results on frozen blinded synthetic coordinate packets",
+      "boundary-note rewrite repair signal on selected Error Atlas derivatives",
+      "benchmark hygiene methodology with semantic leakage audits and human Error Atlas adjudication"
+    ],
+    "does_not_support": [
+      "real-world causal truth",
+      "autonomous intervention recommendations",
+      "automatic taxonomy revision",
+      "production evidence, Bayesian, or wisdom-db updates"
+    ]
+  },
+  "results": {
+    "naturalistic_holdout_v1": {
+      "problem_count": 240,
+      "exact_coordinate_correct": 173,
+      "exact_coordinate_accuracy": 0.7208333333333333,
+      "axis_decisions_correct": 885,
+      "axis_decision_count": 960,
+      "axis_decision_accuracy": 0.921875,
+      "reviewed_error_atlas_rows": 67,
+      "transition_clusters": 20,
+      "review_batches": 6
+    },
+    "boundary_note_mini_holdout_v0": {
+      "problem_count": 83,
+      "exact_coordinate_correct": 69,
+      "exact_coordinate_accuracy": 0.8313253012048193,
+      "axis_decisions_correct": 315,
+      "axis_decision_count": 332,
+      "axis_decision_accuracy": 0.9487951807228916,
+      "replacement_lane_exact": "39/39",
+      "replacement_lane_accuracy": 1.0,
+      "clean_control_lane_exact": "28/39",
+      "clean_control_lane_accuracy": 0.7179,
+      "classifier_followup_lane_exact": "2/5",
+      "classifier_followup_lane_accuracy": 0.4
+    },
+    "residual_mini_error_atlas": {
+      "row_count": 14,
+      "transition_clusters": 9,
+      "review_batches": 2,
+      "accepted_dispositions": {
+        "retain_fixture_classifier_miss": 6,
+        "reauthor_before_clean_reuse": 6,
+        "boundary_case_exclude_from_clean_score": 2
+      }
+    }
+  },
+  "manifest_identity": {
+    "artifact_count": 60,
+    "public_bundle_hash": "21ea78fa30e57da55a9ed90f981debb0b1732388ee79b40b215343f3e40ef14a",
+    "private_bundle_hash_recorded_for_internal_reproducibility_only": "71763440a5ed42df54493f35b2b3cdbefae5d6cb2c6d3e2ce5c46716d400dc43",
+    "bundle_hash": "91343a4cff7d548516b393f81c9455759446c8fcaaaa0b1772dda74de72060c8"
+  },
+  "public_boundaries": {
+    "private_ground_truth_included": false,
+    "private_scorecards_included": false,
+    "may_update_evidence": false,
+    "may_update_wisdom_db": false
+  }
+}

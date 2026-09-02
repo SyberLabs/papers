@@ -1,0 +1,39 @@
+# Enriched NAEB pool at reward_top_frac=1.0 (matches coupling / M2 side-by-side).
+# Same seed as live_naeb_nam.yaml but no sparsification — for genuine-component
+# comparison against Moerman full flora.
+seed: 12345
+output_dir: results/live_naeb_top1
+
+data:
+  source: live
+  seed_mode: naeb
+  reward_source: naeb_use
+  cache_dir: data_cache_naeb
+  external_dir: data_external
+  n_species: 200
+  region:
+    name: north_america
+    min_lon: -170.0
+    min_lat: 15.0
+    max_lon: -52.0
+    max_lat: 72.0
+  seed_families: []
+
+manifold:
+  eco_edge_threshold: 0.10
+  bio_edge_threshold: 0.05
+  discovery_threshold: 0.05
+  reward_top_frac: 1.0
+
+simulation:
+  budget: 50
+  n_replicates: 30
+  observation_noise: 0.05
+
+strategies:
+  - {name: random,       kind: random,       params: {epsilon: 1.0}}
+  - {name: phylogenetic, kind: phylogenetic, params: {epsilon: 0.08}}
+  - {name: sensory,      kind: sensory,      params: {epsilon: 0.08}}
+  - {name: ecological,   kind: ecological,   params: {epsilon: 0.08}}
+  - {name: social,       kind: social,       params: {n_agents: 8, transmission_prob: 0.4}}
+  - {name: cultural,     kind: cultural,     params: {epsilon: 0.05, learning_rate: 0.6}}

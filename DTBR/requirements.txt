@@ -1,0 +1,17 @@
+# DTBR-MC v0.1 — runtime dependencies.
+# Version floors reflect the environment the simulator was developed and tested
+# against. No ML frameworks, no external APIs (per spec).
+numpy>=2.0
+pandas>=2.2
+scipy>=1.13
+matplotlib>=3.8
+seaborn>=0.13
+typer>=0.12
+pydantic>=2.6
+
+# Optional (not required to run anything in this repo):
+# plotly>=5.20      # alternative interactive plots
+# networkx>=3.2     # reserved for future environment-topology models
+
+# Dev / testing:
+# pytest>=8.0

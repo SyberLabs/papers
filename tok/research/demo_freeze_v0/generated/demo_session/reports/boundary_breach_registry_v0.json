@@ -1,0 +1,69 @@
+﻿{
+  "schema_version": "tok_boundary_breach_registry_v0",
+  "production_effect": "none_research_only",
+  "registry_id": "boundary_breach_registry_research_v0",
+  "generated_at": "2026-06-19T00:02:30.980689Z",
+  "records": [
+    {
+      "record_id": "boundary_breach_operation_a_unknown_dynamic_v0",
+      "registered_at": "2026-06-19T00:02:30.980689Z",
+      "causal_status": "boundary_breached",
+      "unknown_dynamic_status": "suspected_not_established",
+      "prior_claim": {
+        "claim_id": "operation_a_improves_success_metric_v0",
+        "recommended_operation": "Operation A",
+        "target_metric": "success_metric",
+        "expected_direction": "increase",
+        "declared_boundary_conditions": [
+          "No major environmental shock during the measurement window.",
+          "Operational capacity remains within the modeled range.",
+          "The intervention is implemented as specified."
+        ]
+      },
+      "observed_outcome": {
+        "metric": "success_metric",
+        "observed_direction": "sharp_decrease",
+        "time_relation_to_recommendation": "after_recommendation",
+        "severity": "large_adverse_divergence",
+        "review_status": "observed_not_causally_explained"
+      },
+      "suspected_unknown_dynamic": {
+        "description": "A larger environmental factor appears to have dominated the target metric after the recommendation.",
+        "status": "suspected_not_established",
+        "known_causal_status": "not_yet_established"
+      },
+      "breach_basis": [
+        "The outcome moved opposite the intervention hypothesis.",
+        "The adverse change is larger than the modeled intervention effect could explain.",
+        "A boundary condition may have been violated by an unmodeled environmental factor."
+      ],
+      "permitted_actions": [
+        "open_boundary_revision",
+        "register_unknown_dynamic",
+        "suspend_intervention_claim",
+        "collect_discriminating_observations"
+      ],
+      "forbidden_actions": [
+        "auto_infer_causation_from_correlation",
+        "auto_blame_intervention",
+        "auto_confirm_unknown_factor",
+        "wisdom_db_update",
+        "bayesian_count_update",
+        "hlmg_status_promotion",
+        "production_query_effect"
+      ],
+      "interpretation_boundary": "This records that observed outcomes exceeded the declared model boundary. It does not prove the suspected unknown dynamic caused the outcome."
+    }
+  ],
+  "source_paths": {
+    "request": "research/causal_status_ladder_v0/requests/operation_a_boundary_breach_request_v0.json"
+  },
+  "boundary": {
+    "registry_is_research_only": true,
+    "unknown_dynamic_is_not_confirmed_cause": true,
+    "may_update_evidence": false,
+    "may_update_learning": false,
+    "may_update_production": false
+  }
+}
+

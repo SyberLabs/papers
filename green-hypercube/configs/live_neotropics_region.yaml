@@ -1,0 +1,47 @@
+# Unfiltered-flora live configuration (the honest needle-in-haystack).
+#
+# Unlike live_neotropics.yaml (which seeds from a curated medicinal-plant mirror
+# and is therefore reward-dense), this seeds an UNFILTERED flora from GBIF
+# occurrences in the region, bridges phytochemistry via LOTUS (natural products
+# in Wikidata), and rewards via ChEMBL measured potency. Most species have no
+# studied chemistry, so reward is genuinely sparse -- and the chemistry/sensory
+# cue is largely absent, leaving phylogeny, co-occurrence and animal association
+# as the cues that must locate the bioactive minority.
+#
+# First run is network-heavy (GBIF region seed + OpenTree + GloBI + a LOTUS
+# SPARQL pass + ChEMBL potency lookups); all layers cache to Parquet so reruns
+# are cheap and a transient ChEMBL outage only needs the reward step repeated.
+seed: 12345
+output_dir: results/live_region
+
+data:
+  source: live
+  seed_mode: region
+  cache_dir: data_cache_region
+  n_species: 150            # resolved unfiltered taxa cap (API friendliness)
+  region:
+    name: amazonia
+    min_lon: -79.0
+    min_lat: -15.0
+    max_lon: -50.0
+    max_lat: 5.0
+  seed_families: []
+
+manifold:
+  eco_edge_threshold: 0.10
+  bio_edge_threshold: 0.05
+  discovery_threshold: 0.05
+  reward_top_frac: 1.0      # natural sparsity; sweep this to probe the gate
+
+simulation:
+  budget: 40
+  n_replicates: 30
+  observation_noise: 0.05
+
+strategies:
+  - {name: random,       kind: random,       params: {epsilon: 1.0}}
+  - {name: phylogenetic, kind: phylogenetic, params: {epsilon: 0.08}}
+  - {name: sensory,      kind: sensory,      params: {epsilon: 0.08}}
+  - {name: ecological,   kind: ecological,   params: {epsilon: 0.08}}
+  - {name: social,       kind: social,       params: {n_agents: 8, transmission_prob: 0.4}}
+  - {name: cultural,     kind: cultural,     params: {epsilon: 0.05, learning_rate: 0.6}}

@@ -1,0 +1,137 @@
+﻿{
+  "schema_version": "tok_mechanism_graph_v0",
+  "graph_id": "hlmg_example_boiler_001",
+  "status": "provisional",
+  "scope": {
+    "inference_id": null,
+    "problem_fingerprint": "example_not_a_live_record",
+    "created_at": "2026-05-27T00:00:00Z",
+    "focal_outcome": "Several housing units lack heat.",
+    "system_boundary": "The boiler shutdown, affected housing units, and management's recorded emergency repair request during the reported observation window.",
+    "outside_boundary": [
+      "The root cause of the boiler shutdown.",
+      "Whether a technician later repaired the boiler.",
+      "Whether heat was restored after the report."
+    ]
+  },
+  "provenance": {
+    "origin": "human_authored",
+    "extractor": null,
+    "human_review_status": "not_reviewed",
+    "observations": [
+      {
+        "observation_id": "obs_001",
+        "source_type": "reviewed_record",
+        "support_fragment": "A housing complex boiler shut down during a cold evening and several units lost heat.",
+        "content_ref": null,
+        "time_reference": "during the reported evening",
+        "review_status": "unreviewed"
+      },
+      {
+        "observation_id": "obs_002",
+        "source_type": "reviewed_record",
+        "support_fragment": "Management requested an emergency repair visit, but the report was written before a technician arrived or heat was restored.",
+        "content_ref": null,
+        "time_reference": "before technician arrival or restored heat",
+        "review_status": "unreviewed"
+      },
+      {
+        "observation_id": "obs_003",
+        "source_type": "reviewed_record",
+        "support_fragment": "The shutdown cause was unknown.",
+        "content_ref": null,
+        "time_reference": "at report time",
+        "review_status": "unreviewed"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "node_id": "n_shutdown",
+      "role": "state",
+      "label": "Boiler shut down",
+      "epistemic_origin": "observed",
+      "observable": true,
+      "time_reference": "reported evening"
+    },
+    {
+      "node_id": "n_no_heat",
+      "role": "outcome",
+      "label": "Several housing units lost heat",
+      "epistemic_origin": "observed",
+      "observable": true,
+      "time_reference": "reported evening"
+    },
+    {
+      "node_id": "n_repair_request",
+      "role": "action",
+      "label": "Management requested emergency repair visit",
+      "epistemic_origin": "observed",
+      "observable": true,
+      "time_reference": "after shutdown, before technician arrival"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e_damage_001",
+      "source_node_id": "n_shutdown",
+      "target_node_id": "n_no_heat",
+      "edge_type": "damage",
+      "predicate": "increases",
+      "epistemic_status": "admitted_observed",
+      "evidence_refs": [
+        "obs_001"
+      ],
+      "temporal_relation": "immediate",
+      "boundary_note": "Loss of heat is explicitly described in the reported observation window."
+    },
+    {
+      "edge_id": "e_response_activation_001",
+      "source_node_id": "n_shutdown",
+      "target_node_id": "n_repair_request",
+      "edge_type": "response_activation",
+      "predicate": "triggers",
+      "epistemic_status": "admitted_observed",
+      "evidence_refs": [
+        "obs_002"
+      ],
+      "temporal_relation": "immediate",
+      "boundary_note": "The repair request is observed; no repair effect is observed."
+    }
+  ],
+  "response_episodes": [
+    {
+      "response_id": "r_repair_request_001",
+      "activation_edge_id": "e_response_activation_001",
+      "action_node_id": "n_repair_request",
+      "status": "outcome_unknown",
+      "effect_edge_ids": [],
+      "cost_edge_ids": [],
+      "evidence_refs": [
+        "obs_002"
+      ]
+    }
+  ],
+  "excluded_claims": [
+    {
+      "claim_id": "x_sensor_fault",
+      "claim_text": "A defective safety sensor caused the boiler shutdown.",
+      "reason": "source_unmentioned_hypothesis",
+      "source_refs": [
+        "obs_003"
+      ],
+      "reconsideration_rule": "May enter as an unresolved hypothesis only if a later source record or human reviewer explicitly raises sensor failure."
+    },
+    {
+      "claim_id": "x_repair_restored_heat",
+      "claim_text": "The emergency repair request restored heat to affected units.",
+      "reason": "unobserved_response_outcome",
+      "source_refs": [
+        "obs_002"
+      ],
+      "reconsideration_rule": "May become a response effect only after an observed or confirmed heat-restoration record."
+    }
+  ],
+  "production_effect": "none_research_only"
+}
+

@@ -1,0 +1,99 @@
+﻿{
+  "schema_version": "tok_evidence_transition_proposal_v0",
+  "production_effect": "none_research_only",
+  "proposal_id": "etp_obsreg_abafb76bd714cf4d_boiler_temperature_prediction_success_contract_v0",
+  "generated_at": "2026-06-19T00:02:30.979177Z",
+  "record_id": "obsreg_abafb76bd714cf4d",
+  "contract_id": "boiler_temperature_prediction_success_contract_v0",
+  "objective_type": "prediction",
+  "source_registry_evidence_status": "not_evidence",
+  "source_observation": {
+    "series_id": "obs_csv_temp_reviewed_001",
+    "variable_id": "v_interior_temp",
+    "variable_name": "interior_temperature_c",
+    "point_count": 4,
+    "review_status": "human_confirmed"
+  },
+  "contract_result": "failed",
+  "transition_recommendation": "do_not_transition",
+  "permitted_transition_scope": "none",
+  "explicitly_forbidden_updates": [
+    "wisdom_db_update",
+    "bayesian_count_update",
+    "hlmg_status_promotion",
+    "law_confirmation",
+    "production_query_effect",
+    "automatic_truth_claim"
+  ],
+  "update_effect": {
+    "applied": false,
+    "registry_mutated": false,
+    "wisdom_db_mutated": false,
+    "bayesian_counts_mutated": false,
+    "hlmg_mutated": false,
+    "production_mutated": false
+  },
+  "audit_summary": {
+    "coverage_fraction": 1.0,
+    "aligned_point_count": 4,
+    "inside_interval_count": 2,
+    "outside_interval_count": 2,
+    "worse_than_expected_count": 2,
+    "better_than_expected_count": 0,
+    "interval_miss_count": 2,
+    "consecutive_adverse_misses": 2,
+    "mean_adverse_residual": 0.6,
+    "interpretation": "Observed values are persistently worse than the modeled interval; review parameters and omitted influences.",
+    "criteria_checks": [
+      {
+        "criterion": "required_coverage_fraction",
+        "required": 1.0,
+        "observed": 1.0,
+        "passed": true
+      },
+      {
+        "criterion": "max_interval_miss_count",
+        "required": 0,
+        "observed": 2,
+        "passed": false
+      },
+      {
+        "criterion": "max_consecutive_adverse_misses",
+        "required": 0,
+        "observed": 2,
+        "passed": false
+      },
+      {
+        "criterion": "mean_adverse_residual_lte",
+        "required": 0.25,
+        "observed": 0.6,
+        "passed": false
+      }
+    ]
+  },
+  "reasoning": [
+    "max_interval_miss_count observed 2 vs required 0",
+    "max_consecutive_adverse_misses observed 2 vs required 0",
+    "mean_adverse_residual_lte observed 0.6 vs required 0.25"
+  ],
+  "forbidden_interpretations": [
+    "This contract cannot prove the universal law is true.",
+    "This contract cannot update Bayesian counts.",
+    "This contract cannot promote the HLMG graph status.",
+    "This contract cannot imply that TOK solved the real-world boiler problem.",
+    "Failure means this exact predictive claim was not supported under the declared criteria, not that the whole TOK system is false."
+  ],
+  "source_paths": {
+    "registry": "research/demo_freeze_v0/generated/demo_session/registry/research_observation_registry_v0.json",
+    "contract": "research/evidence_transition_gate_v0/success_contracts/boiler_temperature_prediction_success_contract_v0.json",
+    "dyndiv": "research/demo_freeze_v0/generated/demo_session/dyndiv/boiler_capacity_loss_csv_reviewed_dyndiv_v0.json"
+  },
+  "boundary": {
+    "proposal_only": true,
+    "asks_exact_claim_not_global_truth": true,
+    "may_update_evidence": false,
+    "may_update_learning": false,
+    "may_update_production": false
+  }
+}
+

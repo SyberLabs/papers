@@ -1,0 +1,100 @@
+﻿{
+  "schema_version": "tok_template_binding_inspection_v0",
+  "production_effect": "none_research_only",
+  "graph_id": "hlmg_example_boiler_001",
+  "template_id": "capacity_loss_service_decay_v0",
+  "template_title": "Capacity Loss Service Decay",
+  "template_status": "illustrative",
+  "runtime_status": "implemented_research_only",
+  "simulation_gate": "may_prepare_research_shadow_request",
+  "human_summary": "Capacity Loss Service Decay is compatible with 1 edge(s) in this graph. This inspection is a pre-binding review, not a binding decision.",
+  "compatible_hlmg_edge_types": [
+    "damage",
+    "dependency"
+  ],
+  "compatible_edges": [
+    {
+      "edge_id": "e_damage_001",
+      "edge_type": "damage",
+      "predicate": "increases",
+      "epistemic_status": "admitted_observed",
+      "source": {
+        "node_id": "n_shutdown",
+        "label": "Boiler shut down",
+        "role": "state"
+      },
+      "target": {
+        "node_id": "n_no_heat",
+        "label": "Several housing units lost heat",
+        "role": "outcome"
+      },
+      "evidence": [
+        {
+          "observation_id": "obs_001",
+          "review_status": "unreviewed",
+          "support_fragment": "A housing complex boiler shut down during a cold evening and several units lost heat."
+        }
+      ],
+      "readiness": "eligible_for_human_binding_review",
+      "caution": []
+    }
+  ],
+  "required_preconditions_before_simulation": [
+    "The graph must identify an enabling dependency and an affected service outcome or state.",
+    "The binding must state which non-capacity influences are omitted."
+  ],
+  "missing_preconditions": [
+    "A human-authored binding must provide required parameter intervals: degradation_rate",
+    "A state-variable mapping must attach template roles to graph nodes and units before simulation."
+  ],
+  "state_roles_to_map": [
+    {
+      "role_id": "capacity_availability",
+      "description": "Availability of the supporting capacity, normalized from zero to one.",
+      "kind": "capacity",
+      "required": true,
+      "observable_preference": "proxy_allowed"
+    },
+    {
+      "role_id": "service_state",
+      "description": "Measurable outcome maintained by the capacity.",
+      "kind": "state",
+      "required": true,
+      "observable_preference": "direct"
+    }
+  ],
+  "parameters_to_supply": [
+    {
+      "parameter_id": "degradation_rate",
+      "description": "Rate of service degradation when capacity availability is absent or reduced.",
+      "value_type": "interval",
+      "required": true,
+      "allowed_provenance": [
+        "assumed",
+        "human_supplied",
+        "literature",
+        "estimated_from_reviewed_observations"
+      ]
+    }
+  ],
+  "prior_predictive_signature": [
+    "Full capacity availability implies no degradation attributable to capacity loss.",
+    "Complete loss of capacity produces monotonic service degradation under the isolated template."
+  ],
+  "forbidden_inferences": [
+    "Do not treat a repair request as recovered capacity unless restoration is observed.",
+    "Do not conclude that capacity loss is the sole cause of measured degradation."
+  ],
+  "compression_view": {
+    "edge_label": "supports",
+    "directionality": "directed",
+    "disclosure": "Compresses enabling infrastructure and consequence transmission into capacity availability versus service state."
+  },
+  "workbench_boundary": {
+    "may_create_binding": false,
+    "may_claim_template_applies": false,
+    "may_update_evidence": false,
+    "may_update_learning": false
+  }
+}
+

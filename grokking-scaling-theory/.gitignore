@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Generated / heavy artifacts
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.ckpt
+*.npz
+*.zip
+wave_upload/
+presentation/
+
+# LaTeX outputs
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.pdf
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+__pycache__/
+*.pyc
+*.npz

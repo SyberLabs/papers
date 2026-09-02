@@ -1,0 +1,149 @@
+{
+  "variables": {
+    "interpretive_capacity": {
+      "kind": "beta",
+      "low": 0.0,
+      "high": 1.0,
+      "mean": 0.5,
+      "std": 0.15,
+      "a": 2.0,
+      "b": 5.0,
+      "value": 0.5,
+      "components": null,
+      "weights": null,
+      "clip": [
+        0.0,
+        1.0
+      ]
+    },
+    "curiosity": {
+      "kind": "beta",
+      "low": 0.0,
+      "high": 1.0,
+      "mean": 0.5,
+      "std": 0.15,
+      "a": 3.0,
+      "b": 2.0,
+      "value": 0.5,
+      "components": null,
+      "weights": null,
+      "clip": [
+        0.0,
+        1.0
+      ]
+    },
+    "institutional_strength": {
+      "kind": "beta",
+      "low": 0.0,
+      "high": 1.0,
+      "mean": 0.5,
+      "std": 0.15,
+      "a": 2.0,
+      "b": 4.0,
+      "value": 0.5,
+      "components": null,
+      "weights": null,
+      "clip": [
+        0.0,
+        1.0
+      ]
+    },
+    "risk_tolerance": {
+      "kind": "uniform",
+      "low": 0.0,
+      "high": 1.0,
+      "mean": 0.5,
+      "std": 0.15,
+      "a": 2.0,
+      "b": 2.0,
+      "value": 0.5,
+      "components": null,
+      "weights": null,
+      "clip": [
+        0.0,
+        1.0
+      ]
+    },
+    "technical_capability": {
+      "kind": "uniform",
+      "low": 0.0,
+      "high": 1.0,
+      "mean": 0.5,
+      "std": 0.15,
+      "a": 2.0,
+      "b": 2.0,
+      "value": 0.5,
+      "components": null,
+      "weights": null,
+      "clip": [
+        0.0,
+        1.0
+      ]
+    },
+    "prestige_sensitivity": {
+      "kind": "uniform",
+      "low": 0.0,
+      "high": 1.0,
+      "mean": 0.5,
+      "std": 0.15,
+      "a": 2.0,
+      "b": 2.0,
+      "value": 0.5,
+      "components": null,
+      "weights": null,
+      "clip": [
+        0.0,
+        1.0
+      ]
+    },
+    "economic_pressure": {
+      "kind": "uniform",
+      "low": 0.0,
+      "high": 1.0,
+      "mean": 0.5,
+      "std": 0.15,
+      "a": 2.0,
+      "b": 2.0,
+      "value": 0.5,
+      "components": null,
+      "weights": null,
+      "clip": [
+        0.0,
+        1.0
+      ]
+    },
+    "ritualization_tendency": {
+      "kind": "uniform",
+      "low": 0.0,
+      "high": 1.0,
+      "mean": 0.5,
+      "std": 0.15,
+      "a": 2.0,
+      "b": 2.0,
+      "value": 0.5,
+      "components": null,
+      "weights": null,
+      "clip": [
+        0.0,
+        1.0
+      ]
+    }
+  },
+  "explorer": {
+    "fraction": 0.08,
+    "variables": [
+      "curiosity",
+      "risk_tolerance",
+      "technical_capability",
+      "prestige_sensitivity"
+    ],
+    "lower_quantile": 0.8
+  },
+  "correlations": [
+    {
+      "var_a": "curiosity",
+      "var_b": "prestige_sensitivity",
+      "rho": 0.4
+    }
+  ]
+}

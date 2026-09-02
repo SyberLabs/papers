@@ -1,0 +1,22 @@
+label,group,architecture,modulus,weight_decay,grokking_epoch,source,trace_path,notes,measured
+local_mlp_p59_wd1,local_mlp,mlp,59,1.0,3200,trace,examples\representational_crossing_p59_mlp_wd1_extended.csv,max_val_acc=99.02,True
+local_mlp_p59_wd2,local_mlp,mlp,59,2.0,1820,trace,examples\representational_crossing_p59_mlp_wd2.csv,max_val_acc=99.08,True
+local_mlp_p97_wd05,local_mlp,mlp,97,0.5,3720,trace,examples\representational_crossing_wd05.csv,max_val_acc=99.04,True
+local_mlp_p97_wd1,local_mlp,mlp,97,1.0,2000,trace,examples\representational_crossing_wd1.csv,max_val_acc=99.13,True
+local_mlp_p97_wd15,local_mlp,mlp,97,1.5,1480,trace,examples\representational_crossing_wd15.csv,max_val_acc=99.00,True
+local_mlp_p97_wd2,local_mlp,mlp,97,2.0,1140,trace,examples\representational_crossing_wd2.csv,max_val_acc=99.26,True
+local_mlp_p113_wd1,local_mlp,mlp,113,1.0,1560,trace,examples\representational_crossing_p113_mlp_wd1.csv,max_val_acc=99.12,True
+local_mlp_p113_wd2,local_mlp,mlp,113,2.0,920,trace,examples\representational_crossing_p113_mlp_wd2.csv,max_val_acc=99.23,True
+local_residual_p59_wd1,local_residual,residual,59,1.0,2760,trace,examples\representational_crossing_p59_residual_wd1.csv,max_val_acc=98.85,True
+local_residual_p59_wd2,local_residual,residual,59,2.0,1380,trace,examples\representational_crossing_p59_residual_wd2.csv,max_val_acc=99.20,True
+local_residual_p97_wd1,local_residual,residual,97,1.0,2300,trace,examples\representational_crossing_p97_residual_wd1.csv,max_val_acc=99.02,True
+local_residual_p97_wd2,local_residual,residual,97,2.0,1120,trace,examples\representational_crossing_p97_residual_wd2.csv,max_val_acc=99.13,True
+local_residual_p113_wd1,local_residual,residual,113,1.0,1980,trace,examples\representational_crossing_p113_residual_wd1.csv,max_val_acc=99.28,True
+local_residual_p113_wd2,local_residual,residual,113,2.0,1020,trace,examples\representational_crossing_p113_residual_wd2.csv,max_val_acc=99.08,True
+published_31_1.0_extrapolated,published_mlp,mlp,31,1.0,2000,extrapolated,,Approximate low-modulus anchor used in prior scripts,False
+published_47_1.0_extrapolated,published_mlp,mlp,47,1.0,3500,extrapolated,,Approximate low-modulus anchor used in prior scripts,False
+published_59_1.0_Power2022,published_mlp,mlp,59,1.0,5000,Power2022,,Smaller-modulus comparison point,True
+published_97_0.01_Power2022,published_mlp,mlp,97,0.01,200000,Power2022,,Published or extrapolated from reported curve,True
+published_97_0.1_Power2022,published_mlp,mlp,97,0.1,50000,Power2022,,Published modular-addition point,True
+published_97_1.0_Power2022,published_mlp,mlp,97,1.0,10000,Power2022,,Published modular-addition point,True
+published_113_1.0_Nanda2023,published_mlp,mlp,113,1.0,15000,Nanda2023,,Mechanistic grokking study point,True

@@ -1,0 +1,31 @@
+# Headline experiment: larger flora, more replicates, all six strategies.
+# Reproduce with:  py -m greenhypercube run --config experiments/compare_strategies.yaml
+seed: 7
+output_dir: results/compare_strategies
+
+data:
+  source: sample
+  cache_dir: data_cache_compare
+  n_species: 600
+  reward_density: 0.10
+  signal_strength: 0.7
+  assay_noise: 0.1
+
+manifold:
+  eco_edge_threshold: 0.15
+  bio_edge_threshold: 0.10
+  discovery_threshold: 0.05
+
+simulation:
+  budget: 220
+  n_replicates: 20
+  observation_noise: 0.02
+  n_landscapes: 5
+
+strategies:
+  - {name: random,       kind: random,       params: {epsilon: 1.0}}
+  - {name: phylogenetic, kind: phylogenetic, params: {epsilon: 0.08}}
+  - {name: sensory,      kind: sensory,      params: {epsilon: 0.08}}
+  - {name: ecological,   kind: ecological,   params: {epsilon: 0.08}}
+  - {name: social,       kind: social,       params: {n_agents: 10, transmission_prob: 0.4}}
+  - {name: cultural,     kind: cultural,     params: {epsilon: 0.05, learning_rate: 0.6}}

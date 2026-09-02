@@ -1,0 +1,112 @@
+﻿{
+  "schema_version": "tok_dynamic_divergence_v0",
+  "dyndiv_id": "dyndiv_generated_boiler_capacity_loss_prior_001",
+  "status": "prior_predictive",
+  "production_effect": "none_research_only",
+  "hlmg_reference": {
+    "graph_id": "hlmg_example_boiler_001",
+    "graph_schema_version": "tok_mechanism_graph_v0",
+    "graph_status_at_binding": "provisional",
+    "target_node_ids": [
+      "n_no_heat"
+    ],
+    "target_edge_ids": [
+      "e_damage_001"
+    ]
+  },
+  "template_binding": {
+    "template_id": "capacity_loss_service_decay_v0",
+    "template_library_status": "illustrative",
+    "binding_status": "proposed",
+    "binding_origin": "human_authored",
+    "covered_node_ids": [
+      "n_shutdown",
+      "n_no_heat"
+    ],
+    "covered_edge_ids": [
+      "e_damage_001"
+    ],
+    "state_variables": [
+      {
+        "variable_id": "v_interior_temp",
+        "variable_name": "interior_temperature_c",
+        "unit": "degC",
+        "attached_node_id": "n_no_heat",
+        "direction_of_harm": "lower_is_worse"
+      }
+    ],
+    "parameters": [
+      {
+        "parameter_name": "degradation_rate",
+        "representation": "interval",
+        "value": {
+          "lower": 0.4,
+          "upper": 0.9
+        },
+        "unit": "degC_per_hour",
+        "provenance": "assumed"
+      }
+    ],
+    "assumptions": [
+      "The measured units begin near the stated baseline temperature.",
+      "No auxiliary heat source changes temperature during the comparison window."
+    ],
+    "omitted_influences": [
+      "Outside temperature variation.",
+      "Insulation and unit-level occupancy variation."
+    ],
+    "compression_disclosure": "This capacity-loss binding models heat-loss deterioration only and omits repair effects."
+  },
+  "model_run": {
+    "run_id": "run_boiler_capacity_loss_prior_001",
+    "runtime": "tok_shadow_dynamics_runtime",
+    "runtime_version": "v0",
+    "generation_mode": "prior_predictive",
+    "horizon": "3 hours",
+    "cadence": "1 hour",
+    "modeled_series": [
+      {
+        "series_id": "model_generated_temp_001",
+        "variable_id": "v_interior_temp",
+        "variable_name": "interior_temperature_c",
+        "unit": "degC",
+        "baseline_definition": "Assumed starting interior temperature of 20.0 degC at 18:00.",
+        "interpretation": "absolute_level",
+        "points": [
+          {
+            "timestamp": "2026-05-27T18:00:00Z",
+            "p10": 20.0,
+            "p50": 20.0,
+            "p90": 20.0
+          },
+          {
+            "timestamp": "2026-05-27T19:00:00Z",
+            "p10": 19.1,
+            "p50": 19.35,
+            "p90": 19.6
+          },
+          {
+            "timestamp": "2026-05-27T20:00:00Z",
+            "p10": 18.2,
+            "p50": 18.7,
+            "p90": 19.2
+          },
+          {
+            "timestamp": "2026-05-27T21:00:00Z",
+            "p10": 17.3,
+            "p50": 18.05,
+            "p90": 18.8
+          }
+        ]
+      }
+    ],
+    "warnings": [
+      "Shadow runtime output is illustrative and cannot update TOK evidence.",
+      "No repair response effect is included in this capacity-loss run."
+    ]
+  },
+  "observed_series": [],
+  "divergence_audit": [],
+  "review_triggers": []
+}
+

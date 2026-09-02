@@ -1,0 +1,68 @@
+# Default Green Hypercube experiment: synthetic (offline) data, all six
+# strategies competing under a shared experiment budget. Reproducible from the
+# single seed below.
+seed: 12345
+output_dir: results/default
+
+data:
+  source: sample          # 'sample' (offline) or 'live' (GBIF/Duke/GloBI/OTL+ChEMBL)
+  cache_dir: data_cache
+  n_species: 400
+  reward_density: 0.12     # ~12% of species are genuinely active (sparse reward)
+  # Cue-reward coupling (synthetic only). 0 => cues independent of reward (null);
+  # 1 => strong but noisy cues. Per-channel multipliers may override in 'coupling'.
+  signal_strength: 0.7
+  assay_noise: 0.1         # independent measurement noise on the reward
+  coupling: {}             # e.g. {sensory: 1.0, eco: 0.8, bio: 0.8, phylo: 1.0}
+  region:
+    name: neotropics
+    min_lon: -82.0
+    min_lat: -20.0
+    max_lon: -34.0
+    max_lat: 13.0
+
+manifold:
+  n_sites: 60
+  eco_edge_threshold: 0.15
+  bio_edge_threshold: 0.10
+  discovery_threshold: 0.05
+
+simulation:
+  # Budget is deliberately a fraction of the species pool, so the task is true
+  # sparse search: no strategy can afford to test everything.
+  budget: 150
+  n_replicates: 15
+  observation_noise: 0.0
+  # >1 generates independent landscapes (distinct data seeds) so CIs reflect
+  # uncertainty about the landscape, not just the search RNG.
+  n_landscapes: 5
+
+strategies:
+  - name: random
+    kind: random
+    params: {epsilon: 1.0}
+
+  - name: phylogenetic
+    kind: phylogenetic
+    params: {epsilon: 0.08}
+
+  - name: sensory
+    kind: sensory
+    params: {epsilon: 0.08}
+
+  - name: ecological
+    kind: ecological
+    params: {epsilon: 0.08, eco_weight: 1.0, bio_weight: 1.0, sensory_prior: 0.25}
+
+  - name: social
+    kind: social
+    params:
+      n_agents: 8
+      topology: watts_strogatz
+      transmission_prob: 0.4
+      epsilon: 0.1
+      phylo_weight: 0.5
+
+  - name: cultural
+    kind: cultural
+    params: {epsilon: 0.05, learning_rate: 0.6}

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "greenhypercube"
+version = "0.1.0"
+description = "Coverage-aware search benchmarks in computational ethnobotany."
+requires-python = ">=3.11"
+dynamic = ["dependencies"]
+
+[tool.setuptools.packages.find]
+include = ["greenhypercube*"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[project.scripts]
+greenhypercube = "greenhypercube.cli:app"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

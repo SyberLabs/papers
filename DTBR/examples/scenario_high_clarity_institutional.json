@@ -1,0 +1,299 @@
+{
+  "name": "high_clarity_institutional",
+  "description": "Near-future receivers with strong institutions, surviving records, and legible markers.",
+  "notes": "ILLUSTRATIVE ONLY. Stipulated optimistic priors; not calibrated.",
+  "calibrated": false,
+  "agents": {
+    "variables": {
+      "interpretive_capacity": {
+        "kind": "beta",
+        "low": 0.0,
+        "high": 1.0,
+        "mean": 0.5,
+        "std": 0.15,
+        "a": 5.0,
+        "b": 2.0,
+        "value": 0.5,
+        "components": null,
+        "weights": null,
+        "clip": [
+          0.0,
+          1.0
+        ]
+      },
+      "institutional_strength": {
+        "kind": "beta",
+        "low": 0.0,
+        "high": 1.0,
+        "mean": 0.5,
+        "std": 0.15,
+        "a": 5.0,
+        "b": 2.0,
+        "value": 0.5,
+        "components": null,
+        "weights": null,
+        "clip": [
+          0.0,
+          1.0
+        ]
+      },
+      "curiosity": {
+        "kind": "uniform",
+        "low": 0.0,
+        "high": 1.0,
+        "mean": 0.5,
+        "std": 0.15,
+        "a": 2.0,
+        "b": 2.0,
+        "value": 0.5,
+        "components": null,
+        "weights": null,
+        "clip": [
+          0.0,
+          1.0
+        ]
+      },
+      "risk_tolerance": {
+        "kind": "uniform",
+        "low": 0.0,
+        "high": 1.0,
+        "mean": 0.5,
+        "std": 0.15,
+        "a": 2.0,
+        "b": 2.0,
+        "value": 0.5,
+        "components": null,
+        "weights": null,
+        "clip": [
+          0.0,
+          1.0
+        ]
+      },
+      "technical_capability": {
+        "kind": "uniform",
+        "low": 0.0,
+        "high": 1.0,
+        "mean": 0.5,
+        "std": 0.15,
+        "a": 2.0,
+        "b": 2.0,
+        "value": 0.5,
+        "components": null,
+        "weights": null,
+        "clip": [
+          0.0,
+          1.0
+        ]
+      },
+      "prestige_sensitivity": {
+        "kind": "uniform",
+        "low": 0.0,
+        "high": 1.0,
+        "mean": 0.5,
+        "std": 0.15,
+        "a": 2.0,
+        "b": 2.0,
+        "value": 0.5,
+        "components": null,
+        "weights": null,
+        "clip": [
+          0.0,
+          1.0
+        ]
+      },
+      "economic_pressure": {
+        "kind": "uniform",
+        "low": 0.0,
+        "high": 1.0,
+        "mean": 0.5,
+        "std": 0.15,
+        "a": 2.0,
+        "b": 2.0,
+        "value": 0.5,
+        "components": null,
+        "weights": null,
+        "clip": [
+          0.0,
+          1.0
+        ]
+      },
+      "ritualization_tendency": {
+        "kind": "uniform",
+        "low": 0.0,
+        "high": 1.0,
+        "mean": 0.5,
+        "std": 0.15,
+        "a": 2.0,
+        "b": 2.0,
+        "value": 0.5,
+        "components": null,
+        "weights": null,
+        "clip": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    "explorer": {
+      "fraction": 0.05,
+      "variables": [
+        "curiosity",
+        "risk_tolerance",
+        "technical_capability",
+        "prestige_sensitivity"
+      ],
+      "lower_quantile": 0.8
+    },
+    "correlations": []
+  },
+  "environment": {
+    "variables": {
+      "marker_clarity": {
+        "kind": "beta",
+        "low": 0.0,
+        "high": 1.0,
+        "mean": 0.5,
+        "std": 0.15,
+        "a": 5.0,
+        "b": 2.0,
+        "value": 0.5,
+        "components": null,
+        "weights": null,
+        "clip": [
+          0.0,
+          1.0
+        ]
+      },
+      "phenomenological_caution": {
+        "kind": "beta",
+        "low": 0.0,
+        "high": 1.0,
+        "mean": 0.5,
+        "std": 0.15,
+        "a": 3.0,
+        "b": 3.0,
+        "value": 0.5,
+        "components": null,
+        "weights": null,
+        "clip": [
+          0.0,
+          1.0
+        ]
+      },
+      "visibility": {
+        "kind": "beta",
+        "low": 0.0,
+        "high": 1.0,
+        "mean": 0.5,
+        "std": 0.15,
+        "a": 4.0,
+        "b": 2.0,
+        "value": 0.5,
+        "components": null,
+        "weights": null,
+        "clip": [
+          0.0,
+          1.0
+        ]
+      },
+      "repository_severity": {
+        "kind": "beta",
+        "low": 0.0,
+        "high": 1.0,
+        "mean": 0.5,
+        "std": 0.15,
+        "a": 5.0,
+        "b": 2.0,
+        "value": 0.5,
+        "components": null,
+        "weights": null,
+        "clip": [
+          0.0,
+          1.0
+        ]
+      },
+      "accessibility": {
+        "kind": "uniform",
+        "low": 0.0,
+        "high": 1.0,
+        "mean": 0.5,
+        "std": 0.15,
+        "a": 2.0,
+        "b": 2.0,
+        "value": 0.5,
+        "components": null,
+        "weights": null,
+        "clip": [
+          0.0,
+          1.0
+        ]
+      },
+      "resource_attractiveness": {
+        "kind": "uniform",
+        "low": 0.0,
+        "high": 1.0,
+        "mean": 0.5,
+        "std": 0.15,
+        "a": 2.0,
+        "b": 2.0,
+        "value": 0.5,
+        "components": null,
+        "weights": null,
+        "clip": [
+          0.0,
+          1.0
+        ]
+      },
+      "artificial_intentionality": {
+        "kind": "uniform",
+        "low": 0.0,
+        "high": 1.0,
+        "mean": 0.5,
+        "std": 0.15,
+        "a": 2.0,
+        "b": 2.0,
+        "value": 0.5,
+        "components": null,
+        "weights": null,
+        "clip": [
+          0.0,
+          1.0
+        ]
+      },
+      "prestige_risk": {
+        "kind": "uniform",
+        "low": 0.0,
+        "high": 1.0,
+        "mean": 0.5,
+        "std": 0.15,
+        "a": 2.0,
+        "b": 2.0,
+        "value": 0.5,
+        "components": null,
+        "weights": null,
+        "clip": [
+          0.0,
+          1.0
+        ]
+      },
+      "historical_memory": {
+        "kind": "uniform",
+        "low": 0.0,
+        "high": 1.0,
+        "mean": 0.5,
+        "std": 0.15,
+        "a": 2.0,
+        "b": 2.0,
+        "value": 0.5,
+        "components": null,
+        "weights": null,
+        "clip": [
+          0.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "model": "baseline",
+  "weights": null
+}

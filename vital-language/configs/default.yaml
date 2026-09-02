@@ -1,0 +1,20 @@
+model: "Qwen/Qwen2.5-0.5B-Instruct"
+device: "cpu"
+seeds: [0, 1, 2]            # repeat each (prompt, condition) over seeds for variance
+sampling:
+  temperature: 0.9
+  top_p: 0.95
+  top_k: 0
+  max_new_tokens: 220
+  greedy: false
+modulation:
+  eps: 0.5                  # in units of per-step logit std
+  chaotic_map: "lorenz"     # lorenz | henon | multifreq | logistic
+                            # NB: logistic(r=4) is decorrelated (ac1~0) -> its OU
+                            # control collapses to white noise; lorenz has ac1~0.97
+  mask_mode: "topk_complement"
+  mask_topk: 50
+  every_k: 1
+  warmup: 8
+prompts_file: "prompts/prompts.yaml"
+out_dir: "outputs"

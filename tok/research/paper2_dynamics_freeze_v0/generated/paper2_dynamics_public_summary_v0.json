@@ -1,0 +1,74 @@
+{
+  "schema_version": "tok_paper2_dynamics_public_summary_v0",
+  "production_effect": "none_research_only",
+  "freeze_id": "paper2_dynamics_freeze_v0",
+  "public_release_note": "Sanitized public summary. The internal reproduction manifest records hashes for a larger private/internal workspace; this file preserves the public citable boundary and result summary.",
+  "scope": {
+    "paper_track": "Paper 2: Structural Recoverability Atlas",
+    "corpus": "12 systems across 7 regimes",
+    "primary_result_bundles": [
+      "admissibility_bundle_v1",
+      "collapse_bundle_v1",
+      "behavioral_probe_window_calibration_v0",
+      "response_assay_contract_hpc_1465448"
+    ]
+  },
+  "claim_boundary": {
+    "supports": [
+      "frozen synthetic and held-out trajectory recoverability results under the declared ordinal ladder",
+      "regime-complete measurement for the included 12-system corpus",
+      "collapse-boundary and response-window sensitivity analysis for the implemented procedures"
+    ],
+    "does_not_support": [
+      "broad invalidation of LTC or LNN model classes",
+      "empirical causal validity",
+      "autonomous intervention policy",
+      "production evidence or learning updates"
+    ]
+  },
+  "results": {
+    "dynamics_corpus": {
+      "system_count": 12,
+      "regime_count": 7,
+      "uncovered_regimes": []
+    },
+    "admissibility_atlas_v1": {
+      "systems": 12,
+      "regimes": 7,
+      "procedures": [
+        "sindy",
+        "ltc",
+        "handshake"
+      ],
+      "total_runs": 116640,
+      "acceptance_all_passed": true
+    },
+    "collapse_atlas_v1": {
+      "transects": 144,
+      "acceptance_all_passed": true
+    },
+    "behavioral_probe_bundle_v0": {
+      "controlled_perturbation_assay": true,
+      "acceptance_all_passed": true
+    },
+    "behavioral_response_window_calibration_v0": {
+      "fixed_window_and_natural_timescale_transects": true,
+      "acceptance_all_passed": true
+    },
+    "response_assay_contract_hpc_1465448": {
+      "provenance_receipt_retained": true,
+      "acceptance_all_passed": true
+    }
+  },
+  "manifest_identity": {
+    "artifact_count": 42,
+    "result_bundle_hash": "b2772a4dc0694153111dc4bd17104dc5ce467b19899d5d509b88adb5a17fd918",
+    "source_bundle_hash": "2084b4ca84f2d06db6cfbbbef51632ebcc68347ec9766bef95712018be56b461",
+    "bundle_hash": "f1d3dbbf051d87e298a53acc418e736b184ba631a56dfb645bf13c42d8008b4a"
+  },
+  "public_boundaries": {
+    "internal_result_bundles_included": false,
+    "may_update_evidence": false,
+    "may_update_wisdom_db": false
+  }
+}

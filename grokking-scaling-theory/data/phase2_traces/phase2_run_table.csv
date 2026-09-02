@@ -1,0 +1,19 @@
+modulus,arch,seed,weight_decay,learning_rate,train_fraction,batch_size,steps_per_epoch,budget_epochs,grokking_epoch,is_censored,n_train,n_val,n_logged_examples,checkpoint_every,n_checkpoints,final_val_acc,trace_path,notes
+59,mlp,0,1.0,0.001,0.45,1566,1,40000,4040,False,1566,1915,1566,20,304,99.58224296569824,data\phase2_traces\trace_mlp_p59_s0.npz,grokked at epoch 4040; logged to 6060
+59,residual,0,1.0,0.001,0.45,1566,1,40000,3000,False,1566,1915,1566,20,226,99.47780966758728,data\phase2_traces\trace_residual_p59_s0.npz,grokked at epoch 3000; logged to 4500
+59,mlp,1,1.0,0.001,0.45,1566,1,40000,4300,False,1566,1915,1566,20,323,99.7389018535614,data\phase2_traces\trace_mlp_p59_s1.npz,grokked at epoch 4300; logged to 6440
+59,mlp,2,1.0,0.001,0.45,1566,1,40000,4960,False,1566,1915,1566,20,373,99.94778037071228,data\phase2_traces\trace_mlp_p59_s2.npz,grokked at epoch 4960; logged to 7440
+59,residual,1,1.0,0.001,0.45,1566,1,40000,3800,False,1566,1915,1566,20,286,99.89556074142456,data\phase2_traces\trace_residual_p59_s1.npz,grokked at epoch 3800; logged to 5700
+59,residual,2,1.0,0.001,0.45,1566,1,40000,3200,False,1566,1915,1566,20,241,100.0,data\phase2_traces\trace_residual_p59_s2.npz,grokked at epoch 3200; logged to 4800
+97,mlp,0,1.0,0.001,0.45,4234,1,40000,3000,False,4234,5175,2000,20,226,100.0,data\phase2_traces\trace_mlp_p97_s0.npz,grokked at epoch 3000; logged to 4500
+97,mlp,1,1.0,0.001,0.45,4234,1,40000,2420,False,4234,5175,2000,20,182,99.98067617416382,data\phase2_traces\trace_mlp_p97_s1.npz,grokked at epoch 2420; logged to 3620
+97,mlp,2,1.0,0.001,0.45,4234,1,40000,2560,False,4234,5175,2000,20,193,100.0,data\phase2_traces\trace_mlp_p97_s2.npz,grokked at epoch 2560; logged to 3840
+97,residual,0,1.0,0.001,0.45,4234,1,40000,2840,False,4234,5175,2000,20,214,100.0,data\phase2_traces\trace_residual_p97_s0.npz,grokked at epoch 2840; logged to 4260
+97,residual,1,1.0,0.001,0.45,4234,1,40000,2700,False,4234,5175,2000,20,203,99.98067617416382,data\phase2_traces\trace_residual_p97_s1.npz,grokked at epoch 2700; logged to 4040
+97,residual,2,1.0,0.001,0.45,4234,1,40000,2420,False,4234,5175,2000,20,182,99.98067617416382,data\phase2_traces\trace_residual_p97_s2.npz,grokked at epoch 2420; logged to 3620
+113,mlp,0,1.0,0.001,0.45,5746,1,40000,2220,False,5746,7023,2000,20,167,99.98576045036316,data\phase2_traces\trace_mlp_p113_s0.npz,grokked at epoch 2220; logged to 3320
+113,mlp,1,1.0,0.001,0.45,5746,1,40000,2160,False,5746,7023,2000,20,163,100.0,data\phase2_traces\trace_mlp_p113_s1.npz,grokked at epoch 2160; logged to 3240
+113,mlp,2,1.0,0.001,0.45,5746,1,40000,2000,False,5746,7023,2000,20,151,99.98576045036316,data\phase2_traces\trace_mlp_p113_s2.npz,grokked at epoch 2000; logged to 3000
+113,residual,0,1.0,0.001,0.45,5746,1,40000,2300,False,5746,7023,2000,20,173,100.0,data\phase2_traces\trace_residual_p113_s0.npz,grokked at epoch 2300; logged to 3440
+113,residual,1,1.0,0.001,0.45,5746,1,40000,2200,False,5746,7023,2000,20,166,100.0,data\phase2_traces\trace_residual_p113_s1.npz,grokked at epoch 2200; logged to 3300
+113,residual,2,1.0,0.001,0.45,5746,1,40000,2440,False,5746,7023,2000,20,184,100.0,data\phase2_traces\trace_residual_p113_s2.npz,grokked at epoch 2440; logged to 3660

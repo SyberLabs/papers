@@ -1,0 +1,92 @@
+{
+  "generated": "2026-06-15 21:40:03 UTC",
+  "model": "baseline",
+  "n_agents": 100000,
+  "seed": 0,
+  "h1": {
+    "verdict": "H1 DIRECTION-ONLY (threshold claim UNSUPPORTED)",
+    "supported": false,
+    "detail": "PC reduces intervention more steeply than SC at EVERY interpretive-capacity level, with no crossover. H1's qualitative direction (PC is the stronger brake) holds, but its central claim \u2014 that this advantage is specific to LOW capacity, below a threshold \u2014 is unsupported: there is no threshold and the advantage does not vanish (or even grows) as capacity rises.",
+    "threshold_intervention": null,
+    "threshold_expected_harm": null
+  },
+  "baseline_metrics": {
+    "expected_harm": {
+      "estimate": 0.06348712069875104,
+      "ci_lo": 0.06313481544192706,
+      "ci_hi": 0.06382875778706106
+    },
+    "encounter_rate": {
+      "estimate": 0.5004125670548103,
+      "ci_lo": 0.4991626335673872,
+      "ci_hi": 0.5016934898791996
+    },
+    "intervention_rate": {
+      "estimate": 0.00099,
+      "ci_lo": 0.00080811619680416,
+      "ci_hi": 0.001190351452546551
+    },
+    "excavation_rate": {
+      "estimate": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.0
+    },
+    "avoidance_rate": {
+      "estimate": 0.5315,
+      "ci_lo": 0.5283165665122257,
+      "ci_hi": 0.5346221705954622
+    },
+    "preservation_rate": {
+      "estimate": 0.05481,
+      "ci_lo": 0.05343311660454784,
+      "ci_hi": 0.0561595240305122
+    },
+    "mean_hesitation_proxy": {
+      "estimate": 0.5007066357137215,
+      "ci_lo": 0.49959270999008537,
+      "ci_hi": 0.5017358968684628
+    },
+    "mystery_to_curiosity_index": {
+      "estimate": 0.004180018283417557,
+      "ci_lo": -0.0021083112902293664,
+      "ci_hi": 0.010286343676671281
+    },
+    "prestige_inversion_index": {
+      "estimate": -0.6596836413359269,
+      "ci_lo": -0.6628185377481729,
+      "ci_hi": -0.6564174809442475
+    },
+    "behavioral_degradation_gradient": {
+      "estimate": 0.02731678707077852,
+      "ci_lo": 0.02604130296923259,
+      "ci_hi": 0.02853366742790014
+    }
+  },
+  "sensitivity_top5": [
+    {
+      "variable": "repository_severity",
+      "ST": 0.546037657735072,
+      "S1": 0.39055428918714
+    },
+    {
+      "variable": "phenomenological_caution",
+      "ST": 0.16403811589770917,
+      "S1": 0.09960682772033344
+    },
+    {
+      "variable": "accessibility",
+      "ST": 0.15767270775145198,
+      "S1": 0.09868631469042131
+    },
+    {
+      "variable": "visibility",
+      "ST": 0.15220559197338526,
+      "S1": 0.09631467038467899
+    },
+    {
+      "variable": "economic_pressure",
+      "ST": 0.06128838193335368,
+      "S1": 0.03323463080817463
+    }
+  ]
+}

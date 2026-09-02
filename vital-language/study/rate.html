@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vital Language — Blind Rating</title>
+<style>
+  :root { --bg:#16161a; --panel:#1f1f26; --ink:#e8e8ea; --mut:#9a9aa6; --acc:#7aa2f7; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:15px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;
+         background:var(--bg); color:var(--ink); }
+  header { padding:14px 22px; background:var(--panel); position:sticky; top:0;
+           display:flex; gap:18px; align-items:center; border-bottom:1px solid #2c2c36; }
+  header h1 { font-size:16px; margin:0; font-weight:600; }
+  #prog { color:var(--mut); font-size:13px; }
+  .wrap { max-width:1200px; margin:0 auto; padding:22px; }
+  .setup input { background:#0e0e12; color:var(--ink); border:1px solid #33333f;
+                 border-radius:6px; padding:8px 10px; font-size:14px; }
+  .btn { background:var(--acc); color:#0b0b0f; border:0; border-radius:6px;
+         padding:9px 16px; font-weight:600; cursor:pointer; font-size:14px; }
+  .btn.ghost { background:#2a2a33; color:var(--ink); }
+  .cat { color:var(--mut); font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin-top:12px; }
+  .card { background:var(--panel); border:1px solid #2c2c36; border-radius:10px; padding:16px; }
+  .card.alive { border-color:var(--acc); box-shadow:0 0 0 1px var(--acc); }
+  .ptext { white-space:pre-wrap; max-height:320px; overflow:auto; font-size:14px;
+           background:#0e0e12; border-radius:7px; padding:12px; margin-bottom:12px; }
+  .dim { display:grid; grid-template-columns:130px 1fr 26px; align-items:center; gap:8px; margin:5px 0; }
+  .dim label { color:var(--mut); font-size:12.5px; }
+  .dim output { font-variant-numeric:tabular-nums; color:var(--acc); text-align:right; }
+  input[type=range] { width:100%; }
+  .alivepick { margin-top:8px; }
+  .alivepick button { width:100%; }
+  footer { display:flex; justify-content:space-between; margin-top:22px; }
+  .hint { color:var(--mut); font-size:13px; }
+  .done { text-align:center; padding:60px 20px; }
+  code { background:#0e0e12; padding:2px 6px; border-radius:4px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Vital Language — Blind Rating</h1>
+  <span id="prog"></span>
+</header>
+<div class="wrap" id="app"></div>
+
+<script>
+const DIMS = [
+  ["vitality","Vitality — does the language feel alive, not inert?"],
+  ["originality","Originality"],
+  ["coherence","Coherence / legibility"],
+  ["reread","Desire to reread"],
+  ["interiority","Felt interiority"],
+  ["resonance","Emotional resonance"],
+  ["stimulation","Cognitive stimulation"],
+  ["artificiality","Artificiality (high = feels machine-made)"],
+];
+let MANIFEST=null, idx=0, rater="", ratings={};
+
+const app = document.getElementById("app");
+const prog = document.getElementById("prog");
+
+function showSetup(){
+  app.innerHTML = `
+    <div class="setup">
+      <p class="hint">Load <code>manifest.json</code>, enter a rater id, and rate each passage.
+        Conditions are hidden. When done, you'll download <code>ratings_&lt;id&gt;.json</code>.</p>
+      <p><input type="file" id="file" accept=".json"></p>
+      <p><input id="rid" placeholder="rater id (e.g. r01)" /></p>
+      <p><button class="btn" id="start" disabled>Start</button></p>
+      <p class="hint" id="loaded"></p>
+    </div>`;
+  document.getElementById("file").onchange = (e)=>{
+    const fr=new FileReader();
+    fr.onload=()=>{ MANIFEST=JSON.parse(fr.result);
+      document.getElementById("loaded").textContent =
+        `loaded ${MANIFEST.items.length} items`;
+      document.getElementById("start").disabled=false; };
+    fr.readAsText(e.target.files[0]);
+  };
+  document.getElementById("start").onclick = ()=>{
+    rater = (document.getElementById("rid").value||"anon").trim();
+    idx=0; ratings={}; renderItem();
+  };
+}
+
+function ensure(uid){
+  if(!ratings[uid]) ratings[uid] = {scores:{}, alive:false};
+  return ratings[uid];
+}
+
+function renderItem(){
+  if(idx>=MANIFEST.items.length) return showDone();
+  const it = MANIFEST.items[idx];
+  prog.textContent = `item ${idx+1} / ${MANIFEST.items.length}`;
+  app.innerHTML = `<div class="cat">${it.category}</div>
+    <p class="hint">Rate each passage 0–100. Then mark the ONE that feels most alive.</p>
+    <div class="cards" id="cards"></div>
+    <footer>
+      <button class="btn ghost" id="back">← Back</button>
+      <span class="hint">all dimensions default to 50; adjust as needed</span>
+      <button class="btn" id="next">Next →</button>
+    </footer>`;
+  const cards = document.getElementById("cards");
+  it.passages.forEach((p,i)=>{
+    const r = ensure(p.uid);
+    const card = document.createElement("div");
+    card.className = "card" + (r.alive?" alive":"");
+    card.id = "card_"+p.uid;
+    let dimHtml = DIMS.map(([k,lab])=>{
+      const v = r.scores[k]??50;
+      return `<div class="dim"><label title="${lab}">${lab.split(" —")[0].split(" (")[0]}</label>
+        <input type="range" min="0" max="100" value="${v}" data-uid="${p.uid}" data-k="${k}">
+        <output>${v}</output></div>`;
+    }).join("");
+    card.innerHTML = `<div class="ptext">${escapeHtml(p.text)}</div>${dimHtml}
+      <div class="alivepick"><button class="btn ghost" data-alive="${p.uid}">
+        ${r.alive?"✓ most alive":"mark most alive"}</button></div>`;
+    cards.appendChild(card);
+  });
+  cards.querySelectorAll("input[type=range]").forEach(inp=>{
+    inp.oninput = ()=>{ inp.nextElementSibling.textContent=inp.value;
+      ensure(inp.dataset.uid).scores[inp.dataset.k]=+inp.value; };
+  });
+  cards.querySelectorAll("button[data-alive]").forEach(b=>{
+    b.onclick = ()=>{ const uid=b.dataset.alive;
+      it.passages.forEach(p=>{ ensure(p.uid).alive = (p.uid===uid); });
+      renderItem(); };
+  });
+  document.getElementById("next").onclick = ()=>{ idx++; renderItem(); };
+  document.getElementById("back").onclick = ()=>{ if(idx>0){idx--; renderItem();} };
+}
+
+function showDone(){
+  prog.textContent = "complete";
+  const blob = new Blob([JSON.stringify({rater, ratings}, null, 2)],
+                        {type:"application/json"});
+  const url = URL.createObjectURL(blob);
+  app.innerHTML = `<div class="done"><h2>Thank you.</h2>
+    <p class="hint">${Object.keys(ratings).length} passages rated.</p>
+    <p><a class="btn" href="${url}" download="ratings_${rater}.json">Download ratings</a></p>
+    <p><button class="btn ghost" id="re">Edit / review</button></p></div>`;
+  document.getElementById("re").onclick=()=>{ idx=0; renderItem(); };
+}
+
+function escapeHtml(s){ return s.replace(/[&<>]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+
+showSetup();
+</script>
+</body>
+</html>

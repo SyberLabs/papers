@@ -1,0 +1,77 @@
+﻿{
+  "schema_version": "tok_dynamic_signal_scout_v0",
+  "production_effect": "none_research_only",
+  "scout_id": "dss_bdf5149479c15502",
+  "generated_at": "2026-06-19T00:02:30.986285Z",
+  "backend": "heuristic_v0",
+  "reserved_backends": [
+    "liquid_neural_network_candidate"
+  ],
+  "source_dyndiv_id": "dyndiv_generated_boiler_capacity_loss_prior_001",
+  "series": {
+    "series_id": "obs_csv_temp_reviewed_001",
+    "variable_id": "v_interior_temp",
+    "variable_name": "interior_temperature_c",
+    "unit": "degC",
+    "direction_of_harm": "lower_is_worse",
+    "review_status": "human_confirmed"
+  },
+  "candidate_signatures": [
+    {
+      "signature": "smooth_decay",
+      "score": 0.77,
+      "basis": "Series moves monotonically in one direction."
+    },
+    {
+      "signature": "regime_change_candidate",
+      "score": 0.53,
+      "basis": "Change-rate variation suggests a possible regime or omitted-influence shift."
+    }
+  ],
+  "diagnostics": {
+    "point_count": 4,
+    "start_value": 20.0,
+    "end_value": 16.8,
+    "total_change": -3.2,
+    "step_deltas": [
+      -0.8,
+      -1.5,
+      -0.9
+    ],
+    "mean_abs_step": 1.066667,
+    "max_abs_step": 1.5,
+    "max_to_mean_step_ratio": 1.40625,
+    "sign_change_count": 0,
+    "second_deltas": [
+      -0.7,
+      0.6
+    ]
+  },
+  "recommended_review_hooks": [
+    "compare_with_dyndiv_residual_audit",
+    "consider_boundary_breach_if_signature_conflicts_with_template",
+    "route_to_causal_status_ladder_only_after_human_review"
+  ],
+  "forbidden_actions": [
+    "auto_infer_causation",
+    "auto_confirm_dynamic",
+    "auto_update_dyndiv",
+    "auto_update_evidence",
+    "wisdom_db_update",
+    "bayesian_count_update",
+    "production_query_effect"
+  ],
+  "boundary": {
+    "scout_only": true,
+    "candidate_signature_not_causation": true,
+    "candidate_signature_not_evidence": true,
+    "may_update_dyndiv": false,
+    "may_update_evidence": false,
+    "may_update_learning": false,
+    "may_update_production": false
+  },
+  "source_paths": {
+    "dyndiv": "research/demo_freeze_v0/generated/demo_session/dyndiv/boiler_capacity_loss_csv_reviewed_dyndiv_v0.json"
+  }
+}
+

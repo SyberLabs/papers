@@ -1,0 +1,74 @@
+﻿{
+  "schema_version": "tok_causal_status_assessment_v0",
+  "production_effect": "none_research_only",
+  "assessment_id": "boiler_causal_status_assessment_v0",
+  "generated_at": "2026-06-19T00:02:30.979177Z",
+  "primary_status": "contradicted",
+  "status_ladder": [
+    "observed_only",
+    "correlated_observation",
+    "candidate_mechanism",
+    "causal_hypothesis",
+    "intervention_hypothesis",
+    "locally_supported",
+    "contradicted",
+    "boundary_breached",
+    "suspended_unknown_dynamic"
+  ],
+  "causation_types_under_review": [
+    "mechanical_causation"
+  ],
+  "association_summary": {
+    "test_count": 0,
+    "has_statistical_association": false,
+    "tests": []
+  },
+  "mechanism_summary": {
+    "claim_count": 1,
+    "mechanism_strength": "plausible_unverified",
+    "claims": [
+      {
+        "claim_id": "mech_boiler_capacity_loss_pathway_v0",
+        "causation_type": "mechanical_causation",
+        "description": "A failed boiler can mechanically reduce heat delivery, which can lower interior temperature.",
+        "status": "plausible_unverified",
+        "evidence_basis": "HLMG damage edge plus capacity-loss DYNDIV template; not sufficient by itself for causal confirmation."
+      }
+    ]
+  },
+  "intervention_summary": {},
+  "evidence_transition_summary": {
+    "contract_result": "failed",
+    "transition_recommendation": "do_not_transition",
+    "objective_type": "prediction"
+  },
+  "boundary_breach_signal": {},
+  "reasons": [
+    "The declared evidence-transition contract failed under its own criteria."
+  ],
+  "allowed_next_steps": [
+    "review_boundary",
+    "suspend_or_revise_hypothesis"
+  ],
+  "forbidden_actions": [
+    "auto_infer_causation_from_correlation",
+    "auto_blame_intervention",
+    "auto_confirm_unknown_factor",
+    "wisdom_db_update",
+    "bayesian_count_update",
+    "hlmg_status_promotion",
+    "production_query_effect"
+  ],
+  "source_paths": {
+    "request": "research/causal_status_ladder_v0/requests/boiler_causal_status_assessment_request_v0.json"
+  },
+  "boundary": {
+    "assessment_only": true,
+    "correlation_is_not_causation": true,
+    "unknown_dynamic_is_not_confirmed_cause": true,
+    "may_update_evidence": false,
+    "may_update_learning": false,
+    "may_update_production": false
+  }
+}
+

@@ -1,0 +1,148 @@
+{
+  "variables": {
+    "marker_clarity": {
+      "kind": "beta",
+      "low": 0.0,
+      "high": 1.0,
+      "mean": 0.5,
+      "std": 0.15,
+      "a": 5.0,
+      "b": 2.0,
+      "value": 0.5,
+      "components": null,
+      "weights": null,
+      "clip": [
+        0.0,
+        1.0
+      ]
+    },
+    "phenomenological_caution": {
+      "kind": "beta",
+      "low": 0.0,
+      "high": 1.0,
+      "mean": 0.5,
+      "std": 0.15,
+      "a": 3.0,
+      "b": 3.0,
+      "value": 0.5,
+      "components": null,
+      "weights": null,
+      "clip": [
+        0.0,
+        1.0
+      ]
+    },
+    "visibility": {
+      "kind": "beta",
+      "low": 0.0,
+      "high": 1.0,
+      "mean": 0.5,
+      "std": 0.15,
+      "a": 4.0,
+      "b": 2.0,
+      "value": 0.5,
+      "components": null,
+      "weights": null,
+      "clip": [
+        0.0,
+        1.0
+      ]
+    },
+    "repository_severity": {
+      "kind": "beta",
+      "low": 0.0,
+      "high": 1.0,
+      "mean": 0.5,
+      "std": 0.15,
+      "a": 5.0,
+      "b": 2.0,
+      "value": 0.5,
+      "components": null,
+      "weights": null,
+      "clip": [
+        0.0,
+        1.0
+      ]
+    },
+    "accessibility": {
+      "kind": "uniform",
+      "low": 0.0,
+      "high": 1.0,
+      "mean": 0.5,
+      "std": 0.15,
+      "a": 2.0,
+      "b": 2.0,
+      "value": 0.5,
+      "components": null,
+      "weights": null,
+      "clip": [
+        0.0,
+        1.0
+      ]
+    },
+    "resource_attractiveness": {
+      "kind": "uniform",
+      "low": 0.0,
+      "high": 1.0,
+      "mean": 0.5,
+      "std": 0.15,
+      "a": 2.0,
+      "b": 2.0,
+      "value": 0.5,
+      "components": null,
+      "weights": null,
+      "clip": [
+        0.0,
+        1.0
+      ]
+    },
+    "artificial_intentionality": {
+      "kind": "uniform",
+      "low": 0.0,
+      "high": 1.0,
+      "mean": 0.5,
+      "std": 0.15,
+      "a": 2.0,
+      "b": 2.0,
+      "value": 0.5,
+      "components": null,
+      "weights": null,
+      "clip": [
+        0.0,
+        1.0
+      ]
+    },
+    "prestige_risk": {
+      "kind": "uniform",
+      "low": 0.0,
+      "high": 1.0,
+      "mean": 0.5,
+      "std": 0.15,
+      "a": 2.0,
+      "b": 2.0,
+      "value": 0.5,
+      "components": null,
+      "weights": null,
+      "clip": [
+        0.0,
+        1.0
+      ]
+    },
+    "historical_memory": {
+      "kind": "uniform",
+      "low": 0.0,
+      "high": 1.0,
+      "mean": 0.5,
+      "std": 0.15,
+      "a": 2.0,
+      "b": 2.0,
+      "value": 0.5,
+      "components": null,
+      "weights": null,
+      "clip": [
+        0.0,
+        1.0
+      ]
+    }
+  }
+}

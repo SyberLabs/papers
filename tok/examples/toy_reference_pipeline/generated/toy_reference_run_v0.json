@@ -1,0 +1,124 @@
+{
+  "artifacts": {
+    "causal_status_assessment": {
+      "artifact_id": "toy_causal_status_assessment_v0",
+      "artifact_type": "causal_status_assessment",
+      "does_not_support": [
+        "The mechanism is true.",
+        "The observation is evidence.",
+        "A production update or intervention is authorized."
+      ],
+      "does_support": [
+        "A source-bounded candidate mechanism can be represented.",
+        "Observation and evidence status can remain separated."
+      ],
+      "production_effect": "none_research_only",
+      "status": "candidate_mechanism_unconfirmed"
+    },
+    "dynamic_divergence_trace": {
+      "artifact_id": "toy_boiler_dyndiv_trace_v0",
+      "artifact_type": "dynamic_divergence_trace",
+      "trace_boundary": "toy_trace_not_empirical_claim",
+      "windows": [
+        {
+          "candidate_signal": "slower_than_expected_recovery",
+          "evidence_status": "not_evidence",
+          "interpretation": "consistent_with_capacity_loss_or_sensor_bias",
+          "window_id": "stable_demand_lag_window"
+        }
+      ]
+    },
+    "dynamics_binding": {
+      "artifact_id": "toy_capacity_loss_binding_v0",
+      "artifact_type": "dynamics_template_binding",
+      "bound_variables": {
+        "candidate_parameter": "effective_heat_transfer_capacity",
+        "input_signal": "demand",
+        "state_proxy": "outlet_temperature"
+      },
+      "may_update_evidence": false,
+      "status": "candidate_not_evidence",
+      "template": "first_order_capacity_loss_or_sensor_bias"
+    },
+    "evidence_transition_proposal": {
+      "artifact_id": "toy_evidence_transition_proposal_v0",
+      "artifact_type": "evidence_transition_proposal",
+      "human_gate": "required_not_satisfied",
+      "may_update_evidence": false,
+      "may_update_wisdom_db": false,
+      "production_effect": "none_research_only",
+      "proposal_status": "not_applied",
+      "rationale": "The toy trace may motivate review, but it does not authorize an evidence update or an intervention recommendation.",
+      "requested_transition": "seen_data_to_candidate_evidence",
+      "update_effect": {
+        "applied": false
+      }
+    },
+    "mechanism_graph": {
+      "artifact_id": "toy_boiler_mechanism_graph_v0",
+      "artifact_type": "mechanism_graph",
+      "claim_boundary": "candidate_graph_not_causal_truth",
+      "edges": [
+        {
+          "from": "demand",
+          "relation": "conditions",
+          "to": "outlet_temperature"
+        },
+        {
+          "from": "sensor_calibration",
+          "relation": "may_bias_observation",
+          "to": "outlet_temperature"
+        },
+        {
+          "from": "heat_transfer_capacity",
+          "relation": "may_reduce_response",
+          "to": "outlet_temperature"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "demand",
+          "kind": "context_signal"
+        },
+        {
+          "id": "sensor_calibration",
+          "kind": "candidate_disturbance"
+        },
+        {
+          "id": "heat_transfer_capacity",
+          "kind": "candidate_mechanism"
+        },
+        {
+          "id": "outlet_temperature",
+          "kind": "observed_signal"
+        }
+      ],
+      "source_boundary": "synthetic_public_toy_example",
+      "status": "candidate_mechanism_hypothesis"
+    },
+    "observation_registry": {
+      "artifact_id": "toy_observation_registry_v0",
+      "artifact_type": "observation_registry",
+      "observations": [
+        {
+          "evidence_status": "not_evidence",
+          "observation_id": "toy_temp_profile_review_v0",
+          "review_state": "human_review_required",
+          "source": "synthetic_public_toy_profile",
+          "summary": "Outlet temperature appears low during stable demand."
+        }
+      ],
+      "registry_status": "reviewed_seen_data"
+    }
+  },
+  "narrative": "A facilities team reports that boiler outlet temperature is drifting below target during stable demand. Recent maintenance notes mention a possible sensor recalibration, but operators also suspect capacity loss.",
+  "public_scope": "synthetic_public_reference_example",
+  "run_id": "toy_reference_pipeline_v0",
+  "safety_boundaries": {
+    "candidate_not_evidence": true,
+    "may_update_evidence": false,
+    "may_update_wisdom_db": false,
+    "observations_are_seen_data": true,
+    "production_effect": "none_research_only"
+  }
+}

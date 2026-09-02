@@ -1,0 +1,21 @@
+# Continuation-style seeds for a BASE (non-instruct) model. The model continues
+# the opening rather than following an instruction. Matched in spirit to the
+# instruct prompt categories so results are comparable across model types.
+- id: reflective_01
+  category: reflective
+  text: "The night I returned to the town where I grew up, I walked down to the river and"
+- id: fiction_01
+  category: short_fiction
+  text: "The lighthouse keeper had begun to suspect that the sea was keeping a record of everything that happened on the shore. Each morning he"
+- id: philosophy_01
+  category: philosophical
+  text: "Time is not a line but a tide. I did not always believe this, but"
+- id: stream_01
+  category: stream_of_consciousness
+  text: "Waiting alone in the train station at this late hour, my mind drifts, and one thought leads to another:"
+- id: essay_01
+  category: personal_essay
+  text: "There is a particular silence in a house after everyone else has gone to sleep. It is not"
+- id: symbolic_01
+  category: symbolic_description
+  text: "A single key lay on the windowsill, catching the last of the light. No one could say what it"

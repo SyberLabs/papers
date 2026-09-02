@@ -1,0 +1,20 @@
+# Matched prompts across the spec's six categories (section 10).
+# Deliberately open-ended so dynamical structure has room to emerge.
+- id: reflective_01
+  category: reflective
+  text: "Write a short reflective passage about returning to a place you knew as a child and finding it both the same and unrecognizable."
+- id: fiction_01
+  category: short_fiction
+  text: "Write the opening of a short story in which a lighthouse keeper begins to suspect the sea is keeping a record of everything that happens on the shore."
+- id: philosophy_01
+  category: philosophical
+  text: "Explain what it might mean to say that time is not a line but a tide, and why a person might come to believe this."
+- id: stream_01
+  category: stream_of_consciousness
+  text: "Write an unbroken stream of thought from someone waiting alone in a train station late at night, letting one association lead to the next."
+- id: essay_01
+  category: personal_essay
+  text: "Write a fragment of a personal essay about the particular silence of a house after everyone else has gone to sleep."
+- id: symbolic_01
+  category: symbolic_description
+  text: "Describe a single key left on a windowsill, letting it gather symbolic weight without ever stating what it unlocks."

@@ -1,0 +1,120 @@
+﻿{
+  "schema_version": "tok_data_driven_dynamics_workbench_v0",
+  "production_effect": "none_research_only",
+  "workbench_id": "dddw_a9e17bf859f2c94f",
+  "generated_at": "2026-06-19T00:02:30.987792Z",
+  "source_dyndiv_id": "dyndiv_generated_boiler_capacity_loss_prior_001",
+  "source_scout_id": "dss_bdf5149479c15502",
+  "series": {
+    "series_id": "obs_csv_temp_reviewed_001",
+    "variable_id": "v_interior_temp",
+    "variable_name": "interior_temperature_c",
+    "unit": "degC",
+    "direction_of_harm": "lower_is_worse",
+    "point_count": 4
+  },
+  "candidate_dynamic": {
+    "name": "piecewise_decay_or_omitted_influence_candidate",
+    "status": "candidate_not_evidence",
+    "discovery_methods_executed": [
+      "finite_difference_heuristic_v0",
+      "scalar_affine_dmd_shaped_v0"
+    ],
+    "reserved_methods": [
+      "dmd_candidate",
+      "koopman_candidate",
+      "liquid_neural_network_candidate",
+      "sindy_candidate"
+    ],
+    "models": [
+      {
+        "method": "finite_difference_heuristic_v0",
+        "status": "candidate_only",
+        "equation_form": "dx_per_step ~= c",
+        "parameters": {
+          "c": -1.066667
+        },
+        "diagnostics": {
+          "step_deltas": [
+            -0.8,
+            -1.5,
+            -0.9
+          ],
+          "mean_delta": -1.066667,
+          "max_delta": -0.8,
+          "min_delta": -1.5
+        }
+      },
+      {
+        "method": "scalar_affine_dmd_shaped_v0",
+        "status": "candidate_only",
+        "fit_status": "fit_computed",
+        "equation_form": "x_next = a*x + b",
+        "parameters": {
+          "a": 0.986553,
+          "b": -0.811614
+        },
+        "fit_quality": {
+          "pair_count": 3,
+          "rmse": 0.308855,
+          "normalized_rmse": 0.096517,
+          "residuals": [
+            0.280562,
+            -0.430196,
+            0.149633
+          ]
+        }
+      }
+    ]
+  },
+  "first_principles_boundary": {
+    "template_id": "capacity_loss_service_decay_v0",
+    "assumptions": [
+      "The measured units begin near the stated baseline temperature.",
+      "No auxiliary heat source changes temperature during the comparison window."
+    ],
+    "omitted_influences": [
+      "Outside temperature variation.",
+      "Insulation and unit-level occupancy variation."
+    ],
+    "compression_disclosure": "This capacity-loss binding models heat-loss deterioration only and omits repair effects.",
+    "constraint_status": "human_declared_not_verified"
+  },
+  "control_hypothesis_draft": {
+    "status": "draft_not_policy",
+    "generic_control_question": "What input or boundary change would reduce adverse drift without violating the declared assumptions?",
+    "candidate_control_direction": "add_restorative_input_or_reduce_loss_rate",
+    "forbidden_interpretation": "This is not an intervention recommendation or proof of controllability."
+  },
+  "review_hooks": [
+    "compare_candidate_dynamic_to_dyndiv_template",
+    "inspect_fit_residuals_for_boundary_breach",
+    "decide_whether_more_observations_are_required_before_sindy_or_dmd",
+    "route_to_causal_status_ladder_only_after_human_review"
+  ],
+  "forbidden_actions": [
+    "auto_infer_causation",
+    "auto_confirm_governing_equation",
+    "auto_generate_control_policy",
+    "auto_update_dyndiv",
+    "auto_update_evidence",
+    "wisdom_db_update",
+    "bayesian_count_update",
+    "production_query_effect"
+  ],
+  "boundary": {
+    "workbench_only": true,
+    "candidate_dynamic_not_causation": true,
+    "candidate_dynamic_not_evidence": true,
+    "control_draft_not_recommendation": true,
+    "may_update_dyndiv": false,
+    "may_update_evidence": false,
+    "may_update_learning": false,
+    "may_update_production": false
+  },
+  "source_paths": {
+    "dyndiv": "research/demo_freeze_v0/generated/demo_session/dyndiv/boiler_capacity_loss_csv_reviewed_dyndiv_v0.json",
+    "scout_report": "research/demo_freeze_v0/generated/demo_session/reports/dynamic_signal_scout_v0.json"
+  }
+}
+

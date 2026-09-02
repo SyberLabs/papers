@@ -1,0 +1,24 @@
+﻿{
+  "adapter_version": "tok_observation_adapter_v0",
+  "request_id": "boiler_temperature_csv_adapter_001",
+  "production_effect": "none_research_only",
+  "source_type": "reviewed_csv",
+  "review_status": "human_confirmed",
+  "series_profiles": [
+    {
+      "series_id": "obs_csv_temp_reviewed_001",
+      "rows_read": 4,
+      "rows_accepted": 4,
+      "missing_timestamp_rows": 0,
+      "missing_value_rows": 0,
+      "invalid_value_rows": 0,
+      "duplicate_timestamps": [],
+      "timestamp_range": {
+        "start": "2026-05-27T18:00:00Z",
+        "end": "2026-05-27T21:00:00Z"
+      },
+      "warnings": []
+    }
+  ]
+}
+

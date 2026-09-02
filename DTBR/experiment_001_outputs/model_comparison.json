@@ -1,0 +1,42 @@
+{
+  "baseline": {
+    "verdict": "H1 DIRECTION-ONLY (threshold claim UNSUPPORTED)",
+    "threshold_intervention": null,
+    "low_ic_slope_pc": -0.2541,
+    "low_ic_slope_sc": -0.0457,
+    "low_ic_margin": 0.2084,
+    "high_ic_margin": 0.2084
+  },
+  "backfire": {
+    "verdict": "H1 DIRECTION-ONLY (threshold claim UNSUPPORTED)",
+    "threshold_intervention": null,
+    "low_ic_slope_pc": -0.2101,
+    "low_ic_slope_sc": -0.0653,
+    "low_ic_margin": 0.1448,
+    "high_ic_margin": 0.1946
+  },
+  "linear": {
+    "verdict": "H1 DIRECTION-ONLY (threshold claim UNSUPPORTED)",
+    "threshold_intervention": null,
+    "low_ic_slope_pc": -0.3592,
+    "low_ic_slope_sc": -0.0696,
+    "low_ic_margin": 0.2896,
+    "high_ic_margin": 0.1318
+  },
+  "backfire_strong": {
+    "verdict": "H1 DIRECTION-ONLY (threshold claim UNSUPPORTED)",
+    "threshold_intervention": null,
+    "low_ic_slope_pc": -0.2065,
+    "low_ic_slope_sc": -0.0744,
+    "low_ic_margin": 0.1321,
+    "high_ic_margin": 0.1427
+  },
+  "pc_brake_off": {
+    "verdict": "H1 FALSIFIED",
+    "threshold_intervention": null,
+    "low_ic_slope_pc": 0.1406,
+    "low_ic_slope_sc": -0.1411,
+    "low_ic_margin": -0.2817,
+    "high_ic_margin": -0.1434
+  }
+}

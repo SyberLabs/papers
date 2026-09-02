@@ -1,0 +1,21 @@
+﻿{
+  "schema_version": "tok_research_session_v0",
+  "production_effect": "none_research_only",
+  "session_id": "demo-freeze-v0-boiler-cockpit",
+  "title": "Demo Freeze v0 Boiler Research Cockpit",
+  "created_at": "2026-06-19T00:02:30.952070Z",
+  "status": "active",
+  "directories": {
+    "graphs": "graphs",
+    "bindings": "bindings",
+    "dyndiv": "dyndiv",
+    "observations": "observations",
+    "registry": "registry",
+    "reports": "reports"
+  },
+  "notes": [
+    "Demo Freeze v0 is a research-only cockpit replay.",
+    "No artifact in this session may update production memory, evidence, or learning."
+  ]
+}
+

@@ -1,0 +1,18 @@
+model: "Qwen/Qwen2.5-0.5B"     # BASE (non-instruct), raw-prompt continuation
+device: "cpu"
+seeds: [0, 1, 2]
+sampling:
+  temperature: 0.9
+  top_p: 0.95
+  top_k: 0
+  max_new_tokens: 250         # surprisal MFDFA valid at this length (R^2~0.97)
+  greedy: false
+modulation:
+  eps: 0.5
+  chaotic_map: "lorenz"
+  mask_mode: "topk_complement"
+  mask_topk: 50
+  every_k: 1
+  warmup: 8
+prompts_file: "prompts/prompts_base.yaml"
+out_dir: "outputs"

@@ -1,0 +1,56 @@
+{
+  "schema_version": "tok_demo_public_summary_v0",
+  "production_effect": "none_research_only",
+  "freeze_id": "demo_freeze_v0",
+  "session_id": "demo-freeze-v0-boiler-cockpit",
+  "public_release_note": "Sanitized public summary plus included replay session. Absolute local paths in replay artifacts were converted to repository-relative paths.",
+  "scope": {
+    "demo_track": "Interactive Epistemic Sandbox / research cockpit MVP",
+    "canonical_session": "research/demo_freeze_v0/generated/demo_session",
+    "primary_trace": "research/demo_freeze_v0/generated/demo_session/reports/cockpit_trace_v0.json",
+    "primary_replay_report": "research/demo_freeze_v0/generated/demo_session/reports/demo_replay_report_v0.json"
+  },
+  "claim_boundary": {
+    "supports": [
+      "local replay of graph, binding, DYNDIV, observation, registry, evidence-proposal, causal-status, triage, bridge, scout, and workbench artifacts",
+      "read-only cockpit trace over session artifacts",
+      "explicit no-production-effect demo for paper and cockpit development"
+    ],
+    "does_not_support": [
+      "production readiness",
+      "autonomous evidence transition",
+      "autonomous intervention recommendation",
+      "private benchmark browsing",
+      "wisdom-db or learning updates"
+    ]
+  },
+  "validation_summary": {
+    "failed_validation_count": 0,
+    "graph": "passed",
+    "prior_dyndiv": "passed",
+    "reviewed_dyndiv": "passed",
+    "registry": "passed",
+    "evidence_transition": "passed",
+    "causal_status": "passed",
+    "boundary_breach": "passed",
+    "observation_triage": "passed",
+    "triage_causal_bridge": "passed",
+    "dynamic_signal_scout": "passed",
+    "data_driven_workbench": "passed"
+  },
+  "key_results": {
+    "registry_evidence_status": "not_evidence",
+    "evidence_transition_recommendation": "do_not_transition",
+    "evidence_update_applied": false,
+    "causal_primary_status": "contradicted",
+    "workbench_candidate_status": "candidate_not_evidence",
+    "invalid_artifact_count": 0,
+    "may_update_wisdom_db": false
+  },
+  "public_boundaries": {
+    "private_benchmark_browsing": false,
+    "may_update_evidence": false,
+    "may_update_wisdom_db": false,
+    "production_effect": "none_research_only"
+  }
+}

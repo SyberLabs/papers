@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Local/generated workspace material
+logs/
+_analysis/
+*.zip
+attention.json
+scratch_*.json
+node_modules/
+dist/
+
+# Private benchmark material must not be published.
+private_ground_truth/
+**/private_ground_truth/
+*answer_key*
+*scorecard_private*
+
+# OS/editor files
+.DS_Store
+Thumbs.db

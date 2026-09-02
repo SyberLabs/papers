@@ -1,0 +1,45 @@
+# Moerman full-flora: GBIF regional pool + NAEB used/unused labels.
+#
+# Unlike live_naeb_nam.yaml (199/200 pre-enriched medicinal), this seeds an
+# unfiltered North American flora from GBIF and labels reward from NAEB Drug
+# records — the classic used-vs-available estimand (Moerman 1979).
+#
+# Requires data_external/naeb_src/ and data_external/duke_src/.
+# First run is network-heavy (GBIF region seed + OTL + GloBI bbox + Duke offline).
+seed: 12345
+output_dir: results/live_naeb_full
+
+data:
+  source: live
+  seed_mode: naeb_full
+  reward_source: naeb_use
+  cache_dir: data_cache_naeb_full
+  external_dir: data_external
+  n_species: 350            # regional GBIF flora cap (resolved taxa)
+  region:
+    name: north_america
+    min_lon: -170.0
+    min_lat: 15.0
+    max_lon: -52.0
+    max_lat: 72.0
+  seed_families: []
+
+manifold:
+  eco_edge_threshold: 0.10
+  bio_edge_threshold: 0.05
+  discovery_threshold: 0.05
+  # Natural sparsity: most regional species have no NAEB Drug record.
+  reward_top_frac: 1.0
+
+simulation:
+  budget: 50
+  n_replicates: 30
+  observation_noise: 0.05
+
+strategies:
+  - {name: random,       kind: random,       params: {epsilon: 1.0}}
+  - {name: phylogenetic, kind: phylogenetic, params: {epsilon: 0.08}}
+  - {name: sensory,      kind: sensory,      params: {epsilon: 0.08}}
+  - {name: ecological,   kind: ecological,   params: {epsilon: 0.08}}
+  - {name: social,       kind: social,       params: {n_agents: 8, transmission_prob: 0.4}}
+  - {name: cultural,     kind: cultural,     params: {epsilon: 0.05, learning_rate: 0.6}}

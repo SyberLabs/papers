@@ -1,0 +1,20 @@
+﻿\\documentclass[11pt]{article}
+\\usepackage[margin=1in]{geometry}
+\\usepackage{amsmath,amssymb,amsthm}
+\\usepackage{booktabs}
+\\usepackage{graphicx}
+\\usepackage{hyperref}
+\\usepackage{enumitem}
+\\usepackage{natbib}
+
+\\title{A Latent-Variable Effective Theory of Grokking in Modular Arithmetic}
+\\author{SyberLabs}
+\\date{}
+
+\\begin{document}
+\\maketitle
+
+\\begin{abstract}
+We propose that grokking---the delayed onset of generalization in neural networks---is
+a \\emph{two-stage} process: (1) rule formation, where representations become organized
+by task structure, and (2) deployment, where rule-structured representations become

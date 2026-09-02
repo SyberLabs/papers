@@ -1,0 +1,90 @@
+﻿{
+  "schema_version": "tok_demo_replay_report_v0",
+  "production_effect": "none_research_only",
+  "demo_id": "demo_freeze_v0",
+  "generated_at": "2026-06-19T00:02:30.988799Z",
+  "session_id": "demo-freeze-v0-boiler-cockpit",
+  "canonical_flow": [
+    "load_source_graph",
+    "inspect_candidate_binding",
+    "run_prior_dyndiv",
+    "attach_reviewed_csv_observations",
+    "register_seen_data_not_evidence",
+    "propose_evidence_transition",
+    "assess_causal_status",
+    "register_boundary_breach",
+    "triage_loose_context_observations",
+    "bridge_triage_to_causal_request_drafts",
+    "scout_dynamic_signal",
+    "discover_candidate_dynamic",
+    "build_read_only_cockpit_trace"
+  ],
+  "validation_summary": {
+    "graph": {
+      "status": "passed",
+      "errors": []
+    },
+    "prior_dyndiv": {
+      "status": "passed",
+      "errors": []
+    },
+    "reviewed_dyndiv": {
+      "status": "passed",
+      "errors": []
+    },
+    "registry": {
+      "status": "passed",
+      "errors": []
+    },
+    "evidence_transition": {
+      "status": "passed",
+      "errors": []
+    },
+    "causal_status": {
+      "status": "passed",
+      "errors": []
+    },
+    "boundary_breach": {
+      "status": "passed",
+      "errors": []
+    },
+    "observation_triage": {
+      "status": "passed",
+      "errors": []
+    },
+    "triage_causal_bridge": {
+      "status": "passed",
+      "errors": []
+    },
+    "dynamic_signal_scout": {
+      "status": "passed",
+      "errors": []
+    },
+    "data_driven_workbench": {
+      "status": "passed",
+      "errors": []
+    }
+  },
+  "key_results": {
+    "registry_record_id": "obsreg_abafb76bd714cf4d",
+    "registry_evidence_status": "not_evidence",
+    "evidence_transition_recommendation": "do_not_transition",
+    "evidence_update_applied": false,
+    "causal_primary_status": "contradicted",
+    "boundary_breach_status": "boundary_breached",
+    "triage_selected_count": 4,
+    "scout_signature_count": 2,
+    "workbench_candidate_status": "candidate_not_evidence",
+    "cockpit_invalid_artifact_count": 0
+  },
+  "demo_boundary": {
+    "research_only": true,
+    "no_networked_llm_call": true,
+    "private_benchmark_material_used": false,
+    "may_update_evidence": false,
+    "may_update_learning": false,
+    "may_update_wisdom_db": false,
+    "may_recommend_intervention": false
+  }
+}
+

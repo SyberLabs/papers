@@ -1,0 +1,103 @@
+﻿{
+  "schema_version": "tok_binding_suggestions_v0",
+  "production_effect": "none_research_only",
+  "graph_id": "hlmg_example_boiler_001",
+  "suggestion_count": 5,
+  "suggestions": [
+    {
+      "template_id": "capacity_loss_service_decay_v0",
+      "template_title": "Capacity Loss Service Decay",
+      "score": 18,
+      "candidate_status": "candidate_not_binding",
+      "compatible_edge_count": 1,
+      "admitted_edge_count": 1,
+      "runtime_status": "implemented_research_only",
+      "simulation_gate": "may_prepare_research_shadow_request",
+      "recommended_command": "binding inspect --graph <graph> --library <library> --template capacity_loss_service_decay_v0",
+      "reason": "Capacity Loss Service Decay is compatible with 1 edge(s) in this graph. This inspection is a pre-binding review, not a binding decision.",
+      "cautions": [],
+      "forbidden_inferences": [
+        "Do not treat a repair request as recovered capacity unless restoration is observed.",
+        "Do not conclude that capacity loss is the sole cause of measured degradation."
+      ]
+    },
+    {
+      "template_id": "balancing_response_correction_v0",
+      "template_title": "Balancing Response Correction",
+      "score": 17,
+      "candidate_status": "candidate_not_binding",
+      "compatible_edge_count": 1,
+      "admitted_edge_count": 1,
+      "runtime_status": "implemented_research_only",
+      "simulation_gate": "may_prepare_research_shadow_request",
+      "recommended_command": "binding inspect --graph <graph> --library <library> --template balancing_response_correction_v0",
+      "reason": "Balancing Response Correction is compatible with 1 edge(s) in this graph. This inspection is a pre-binding review, not a binding decision.",
+      "cautions": [
+        "A response activation edge alone cannot assert restorative effect; outcome evidence is required."
+      ],
+      "forbidden_inferences": [
+        "Do not convert attempted action into successful response.",
+        "Do not update graph or posterior evidence from assumed response gain."
+      ]
+    },
+    {
+      "template_id": "threshold_transition_v0",
+      "template_title": "Threshold Transition",
+      "score": 15,
+      "candidate_status": "candidate_not_binding",
+      "compatible_edge_count": 1,
+      "admitted_edge_count": 1,
+      "runtime_status": "not_implemented_shadow_spec",
+      "simulation_gate": "inspect_only",
+      "recommended_command": "binding inspect --graph <graph> --library <library> --template threshold_transition_v0",
+      "reason": "Threshold Transition is compatible with 1 edge(s) in this graph. This inspection is a pre-binding review, not a binding decision.",
+      "cautions": [],
+      "forbidden_inferences": [
+        "Do not infer a threshold merely from a sudden observed event without a registered comparison.",
+        "Do not declare an irreversible transition from a provisional model run."
+      ]
+    },
+    {
+      "template_id": "stock_depletion_by_consumption_v0",
+      "template_title": "Stock Depletion By Consumption",
+      "score": 15,
+      "candidate_status": "candidate_not_binding",
+      "compatible_edge_count": 1,
+      "admitted_edge_count": 1,
+      "runtime_status": "not_implemented_shadow_spec",
+      "simulation_gate": "inspect_only",
+      "recommended_command": "binding inspect --graph <graph> --library <library> --template stock_depletion_by_consumption_v0",
+      "reason": "Stock Depletion By Consumption is compatible with 1 edge(s) in this graph. This inspection is a pre-binding review, not a binding decision.",
+      "cautions": [],
+      "forbidden_inferences": [
+        "Do not infer replenishment, feedback, or predator reproduction from consumption alone.",
+        "Do not treat the predicted depletion rate as observed without reviewed measurements."
+      ]
+    },
+    {
+      "template_id": "shared_resource_competition_v0",
+      "template_title": "Shared Resource Competition",
+      "score": 15,
+      "candidate_status": "candidate_not_binding",
+      "compatible_edge_count": 1,
+      "admitted_edge_count": 1,
+      "runtime_status": "not_implemented_shadow_spec",
+      "simulation_gate": "inspect_only",
+      "recommended_command": "binding inspect --graph <graph> --library <library> --template shared_resource_competition_v0",
+      "reason": "Shared Resource Competition is compatible with 1 edge(s) in this graph. This inspection is a pre-binding review, not a binding decision.",
+      "cautions": [],
+      "forbidden_inferences": [
+        "Do not infer adversarial intent merely because demands share a resource.",
+        "Do not model allocation fairness or conflict without stated evidence."
+      ]
+    }
+  ],
+  "boundary": {
+    "candidate_only": true,
+    "may_create_binding": false,
+    "may_claim_template_applies": false,
+    "may_update_evidence": false,
+    "may_update_learning": false
+  }
+}
+

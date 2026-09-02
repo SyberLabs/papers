@@ -1,0 +1,52 @@
+# Live data configuration: pulls real records from GBIF, Dr. Duke's, GloBI, the
+# Open Tree of Life, and ChEMBL (independent measured bioactivity = reward),
+# caches them to Parquet, then runs the same comparison.
+#
+# Provenance: chemistry (Duke), occurrences (GBIF), animal links (GloBI) are
+# CUES; the reward comes from ChEMBL measured potency, not from documented use.
+#
+# Requirements:
+#   pip install -r requirements.txt
+#   (optional, only for GBIF bulk downloads) set GBIF_USER / GBIF_PWD / GBIF_EMAIL
+#
+# The first run performs network requests and may take a while; subsequent runs
+# reuse the cache. Network failures for any single source are logged and that
+# source's table is left empty rather than aborting the whole pipeline.
+seed: 12345
+output_dir: results/live_neotropics
+
+data:
+  source: live
+  # Species are seeded from the Dr. Duke's chemistry mirror, resolved against the
+  # GBIF backbone + Open Tree, then enriched with GBIF occurrences and GloBI
+  # interactions. Reward = independent ChEMBL measured potency.
+  cache_dir: data_cache_live
+  n_species: 120            # distinct chemistry-source species cap (API friendliness)
+  region:                   # informational; live seeding is global, not region-limited
+    name: global
+    min_lon: -180.0
+    min_lat: -90.0
+    max_lon: 180.0
+    max_lat: 90.0
+  seed_families: []         # optionally restrict, e.g. [Apocynaceae, Rubiaceae]
+
+manifold:
+  eco_edge_threshold: 0.10
+  bio_edge_threshold: 0.05
+  discovery_threshold: 0.05
+
+simulation:
+  # Budget is deliberately well below the resolved-species count so the search
+  # is partial: coverage/time-to-discovery separate strategies (with a budget
+  # exceeding the pool, every strategy trivially finds everything).
+  budget: 22
+  n_replicates: 30
+  observation_noise: 0.05
+
+strategies:
+  - {name: random,       kind: random,       params: {epsilon: 1.0}}
+  - {name: phylogenetic, kind: phylogenetic, params: {epsilon: 0.08}}
+  - {name: sensory,      kind: sensory,      params: {epsilon: 0.08}}
+  - {name: ecological,   kind: ecological,   params: {epsilon: 0.08}}
+  - {name: social,       kind: social,       params: {n_agents: 8, transmission_prob: 0.4}}
+  - {name: cultural,     kind: cultural,     params: {epsilon: 0.05, learning_rate: 0.6}}

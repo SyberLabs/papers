@@ -1,0 +1,410 @@
+﻿{
+  "schema_version": "tok_session_cockpit_trace_v0",
+  "production_effect": "none_research_only",
+  "session_id": "demo-freeze-v0-boiler-cockpit",
+  "generated_at": "2026-06-19T00:02:31.074786Z",
+  "session": {
+    "schema_version": "tok_research_session_v0",
+    "production_effect": "none_research_only",
+    "session_id": "demo-freeze-v0-boiler-cockpit",
+    "title": "Demo Freeze v0 Boiler Research Cockpit",
+    "created_at": "2026-06-19T00:02:30.952070Z",
+    "status": "active",
+    "directories": {
+      "graphs": "graphs",
+      "bindings": "bindings",
+      "dyndiv": "dyndiv",
+      "observations": "observations",
+      "registry": "registry",
+      "reports": "reports"
+    },
+    "notes": [
+      "Demo Freeze v0 is a research-only cockpit replay.",
+      "No artifact in this session may update production memory, evidence, or learning."
+    ]
+  },
+  "artifact_counts": {
+    "graphs": 1,
+    "bindings": 2,
+    "dyndiv": 2,
+    "observations": 1,
+    "registry": 1,
+    "reports": 8
+  },
+  "artifact_cards": [
+    {
+      "group": "bindings",
+      "path": "bindings//binding_inspection_capacity_loss_v0.json",
+      "file_name": "binding_inspection_capacity_loss_v0.json",
+      "artifact_type": "tok_template_binding_inspection_v0",
+      "production_effect": "none_research_only",
+      "validation": {
+        "status": "not_validated_by_cockpit_trace",
+        "errors": []
+      },
+      "boundary_panels": {
+        "workbench_boundary": {
+          "may_create_binding": false,
+          "may_claim_template_applies": false,
+          "may_update_evidence": false,
+          "may_update_learning": false
+        }
+      }
+    },
+    {
+      "group": "bindings",
+      "path": "bindings//binding_suggestions_v0.json",
+      "file_name": "binding_suggestions_v0.json",
+      "artifact_type": "tok_binding_suggestions_v0",
+      "production_effect": "none_research_only",
+      "validation": {
+        "status": "not_validated_by_cockpit_trace",
+        "errors": []
+      },
+      "boundary_panels": {
+        "boundary": {
+          "candidate_only": true,
+          "may_create_binding": false,
+          "may_claim_template_applies": false,
+          "may_update_evidence": false,
+          "may_update_learning": false
+        }
+      }
+    },
+    {
+      "group": "dyndiv",
+      "path": "dyndiv//boiler_capacity_loss_csv_reviewed_dyndiv_v0.json",
+      "file_name": "boiler_capacity_loss_csv_reviewed_dyndiv_v0.json",
+      "artifact_type": "tok_dynamic_divergence_v0",
+      "production_effect": "none_research_only",
+      "validation": {
+        "status": "passed",
+        "errors": []
+      },
+      "boundary_panels": {}
+    },
+    {
+      "group": "dyndiv",
+      "path": "dyndiv//boiler_capacity_loss_prior_dyndiv_v0.json",
+      "file_name": "boiler_capacity_loss_prior_dyndiv_v0.json",
+      "artifact_type": "tok_dynamic_divergence_v0",
+      "production_effect": "none_research_only",
+      "validation": {
+        "status": "passed",
+        "errors": []
+      },
+      "boundary_panels": {}
+    },
+    {
+      "group": "graphs",
+      "path": "graphs//boiler_hlmg_example_v0.json",
+      "file_name": "boiler_hlmg_example_v0.json",
+      "artifact_type": "tok_mechanism_graph_v0",
+      "production_effect": "none_research_only",
+      "validation": {
+        "status": "passed",
+        "errors": []
+      },
+      "boundary_panels": {}
+    },
+    {
+      "group": "observations",
+      "path": "observations//boiler_temperature_csv_profile_v0.json",
+      "file_name": "boiler_temperature_csv_profile_v0.json",
+      "artifact_type": "json_without_schema_version",
+      "production_effect": "none_research_only",
+      "validation": {
+        "status": "not_validated_by_cockpit_trace",
+        "errors": []
+      },
+      "boundary_panels": {}
+    },
+    {
+      "group": "registry",
+      "path": "registry//research_observation_registry_v0.json",
+      "file_name": "research_observation_registry_v0.json",
+      "artifact_type": "json_without_schema_version",
+      "production_effect": "none_research_only",
+      "validation": {
+        "status": "not_validated_by_cockpit_trace",
+        "errors": []
+      },
+      "boundary_panels": {}
+    },
+    {
+      "group": "reports",
+      "path": "reports//boundary_breach_registry_v0.json",
+      "file_name": "boundary_breach_registry_v0.json",
+      "artifact_type": "tok_boundary_breach_registry_v0",
+      "production_effect": "none_research_only",
+      "validation": {
+        "status": "passed",
+        "errors": []
+      },
+      "boundary_panels": {
+        "boundary": {
+          "registry_is_research_only": true,
+          "unknown_dynamic_is_not_confirmed_cause": true,
+          "may_update_evidence": false,
+          "may_update_learning": false,
+          "may_update_production": false
+        }
+      }
+    },
+    {
+      "group": "reports",
+      "path": "reports//causal_status_assessment_v0.json",
+      "file_name": "causal_status_assessment_v0.json",
+      "artifact_type": "tok_causal_status_assessment_v0",
+      "production_effect": "none_research_only",
+      "validation": {
+        "status": "passed",
+        "errors": []
+      },
+      "boundary_panels": {
+        "boundary": {
+          "assessment_only": true,
+          "correlation_is_not_causation": true,
+          "unknown_dynamic_is_not_confirmed_cause": true,
+          "may_update_evidence": false,
+          "may_update_learning": false,
+          "may_update_production": false
+        }
+      }
+    },
+    {
+      "group": "reports",
+      "path": "reports//data_driven_workbench_v0.json",
+      "file_name": "data_driven_workbench_v0.json",
+      "artifact_type": "tok_data_driven_dynamics_workbench_v0",
+      "production_effect": "none_research_only",
+      "validation": {
+        "status": "passed",
+        "errors": []
+      },
+      "boundary_panels": {
+        "boundary": {
+          "workbench_only": true,
+          "candidate_dynamic_not_causation": true,
+          "candidate_dynamic_not_evidence": true,
+          "control_draft_not_recommendation": true,
+          "may_update_dyndiv": false,
+          "may_update_evidence": false,
+          "may_update_learning": false,
+          "may_update_production": false
+        }
+      }
+    },
+    {
+      "group": "reports",
+      "path": "reports//demo_replay_report_v0.json",
+      "file_name": "demo_replay_report_v0.json",
+      "artifact_type": "tok_demo_replay_report_v0",
+      "production_effect": "none_research_only",
+      "validation": {
+        "status": "not_validated_by_cockpit_trace",
+        "errors": []
+      },
+      "boundary_panels": {}
+    },
+    {
+      "group": "reports",
+      "path": "reports//dynamic_signal_scout_v0.json",
+      "file_name": "dynamic_signal_scout_v0.json",
+      "artifact_type": "tok_dynamic_signal_scout_v0",
+      "production_effect": "none_research_only",
+      "validation": {
+        "status": "passed",
+        "errors": []
+      },
+      "boundary_panels": {
+        "boundary": {
+          "scout_only": true,
+          "candidate_signature_not_causation": true,
+          "candidate_signature_not_evidence": true,
+          "may_update_dyndiv": false,
+          "may_update_evidence": false,
+          "may_update_learning": false,
+          "may_update_production": false
+        }
+      }
+    },
+    {
+      "group": "reports",
+      "path": "reports//evidence_transition_proposal_v0.json",
+      "file_name": "evidence_transition_proposal_v0.json",
+      "artifact_type": "tok_evidence_transition_proposal_v0",
+      "production_effect": "none_research_only",
+      "validation": {
+        "status": "passed",
+        "errors": []
+      },
+      "boundary_panels": {
+        "boundary": {
+          "proposal_only": true,
+          "asks_exact_claim_not_global_truth": true,
+          "may_update_evidence": false,
+          "may_update_learning": false,
+          "may_update_production": false
+        }
+      }
+    },
+    {
+      "group": "reports",
+      "path": "reports//observation_triage_v0.json",
+      "file_name": "observation_triage_v0.json",
+      "artifact_type": "tok_observation_triage_v0",
+      "production_effect": "none_research_only",
+      "validation": {
+        "status": "passed",
+        "errors": []
+      },
+      "boundary_panels": {
+        "boundary": {
+          "triage_only": true,
+          "candidate_context_not_evidence": true,
+          "relevance_score_is_not_causation": true,
+          "may_update_evidence": false,
+          "may_update_learning": false,
+          "may_update_production": false
+        }
+      }
+    },
+    {
+      "group": "reports",
+      "path": "reports//triage_to_causal_bridge_v0.json",
+      "file_name": "triage_to_causal_bridge_v0.json",
+      "artifact_type": "tok_triage_to_causal_bridge_v0",
+      "production_effect": "none_research_only",
+      "validation": {
+        "status": "not_validated_by_cockpit_trace",
+        "errors": []
+      },
+      "boundary_panels": {
+        "boundary": {
+          "bridge_only": true,
+          "drafts_are_not_assessments": true,
+          "triage_score_is_not_causation": true,
+          "may_auto_run_causal_assessment": false,
+          "may_update_evidence": false,
+          "may_update_learning": false,
+          "may_update_production": false
+        }
+      }
+    }
+  ],
+  "invalid_artifact_count": 0,
+  "invalid_artifacts": [],
+  "production_effects_seen": [
+    "none_research_only"
+  ],
+  "next_suggestion": {
+    "schema_version": "tok_session_next_suggestion_v0",
+    "production_effect": "none_research_only",
+    "session_id": "demo-freeze-v0-boiler-cockpit",
+    "current_state": "registry_exists_review_ready",
+    "next_recommended_action": "human_review",
+    "reason": "The session has graph, binding, DYNDIV, and registry artifacts.",
+    "artifact_counts": {
+      "graphs": 1,
+      "bindings": 2,
+      "dyndiv": 2,
+      "observations": 1,
+      "registry": 1,
+      "reports": 8
+    },
+    "latest_artifacts": {
+      "graph": "D://syberlabs//tok//research//demo_freeze_v0//generated//demo_session//graphs//boiler_hlmg_example_v0.json",
+      "binding": "D://syberlabs//tok//research//demo_freeze_v0//generated//demo_session//bindings//binding_inspection_capacity_loss_v0.json",
+      "dyndiv": "D://syberlabs//tok//research//demo_freeze_v0//generated//demo_session//dyndiv//boiler_capacity_loss_csv_reviewed_dyndiv_v0.json",
+      "registry": "D://syberlabs//tok//research//demo_freeze_v0//generated//demo_session//registry//research_observation_registry_v0.json"
+    },
+    "safe_commands": [
+      "session status --session <session>",
+      "registry validate --registry <registry>"
+    ],
+    "binding_suggestions": {
+      "schema_version": "tok_binding_suggestions_v0",
+      "production_effect": "none_research_only",
+      "graph_id": "hlmg_example_boiler_001",
+      "suggestion_count": 3,
+      "suggestions": [
+        {
+          "template_id": "capacity_loss_service_decay_v0",
+          "template_title": "Capacity Loss Service Decay",
+          "score": 18,
+          "candidate_status": "candidate_not_binding",
+          "compatible_edge_count": 1,
+          "admitted_edge_count": 1,
+          "runtime_status": "implemented_research_only",
+          "simulation_gate": "may_prepare_research_shadow_request",
+          "recommended_command": "binding inspect --graph <graph> --library <library> --template capacity_loss_service_decay_v0",
+          "reason": "Capacity Loss Service Decay is compatible with 1 edge(s) in this graph. This inspection is a pre-binding review, not a binding decision.",
+          "cautions": [],
+          "forbidden_inferences": [
+            "Do not treat a repair request as recovered capacity unless restoration is observed.",
+            "Do not conclude that capacity loss is the sole cause of measured degradation."
+          ]
+        },
+        {
+          "template_id": "balancing_response_correction_v0",
+          "template_title": "Balancing Response Correction",
+          "score": 17,
+          "candidate_status": "candidate_not_binding",
+          "compatible_edge_count": 1,
+          "admitted_edge_count": 1,
+          "runtime_status": "implemented_research_only",
+          "simulation_gate": "may_prepare_research_shadow_request",
+          "recommended_command": "binding inspect --graph <graph> --library <library> --template balancing_response_correction_v0",
+          "reason": "Balancing Response Correction is compatible with 1 edge(s) in this graph. This inspection is a pre-binding review, not a binding decision.",
+          "cautions": [
+            "A response activation edge alone cannot assert restorative effect; outcome evidence is required."
+          ],
+          "forbidden_inferences": [
+            "Do not convert attempted action into successful response.",
+            "Do not update graph or posterior evidence from assumed response gain."
+          ]
+        },
+        {
+          "template_id": "threshold_transition_v0",
+          "template_title": "Threshold Transition",
+          "score": 15,
+          "candidate_status": "candidate_not_binding",
+          "compatible_edge_count": 1,
+          "admitted_edge_count": 1,
+          "runtime_status": "not_implemented_shadow_spec",
+          "simulation_gate": "inspect_only",
+          "recommended_command": "binding inspect --graph <graph> --library <library> --template threshold_transition_v0",
+          "reason": "Threshold Transition is compatible with 1 edge(s) in this graph. This inspection is a pre-binding review, not a binding decision.",
+          "cautions": [],
+          "forbidden_inferences": [
+            "Do not infer a threshold merely from a sudden observed event without a registered comparison.",
+            "Do not declare an irreversible transition from a provisional model run."
+          ]
+        }
+      ],
+      "boundary": {
+        "candidate_only": true,
+        "may_create_binding": false,
+        "may_claim_template_applies": false,
+        "may_update_evidence": false,
+        "may_update_learning": false
+      }
+    },
+    "boundary": {
+      "advisory_only": true,
+      "may_run_commands": false,
+      "may_update_evidence": false,
+      "may_update_learning": false
+    }
+  },
+  "cockpit_boundary": {
+    "read_only_trace": true,
+    "may_run_commands": false,
+    "may_update_evidence": false,
+    "may_update_learning": false,
+    "may_update_wisdom_db": false,
+    "private_benchmark_safe": false
+  }
+}
+

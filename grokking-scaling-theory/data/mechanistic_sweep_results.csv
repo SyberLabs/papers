@@ -1,0 +1,5 @@
+modulus,t_rule,t_grok,delay_gap,trace_path
+31,30000,20400,-9600,d:\syberlabs\research\grokking-scaling-theory\data\mechanistic_p31_raw.csv
+53,20000,4020,-15980,d:\syberlabs\research\grokking-scaling-theory\data\mechanistic_p53_raw.csv
+71,20000,3060,-16940,d:\syberlabs\research\grokking-scaling-theory\data\mechanistic_p71_raw.csv
+97,20000,2330,-17670,d:\syberlabs\research\grokking-scaling-theory\data\mechanistic_p97_raw.csv

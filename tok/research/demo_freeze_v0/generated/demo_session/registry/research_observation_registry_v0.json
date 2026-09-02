@@ -1,0 +1,78 @@
+﻿{
+  "registry_version": "tok_observation_registry_v0",
+  "production_effect": "none_research_only",
+  "records": [
+    {
+      "record_id": "obsreg_abafb76bd714cf4d",
+      "record_type": "dyndiv_observed_series",
+      "registered_at": "2026-05-27T19:30:00Z",
+      "registration_request_id": "register_boiler_csv_observations_001",
+      "registration_basis": "Reviewed CSV observation series attached to a DYNDIV capacity-loss comparison.",
+      "evidence_status": "not_evidence",
+      "allowed_use": [
+        "research_inspection",
+        "dyndiv_comparison_lookup",
+        "future_human_review_input"
+      ],
+      "forbidden_use": [
+        "wisdom_db_update",
+        "bayesian_count_update",
+        "hlmg_status_promotion",
+        "law_confirmation",
+        "production_query_effect"
+      ],
+      "observation": {
+        "series_id": "obs_csv_temp_reviewed_001",
+        "source_type": "reviewed_csv",
+        "review_status": "human_confirmed",
+        "attached_node_id": "n_no_heat",
+        "variable_id": "v_interior_temp",
+        "variable_name": "interior_temperature_c",
+        "unit": "degC",
+        "direction_of_harm": "lower_is_worse",
+        "point_count": 4,
+        "time_range": {
+          "start": "2026-05-27T18:00:00Z",
+          "end": "2026-05-27T21:00:00Z"
+        },
+        "content_fingerprint_sha256": "abafb76bd714cf4d3534ae7d3111fa9c053580ad7c93fef1fdf3f63f2c4baa6d"
+      },
+      "provenance": {
+        "dyndiv_id": "dyndiv_generated_boiler_capacity_loss_prior_001",
+        "dyndiv_status": "comparison_reviewed",
+        "dyndiv_path": "D://syberlabs//tok//research//demo_freeze_v0//generated//demo_session//dyndiv//boiler_capacity_loss_csv_reviewed_dyndiv_v0.json",
+        "graph_id": "hlmg_example_boiler_001",
+        "graph_status_at_binding": "provisional",
+        "template_id": "capacity_loss_service_decay_v0",
+        "modeled_series_id": "model_generated_temp_001",
+        "profile_path": "D://syberlabs//tok//research//demo_freeze_v0//generated//demo_session//observations//boiler_temperature_csv_profile_v0.json",
+        "source_manifest_path": "D://syberlabs//tok//research//observation_adapter_v0//requests//boiler_temperature_csv_adapter_request_v0.json",
+        "adapter_request_id": "boiler_temperature_csv_adapter_001",
+        "ingestion_profile": {
+          "series_id": "obs_csv_temp_reviewed_001",
+          "rows_read": 4,
+          "rows_accepted": 4,
+          "missing_timestamp_rows": 0,
+          "missing_value_rows": 0,
+          "invalid_value_rows": 0,
+          "duplicate_timestamps": [],
+          "timestamp_range": {
+            "start": "2026-05-27T18:00:00Z",
+            "end": "2026-05-27T21:00:00Z"
+          },
+          "warnings": []
+        }
+      }
+    }
+  ],
+  "audit_log": [
+    {
+      "event_type": "register_dyndiv_observations",
+      "request_id": "register_boiler_csv_observations_001",
+      "registered_at": "2026-05-27T19:30:00Z",
+      "record_count": 1,
+      "production_effect": "none_research_only"
+    }
+  ]
+}
+

@@ -1,0 +1,18 @@
+task_name,dataset_name,modulus,weight_decay,learning_rate,optimizer,architecture,width,depth,noise_level,seed,max_epochs,grokking_threshold,grokking_epoch,is_censored,include_in_scaling_fit,source,notes,trace_path
+modular_addition,modular_addition,97,1.0,0.001,adamw,mlp,,,0.0,0,10000,95,10000,False,True,Power2022,Published modular-addition point,
+modular_addition,modular_addition,97,0.1,0.001,adamw,mlp,,,0.0,0,50000,95,50000,False,True,Power2022,Published modular-addition point,
+modular_addition,modular_addition,97,0.01,0.001,adamw,mlp,,,0.0,0,200000,95,200000,False,True,Power2022,Published or extrapolated from reported curve,
+modular_addition,modular_addition,113,1.0,0.001,adamw,mlp,,,0.0,0,15000,95,15000,False,True,Nanda2023,Mechanistic grokking study point,
+modular_addition,modular_addition,59,1.0,0.001,adamw,mlp,,,0.0,0,5000,95,5000,False,True,Power2022,Smaller-modulus comparison point,
+modular_addition,modular_addition,31,1.0,0.001,adamw,mlp,,,0.0,42,20000,95,20000,True,False,local_sweep,CENSORED: grokking_epoch=max_epochs; excluded from fit,d:\syberlabs\research\grokking-scaling-theory\data\sweep_p31_raw.csv
+modular_addition,modular_addition,37,1.0,0.001,adamw,mlp,,,0.0,42,20000,95,8870,False,True,local_sweep,Low-modulus automated sweep point,d:\syberlabs\research\grokking-scaling-theory\data\sweep_p37_raw.csv
+modular_addition,modular_addition,41,1.0,0.001,adamw,mlp,,,0.0,42,20000,95,9480,False,True,local_sweep,Low-modulus automated sweep point,d:\syberlabs\research\grokking-scaling-theory\data\sweep_p41_raw.csv
+modular_addition,modular_addition,43,1.0,0.001,adamw,mlp,,,0.0,42,20000,95,9220,False,True,local_sweep,Low-modulus automated sweep point,d:\syberlabs\research\grokking-scaling-theory\data\sweep_p43_raw.csv
+modular_addition,modular_addition,47,1.0,0.001,adamw,mlp,,,0.0,42,20000,95,5680,False,True,local_sweep,Low-modulus automated sweep point,d:\syberlabs\research\grokking-scaling-theory\data\sweep_p47_raw.csv
+modular_addition,modular_addition,53,1.0,0.001,adamw,mlp,,,0.0,42,20000,95,4020,False,True,local_sweep,Low-modulus automated sweep point,d:\syberlabs\research\grokking-scaling-theory\data\sweep_p53_raw.csv
+modular_addition,modular_addition,61,1.0,0.001,adamw,mlp,256,2,0.0,42,30000,95,4220,False,True,validation_sweep,Fourier regime validation point,d:\syberlabs\research\grokking-scaling-theory\data\validation_p61_wd1.0_raw.csv
+modular_addition,modular_addition,67,1.0,0.001,adamw,mlp,256,2,0.0,42,30000,95,3590,False,True,validation_sweep,Fourier regime validation point,d:\syberlabs\research\grokking-scaling-theory\data\validation_p67_wd1.0_raw.csv
+modular_addition,modular_addition,71,1.0,0.001,adamw,mlp,256,2,0.0,42,30000,95,3060,False,True,validation_sweep,Fourier regime validation point,d:\syberlabs\research\grokking-scaling-theory\data\validation_p71_wd1.0_raw.csv
+modular_addition,modular_addition,97,1.0,0.001,adamw,mlp,256,2,0.0,42,2330,95,,False,False,local_trace,Local training trace attached for diagnostics; enriched with proxy dynamics and excluded from scaling fit,..\examples\empirical_grokking_data_enriched.csv
+modular_addition,modular_addition,97,0.5,0.001,adamw,mlp,256,2,0.0,42,4280,95,,False,False,local_trace_wd05,Third local trace generated in-workspace; enriched with proxy dynamics and excluded from scaling fit pending curation,..\examples\empirical_grokking_wd05_enriched.csv
+modular_addition,modular_addition,97,2.0,0.001,adamw,mlp,256,2,0.0,42,1310,95,,False,False,local_trace_wd2,Second local trace generated in-workspace; enriched with proxy dynamics and excluded from scaling fit pending curation,..\examples\empirical_grokking_wd2_enriched.csv

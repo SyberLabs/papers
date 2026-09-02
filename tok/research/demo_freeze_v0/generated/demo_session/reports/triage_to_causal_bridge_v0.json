@@ -1,0 +1,272 @@
+﻿{
+  "schema_version": "tok_triage_to_causal_bridge_v0",
+  "production_effect": "none_research_only",
+  "bridge_id": "tcb_40288ccf58da46dd",
+  "generated_at": "2026-06-19T00:02:30.985278Z",
+  "source_triage_id": "support_workload_loose_observations_triage_v0",
+  "min_relevance_score": 0.35,
+  "selected_count": 4,
+  "drafts": [
+    {
+      "observation_id": "loose_obs_dashboard_definition_change_v0",
+      "source_triage_status": "high_signal_candidate_context",
+      "source_relevance_score": 0.66,
+      "candidate_roles": [
+        "measurement_artifact_candidate",
+        "correlated_candidate",
+        "intervention_context_candidate"
+      ],
+      "bridge_status": "draft_request_for_human_review",
+      "draft_causal_status_request": {
+        "request_version": "tok_causal_status_assessment_request_v0",
+        "production_effect": "none_research_only",
+        "assessment_id": "loose_obs_dashboard_definition_change_v0_causal_status_draft_v0",
+        "case_id": "support_workload_loose_observations_triage_v0",
+        "observation_summary": {
+          "observation_id": "loose_obs_dashboard_definition_change_v0",
+          "status": "triaged_candidate_context_not_evidence",
+          "text": "The support dashboard changed how it counted closed tickets two days before the unresolved workload appeared to rise.",
+          "relevance_score": 0.66,
+          "candidate_roles": [
+            "measurement_artifact_candidate",
+            "correlated_candidate",
+            "intervention_context_candidate"
+          ],
+          "target_problem_summary": "A customer support department rewards agents for closing tickets quickly. Difficult tickets are closed without resolution, customers reopen cases, and unresolved workload rises."
+        },
+        "association_tests": [
+          {
+            "test_id": "loose_obs_dashboard_definition_change_v0_association_candidate_v0",
+            "test_type": "candidate_association_not_tested",
+            "result_status": "candidate_not_tested",
+            "notes": "Triage identified possible timing or directional relation. No statistical association test has been run."
+          }
+        ],
+        "mechanism_claims": [
+          {
+            "claim_id": "loose_obs_dashboard_definition_change_v0_measurement_artifact_candidate_v0",
+            "causation_type": "unknown_or_mixed",
+            "description": "The observation may indicate that measured change differs from real system change.",
+            "status": "plausible_unverified",
+            "evidence_basis": "Drafted from observation triage role measurement_artifact_candidate; not evidence."
+          }
+        ],
+        "intervention_claim": {
+          "claim_id": "loose_obs_dashboard_definition_change_v0_intervention_context_candidate_v0",
+          "support_status": "candidate_context_not_evidence",
+          "expected_direction": "unknown",
+          "notes": "The observation may affect intervention validity or implementation fidelity. No intervention effect is established."
+        },
+        "evidence_transition_proposal": {},
+        "boundary_breach_signal": {},
+        "interpretation_goal": "Review whether this triaged context signal should remain loose context, be tested as association, be elaborated as a mechanism, or be dismissed."
+      },
+      "human_review_prompt": "Should this candidate context signal be promoted into a causal-status assessment request, revised, or dismissed?",
+      "forbidden_actions": [
+        "auto_run_causal_assessment",
+        "auto_promote_to_evidence",
+        "auto_infer_causation",
+        "wisdom_db_update",
+        "bayesian_count_update",
+        "hlmg_status_promotion",
+        "production_query_effect"
+      ]
+    },
+    {
+      "observation_id": "loose_obs_reopen_spike_region_east_v0",
+      "source_triage_status": "medium_signal_candidate_context",
+      "source_relevance_score": 0.59,
+      "candidate_roles": [
+        "boundary_condition_candidate",
+        "mechanism_candidate",
+        "correlated_candidate"
+      ],
+      "bridge_status": "draft_request_for_human_review",
+      "draft_causal_status_request": {
+        "request_version": "tok_causal_status_assessment_request_v0",
+        "production_effect": "none_research_only",
+        "assessment_id": "loose_obs_reopen_spike_region_east_v0_causal_status_draft_v0",
+        "case_id": "support_workload_loose_observations_triage_v0",
+        "observation_summary": {
+          "observation_id": "loose_obs_reopen_spike_region_east_v0",
+          "status": "triaged_candidate_context_not_evidence",
+          "text": "Case reopenings spiked in the East region during the same week the quick-closure incentive was rolled out.",
+          "relevance_score": 0.59,
+          "candidate_roles": [
+            "boundary_condition_candidate",
+            "mechanism_candidate",
+            "correlated_candidate"
+          ],
+          "target_problem_summary": "A customer support department rewards agents for closing tickets quickly. Difficult tickets are closed without resolution, customers reopen cases, and unresolved workload rises."
+        },
+        "association_tests": [
+          {
+            "test_id": "loose_obs_reopen_spike_region_east_v0_association_candidate_v0",
+            "test_type": "candidate_association_not_tested",
+            "result_status": "candidate_not_tested",
+            "notes": "Triage identified possible timing or directional relation. No statistical association test has been run."
+          }
+        ],
+        "mechanism_claims": [
+          {
+            "claim_id": "loose_obs_reopen_spike_region_east_v0_mechanism_candidate_v0",
+            "causation_type": "unknown_or_mixed",
+            "description": "The observation may indicate a pathway linking system pressure, action, and outcome.",
+            "status": "plausible_unverified",
+            "evidence_basis": "Drafted from observation triage role mechanism_candidate; not evidence."
+          },
+          {
+            "claim_id": "loose_obs_reopen_spike_region_east_v0_boundary_condition_candidate_v0",
+            "causation_type": "structural_causation",
+            "description": "The observation may identify a scope condition where the problem behaves differently.",
+            "status": "plausible_unverified",
+            "evidence_basis": "Drafted from observation triage role boundary_condition_candidate; not evidence."
+          }
+        ],
+        "intervention_claim": {},
+        "evidence_transition_proposal": {},
+        "boundary_breach_signal": {},
+        "interpretation_goal": "Review whether this triaged context signal should remain loose context, be tested as association, be elaborated as a mechanism, or be dismissed."
+      },
+      "human_review_prompt": "Should this candidate context signal be promoted into a causal-status assessment request, revised, or dismissed?",
+      "forbidden_actions": [
+        "auto_run_causal_assessment",
+        "auto_promote_to_evidence",
+        "auto_infer_causation",
+        "wisdom_db_update",
+        "bayesian_count_update",
+        "hlmg_status_promotion",
+        "production_query_effect"
+      ]
+    },
+    {
+      "observation_id": "loose_obs_manager_departure_v0",
+      "source_triage_status": "medium_signal_candidate_context",
+      "source_relevance_score": 0.49,
+      "candidate_roles": [
+        "boundary_condition_candidate",
+        "correlated_candidate"
+      ],
+      "bridge_status": "draft_request_for_human_review",
+      "draft_causal_status_request": {
+        "request_version": "tok_causal_status_assessment_request_v0",
+        "production_effect": "none_research_only",
+        "assessment_id": "loose_obs_manager_departure_v0_causal_status_draft_v0",
+        "case_id": "support_workload_loose_observations_triage_v0",
+        "observation_summary": {
+          "observation_id": "loose_obs_manager_departure_v0",
+          "status": "triaged_candidate_context_not_evidence",
+          "text": "A senior support manager left the department shortly before the backlog increased.",
+          "relevance_score": 0.49,
+          "candidate_roles": [
+            "boundary_condition_candidate",
+            "correlated_candidate"
+          ],
+          "target_problem_summary": "A customer support department rewards agents for closing tickets quickly. Difficult tickets are closed without resolution, customers reopen cases, and unresolved workload rises."
+        },
+        "association_tests": [
+          {
+            "test_id": "loose_obs_manager_departure_v0_association_candidate_v0",
+            "test_type": "candidate_association_not_tested",
+            "result_status": "candidate_not_tested",
+            "notes": "Triage identified possible timing or directional relation. No statistical association test has been run."
+          }
+        ],
+        "mechanism_claims": [
+          {
+            "claim_id": "loose_obs_manager_departure_v0_boundary_condition_candidate_v0",
+            "causation_type": "structural_causation",
+            "description": "The observation may identify a scope condition where the problem behaves differently.",
+            "status": "plausible_unverified",
+            "evidence_basis": "Drafted from observation triage role boundary_condition_candidate; not evidence."
+          }
+        ],
+        "intervention_claim": {},
+        "evidence_transition_proposal": {},
+        "boundary_breach_signal": {},
+        "interpretation_goal": "Review whether this triaged context signal should remain loose context, be tested as association, be elaborated as a mechanism, or be dismissed."
+      },
+      "human_review_prompt": "Should this candidate context signal be promoted into a causal-status assessment request, revised, or dismissed?",
+      "forbidden_actions": [
+        "auto_run_causal_assessment",
+        "auto_promote_to_evidence",
+        "auto_infer_causation",
+        "wisdom_db_update",
+        "bayesian_count_update",
+        "hlmg_status_promotion",
+        "production_query_effect"
+      ]
+    },
+    {
+      "observation_id": "loose_obs_weather_event_v0",
+      "source_triage_status": "medium_signal_candidate_context",
+      "source_relevance_score": 0.35,
+      "candidate_roles": [
+        "confounder_candidate",
+        "boundary_condition_candidate"
+      ],
+      "bridge_status": "draft_request_for_human_review",
+      "draft_causal_status_request": {
+        "request_version": "tok_causal_status_assessment_request_v0",
+        "production_effect": "none_research_only",
+        "assessment_id": "loose_obs_weather_event_v0_causal_status_draft_v0",
+        "case_id": "support_workload_loose_observations_triage_v0",
+        "observation_summary": {
+          "observation_id": "loose_obs_weather_event_v0",
+          "status": "triaged_candidate_context_not_evidence",
+          "text": "There was unusual weather in one customer region that week.",
+          "relevance_score": 0.35,
+          "candidate_roles": [
+            "confounder_candidate",
+            "boundary_condition_candidate"
+          ],
+          "target_problem_summary": "A customer support department rewards agents for closing tickets quickly. Difficult tickets are closed without resolution, customers reopen cases, and unresolved workload rises."
+        },
+        "association_tests": [],
+        "mechanism_claims": [
+          {
+            "claim_id": "loose_obs_weather_event_v0_confounder_candidate_v0",
+            "causation_type": "unknown_or_mixed",
+            "description": "The observation may represent an outside factor influencing the target outcome.",
+            "status": "plausible_unverified",
+            "evidence_basis": "Drafted from observation triage role confounder_candidate; not evidence."
+          },
+          {
+            "claim_id": "loose_obs_weather_event_v0_boundary_condition_candidate_v0",
+            "causation_type": "structural_causation",
+            "description": "The observation may identify a scope condition where the problem behaves differently.",
+            "status": "plausible_unverified",
+            "evidence_basis": "Drafted from observation triage role boundary_condition_candidate; not evidence."
+          }
+        ],
+        "intervention_claim": {},
+        "evidence_transition_proposal": {},
+        "boundary_breach_signal": {},
+        "interpretation_goal": "Review whether this triaged context signal should remain loose context, be tested as association, be elaborated as a mechanism, or be dismissed."
+      },
+      "human_review_prompt": "Should this candidate context signal be promoted into a causal-status assessment request, revised, or dismissed?",
+      "forbidden_actions": [
+        "auto_run_causal_assessment",
+        "auto_promote_to_evidence",
+        "auto_infer_causation",
+        "wisdom_db_update",
+        "bayesian_count_update",
+        "hlmg_status_promotion",
+        "production_query_effect"
+      ]
+    }
+  ],
+  "boundary": {
+    "bridge_only": true,
+    "drafts_are_not_assessments": true,
+    "triage_score_is_not_causation": true,
+    "may_auto_run_causal_assessment": false,
+    "may_update_evidence": false,
+    "may_update_learning": false,
+    "may_update_production": false
+  },
+  "source_paths": {
+    "triage_report": "research/demo_freeze_v0/generated/demo_session/reports/observation_triage_v0.json"
+  }
+}
+

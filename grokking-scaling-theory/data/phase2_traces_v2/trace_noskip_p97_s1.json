@@ -1,0 +1,40 @@
+{
+  "config": {
+    "modulus": 97,
+    "arch": "noskip",
+    "seed": 1,
+    "weight_decay": 1.0,
+    "learning_rate": 0.001,
+    "embed_dim": 128,
+    "hidden_dim": 256,
+    "train_fraction": 0.45,
+    "budget_epochs": 40000,
+    "checkpoint_every": 20,
+    "post_grok_frac": 0.5,
+    "grok_threshold": 90.0,
+    "max_examples": 2000,
+    "optimizer": "adamw"
+  },
+  "result": {
+    "modulus": 97,
+    "arch": "noskip",
+    "seed": 1,
+    "weight_decay": 1.0,
+    "learning_rate": 0.001,
+    "train_fraction": 0.45,
+    "batch_size": 4234,
+    "steps_per_epoch": 1,
+    "budget_epochs": 40000,
+    "grokking_threshold": 90.0,
+    "grokking_epoch": 2520,
+    "is_censored": false,
+    "n_train": 4234,
+    "n_val": 5175,
+    "n_logged_examples": 2000,
+    "checkpoint_every": 20,
+    "n_checkpoints": 190,
+    "final_val_acc": 99.96135234832764,
+    "trace_path": "data\\phase2_traces_v2\\trace_noskip_p97_s1.npz",
+    "notes": "grokked at epoch 2520; logged to 3780"
+  }
+}

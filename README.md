@@ -2,7 +2,7 @@
 
 Finished SyberLabs studies. Each folder contains the writeup and the code that produced it. 
 
-If a dataset cannot be redistributed, the paper says how to fetch it. The code still lives here.
+*If a dataset cannot be redistributed, the paper says how to fetch it.*
 
 
 ## Studies

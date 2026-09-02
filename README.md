@@ -17,4 +17,3 @@ These still live in their original repos. After they move here, the old repos go
 | [vital-language](https://github.com/SyberLabs/vital-language) | Coherence scaffolding beat token-level turbulence. Negative result kept. |
 | [grokking-scaling-theory](https://github.com/SyberLabs/grokking-scaling-theory) | Scaling-law tests around grokking, with bootstrap intervals over declared scaling points. |
 
-Syber-Index stays private until any patent filing is settled. If the paper is published, a reproduction package without restricted data can still live here.

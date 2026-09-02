@@ -1,10 +1,8 @@
 # Papers
 
-Finished SyberLabs studies. Each folder is the writeup and the code that produced it. Both are public.
+Finished SyberLabs studies. Each folder contains the writeup and the code that produced it. 
 
 If a dataset cannot be redistributed, the paper says how to fetch it. The code still lives here.
-
-This repo is the source of truth. The old study remotes should be deleted: `DTBR`, `green-hypercube`, `grokking-scaling-theory`, `tok`, `vital-language`.
 
 
 ## Studies

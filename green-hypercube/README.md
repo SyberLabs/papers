@@ -13,6 +13,9 @@ ethnobotanical databases often measure research attention as much as biological
 structure. Green Hypercube is built to separate raw cue-reward coupling from
 coverage artifacts before crediting a search strategy with real signal.
 
+The full draft manuscript is
+[`green_hypercube_manuscript.md`](./green_hypercube_manuscript.md).
+
 ## What This Is
 
 - A reproducible Python package for sequential search over plant manifolds.

@@ -1,7 +1,7 @@
 """Topology-weighted random search (M2 ladder rung 4).
 
 Proposes untested species with probability proportional to co-occurrence +
-animal-association graph degree: the structural bias toward well-connected
+animal-association graph degree — the structural bias toward well-connected
 nodes, without sensory features or reward-linked hit propagation. Beating this
 baseline is required before attributing strategy advantage to reward-linked
 coupling; failing to beat it implicates pool geometry and base-rate heterogeneity.

@@ -131,7 +131,7 @@ def main() -> None:
             "conc_final": float(fc["mean"]),
         }
 
-        # D4 timings (grokked runs only), while the strided trace is alive.
+        # D4 timings (grokked runs only) — while the strided trace is alive.
         if tau is not None:
             dvar = d_var_series(trace)
             t_dvar = _timing("D_var", trace.epochs, dvar, tau)

@@ -88,7 +88,7 @@ def write_report(result, sens: dict, outdir: str, fig_paths: list[str],
     lines: list[str] = []
     A = lines.append
 
-    A(f"# DTBR-MC Experiment 001: Report")
+    A(f"# DTBR-MC Experiment 001 — Report")
     A("")
     A(f"*Generated {_now()} · model = `{result.config.model}` · "
       f"N = {result.config.n_agents:,} agents · seed = {result.config.seed}*")
@@ -131,7 +131,7 @@ def write_report(result, sens: dict, outdir: str, fig_paths: list[str],
     A("")
     A("so that **margin > 0 means PC is the stronger brake** at that capacity. H1 "
       "predicts margin > 0 at low IC and a downward crossing (margin ≤ 0) as IC "
-      "rises: i.e. a *threshold* above which clarity wins.")
+      "rises — i.e. a *threshold* above which clarity wins.")
     A("")
     A(f"- At lowest IC ({_fmt(lo_margin['interpretive_capacity'],2)}): "
       f"slope_PC = {_fmt(lo_margin['slope_pc_intervention'])}, "
@@ -144,7 +144,7 @@ def write_report(result, sens: dict, outdir: str, fig_paths: list[str],
     if h1.threshold_intervention is not None:
         A(f"- Crossover (intervention): **IC\\* ≈ {_fmt(h1.threshold_intervention,3)}**.")
     else:
-        A("- Crossover (intervention): **none within [0,1]**: the levers never "
+        A("- Crossover (intervention): **none within [0,1]** — the levers never "
           "swap ranking, so there is no threshold of the kind H1 posits.")
     A("")
     A(f"See `{rel('h1_margin.png')}` and `{rel('phase_diagram.png')}`.")
@@ -169,7 +169,7 @@ def write_report(result, sens: dict, outdir: str, fig_paths: list[str],
     A("")
     pii = bm.loc["prestige_inversion_index", "estimate"] if "prestige_inversion_index" in bm.index else float("nan")
     A(f"1. **The threshold is the weak point of H1.** In the baseline model the PC "
-      f"advantage does not switch off at high capacity: it is roughly flat or even "
+      f"advantage does not switch off at high capacity — it is roughly flat or even "
       f"widens. H1's *direction* (PC brakes harder) can hold while its *structure* "
       f"(only below a capacity threshold) does not. A result that merely shows "
       f"\"PC > SC on average\" should not be read as confirming H1.")
@@ -178,7 +178,7 @@ def write_report(result, sens: dict, outdir: str, fig_paths: list[str],
       f"backfire channel (mystery → curiosity) only bites where comprehension is "
       f"low; wherever people partly understand the marker, caution stops being "
       f"alluring. Whether backfire ever dominates is a property of "
-      f"`backfire_strength`, not a law of the system: try the `backfire` model "
+      f"`backfire_strength`, not a law of the system — try the `backfire` model "
       f"with a higher strength to see the sign flip.")
     A(f"3. **Severity dominates the levers.** Sensitivity analysis puts "
       f"repository_severity (a fixed property of the waste, not a messaging choice) "
@@ -199,22 +199,22 @@ def write_report(result, sens: dict, outdir: str, fig_paths: list[str],
         A("| --- | --- | --- | --- | --- | --- |")
         for label, s in model_comparison.items():
             thr = s.get("threshold_intervention")
-            thr_s = ": " if thr is None else f"{thr:.3f}"
+            thr_s = "—" if thr is None else f"{thr:.3f}"
             A(f"| `{label}` | {s['verdict'].replace('H1 ', '')} "
               f"| {s['low_ic_slope_pc']:+.3f} | {s['low_ic_margin']:+.3f} "
               f"| {s['high_ic_margin']:+.3f} | {thr_s} |")
         A("")
         A("Reading this table:")
         A("")
-        A("- Under every model that keeps PC as a direct brake: including "
-          "`backfire` with strength raised well above default: the verdict is "
+        A("- Under every model that keeps PC as a direct brake — including "
+          "`backfire` with strength raised well above default — the verdict is "
           "**direction-only**: PC out-brakes SC at *all* capacities and no "
           "threshold appears. Cranking the backfire channel does not flip the "
           "sign, because PC's suppressive effect enters the caution term *before* "
           "the `(1 − caution)` multiplier while its curiosity backfire only enters "
           "the drive that the same multiplier then attenuates.")
         A("- In `linear` the PC advantage at least *shrinks* as capacity rises "
-          "(margin falls with IC), which is the qualitative direction H1 expects: "
+          "(margin falls with IC), which is the qualitative direction H1 expects — "
           "yet it still never crosses zero, so the threshold is absent there too.")
         A("- H1 only **falsifies** when PC's direct brake is removed "
           "(`pc_brake_off`): then PC acts solely through curiosity inflation, its "
@@ -222,8 +222,8 @@ def write_report(result, sens: dict, outdir: str, fig_paths: list[str],
           "intervention (the Alternative hypothesis).")
         A("")
         A("**Implication.** Whether H1 holds is governed by a structural modelling "
-          "choice: does phenomenological caution primarily *deter* or primarily "
-          "*intrigue*?: far more than by interpretive capacity. The hypothesis's "
+          "choice — does phenomenological caution primarily *deter* or primarily "
+          "*intrigue*? — far more than by interpretive capacity. The hypothesis's "
           "framing around a capacity threshold mislocates the real dependency.")
         A("")
 
@@ -236,7 +236,7 @@ def write_report(result, sens: dict, outdir: str, fig_paths: list[str],
         "every term); we render them as weighted linear combinations with caution "
         "as a multiplicative brake, because the literal product is degenerate and "
         "inverts the research question. The literal reading is reinstatable via "
-        "config: results are conditional on this choice.",
+        "config — results are conditional on this choice.",
         "No historical calibration. Priors are illustrative; the calibration hooks "
         "load files but ship with example scenarios only.",
         "Agents are independent draws with a static environment; there is no time "
@@ -395,7 +395,7 @@ def scenario(
     sim_cfg = scn.to_simulation_config(n_agents=n_agents, seed=seed)
     result = Simulator(sim_cfg).run()
     metrics = compute_metrics(result, bootstrap_n=bootstrap_n, ci=0.95, seed=seed + 1)
-    typer.echo(f"Scenario: {scn.name}: {scn.description}")
+    typer.echo(f"Scenario: {scn.name} — {scn.description}")
     typer.echo(metrics.to_string(float_format=lambda x: f"{x:.5f}"))
 
 

@@ -8,7 +8,7 @@ touching the simulator core.
 A :class:`Scenario` bundles an agent prior, an environment prior, a behaviour
 model name + weights, and free-form provenance notes. Scenarios are plain JSON
 and round-trip through pydantic. The bundled files under ``examples/`` are
-illustrative placeholders, NOT empirically calibrated: every value there is a
+illustrative placeholders, NOT empirically calibrated — every value there is a
 modelling stipulation and is labelled as such in its ``notes``.
 
 Example
@@ -69,7 +69,7 @@ class Scenario(BaseModel):
 
 
 def load_scenario(path: str) -> Scenario:
-    """Load a :class:`Scenario` from a JSON file. Interface only: no fitting."""
+    """Load a :class:`Scenario` from a JSON file. Interface only — no fitting."""
     with open(path) as fh:
         data = json.load(fh)
     return Scenario.model_validate(data)

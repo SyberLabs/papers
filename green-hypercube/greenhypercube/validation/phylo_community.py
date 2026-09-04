@@ -2,17 +2,17 @@
 
 Complements pairwise cue->reward coupling (H2.1/H2.2) with clade-level estimands:
 
-- **NRI / NTI**: net relatedness / nearest-taxon indices from MPD and MNTD
+- **NRI / NTI** — net relatedness / nearest-taxon indices from MPD and MNTD
   (Webb et al. 2002; Milliken et al. 2021 sign convention).
-- **Hot-node / taxon enrichment**: internal clades and genera with more used
+- **Hot-node / taxon enrichment** — internal clades and genera with more used
   species than label-permutation null.
 
 Label variants:
 
-- ``raw``: ``reward >= discovery_threshold`` (documented use / active assay).
-- ``residual``: rank-residualized reward on ``reward_depth`` > 0 (documentation
+- ``raw`` — ``reward >= discovery_threshold`` (documented use / active assay).
+- ``residual`` — rank-residualized reward on ``reward_depth`` > 0 (documentation
   control when depth covariates exist).
-- ``effort_null``: same raw labels, but NRI/NTI null draws match the effort
+- ``effort_null`` — same raw labels, but NRI/NTI null draws match the effort
   distribution of the observed community (stratified sampling).
 """
 

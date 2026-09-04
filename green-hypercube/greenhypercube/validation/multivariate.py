@@ -2,7 +2,7 @@
 
 Single-channel Spearman coupling can miss signal that integrative strategies
 exploit across cues jointly. This module tests whether a **vector** of channel
-cues: sensory salience plus phylo/eco/bio neighbourhood fields: jointly
+cues — sensory salience plus phylo/eco/bio neighbourhood fields — jointly
 predicts reward beyond coverage and reward-depth confounds.
 
 Statistic: rank-based **partial R²** (incremental variance explained by all

@@ -127,7 +127,7 @@ if clean.sum() >= 6:
     print(f"  recurrence~vitality CLEAN  = {np.corrcoef(rc[mm], vc[mm])[0,1]:+.3f} "
           f"(advisor: should weaken if stuckness-confound)")
 
-print("\n=== TEST 3: novelty carrier: mean-surprisal vs semantic-volume ===")
+print("\n=== TEST 3: novelty carrier — mean-surprisal vs semantic-volume ===")
 MS = np.array([r["mean_surp"] for r in rows])
 SV = np.array([r["sem_vol"] for r in rows])
 mm = np.isfinite(SV)

@@ -33,7 +33,7 @@ from vitality.metrics.surface import tokenize_words
 from sentence_transformers import SentenceTransformer
 
 SCAFFOLD = ("I am one person, and I remember as I go. Everything I say stays "
-            "tied to a single life (mine) carried forward by one voice that "
+            "tied to a single life — mine — carried forward by one voice that "
             "keeps its own thread. ")
 
 TEMPLATE_PAT = re.compile(

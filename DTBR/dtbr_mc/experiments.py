@@ -212,8 +212,8 @@ def _h1_test(
         detail = (
             "PC reduces intervention more steeply than SC at EVERY interpretive-"
             "capacity level, with no crossover. H1's qualitative direction (PC is "
-            "the stronger brake) holds, but its central claim, that this advantage "
-            "is specific to LOW capacity, below a threshold: is unsupported: there "
+            "the stronger brake) holds, but its central claim — that this advantage "
+            "is specific to LOW capacity, below a threshold — is unsupported: there "
             "is no threshold and the advantage does not vanish (or even grows) as "
             "capacity rises."
         )

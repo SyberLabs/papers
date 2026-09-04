@@ -66,7 +66,7 @@ The observed grokking time is the superposition of a deterministic representatio
 
 The Arrhenius model posits that the escape rate $h(t) \propto \exp(-B(p) / T_{\text{eff}})$, where the learning rate serves as an effective temperature. Our Learning Rate sweep ($p=47$) allows us to measure $B$ as a physical constant of the landscape. We find that $B$ decreases logarithmically with modulus, explaining why larger problems grok faster despite higher computational complexity ($t_R$). We validate this universality on a canonical attention-based Transformer, where the deconvolution holds ($t_R=52, t_{90}=3400$), proving that the metastable delay is a fundamental property of the double-well landscape across architectures.
 
- governing grokking are not primary: they are the emergent consequences of a decaying potential barrier $B(p)$. 
+ governing grokking are not primary—they are the emergent consequences of a decaying potential barrier $B(p)$. 
 
 \begin{table}[h!]
 \centering
@@ -78,7 +78,7 @@ Friction ($\Delta \tau$) & $1 / P^{3.87}$ & Release & Stochastic ($CV$ peak) \\ 
 \caption{The Deconvolution of Grokking: Intelligence vs. Friction.}
 \end{table}
 
-Our empirical finding that release delay collapses with modulus implies that the barrier height collapses logarithmically with problem size: $B(p) \approx \Delta V_0 - k \log p$. We identify the initial spectral ratio spike (Epoch 80) as **Spike-and-Trap**: the signature of the memorization attractor's formation. Grokking is then triggered by a stochastic fluctuation: a thermodynamic escape: that carries the system into the algorithmic basin. 
+Our empirical finding that release delay collapses with modulus implies that the barrier height collapses logarithmically with problem size: $B(p) \approx \Delta V_0 - k \log p$. We identify the initial spectral ratio spike (Epoch 80) as **Spike-and-Trap**: the signature of the memorization attractor's formation. Grokking is then triggered by a stochastic fluctuation—a thermodynamic escape—that carries the system into the algorithmic basin. 
 
 \section{Hypothesis: Algorithmic Basins & Transition Zones}
 The regime-specificity of scaling laws is a signature of algorithmic multiplicity. We hypothesize that $Q=2$ is the fingerprint of the **Fourier family**, while different architectures or moduli bias the network toward different basins (Position, Lookup). 

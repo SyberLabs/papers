@@ -208,7 +208,7 @@ def test_experiment_runs_and_has_h1():
 
 def test_h1_can_be_falsified():
     """With PC's brake disabled and strong backfire, PC should raise intervention,
-    yielding an H1 FALSIFIED verdict: proving the test is not rigged."""
+    yielding an H1 FALSIFIED verdict — proving the test is not rigged."""
     w = BehaviorWeights(caut_phenomenological_caution=0.0, caut_comprehension=0.6,
                         caut_institutional_strength=0.4, backfire_strength=2.0)
     cfg = ExperimentConfig(n_agents=2000, seed=0, model="backfire", bootstrap_n=0, weights=w)

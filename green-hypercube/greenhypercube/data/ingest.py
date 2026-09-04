@@ -269,7 +269,7 @@ def _ingest_live_naeb_full(cfg: DataConfig, cache: ParquetCache) -> None:
 
     Species are drawn from GBIF occurrences in the configured region (North
     America for NAEB), *not* pre-filtered to documented NAEB plants. Reward is
-    documented medicinal-use intensity for species in NAEB, zero otherwise
+    documented medicinal-use intensity for species in NAEB, zero otherwise —
     the classic *used vs available* estimand (Moerman 1979).
     """
     from . import gbif, globi, opentree, duke_offline, naeb

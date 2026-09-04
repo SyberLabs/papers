@@ -31,8 +31,8 @@ flowchart LR
 ## Phase 2: Categorical Order Parameters (2026-07)
 
 A complete, pre-registered follow-on study asking whether categorical
-structure — a label-free sheaf/kNN "gluing" parameter (geometric leg) and a
-Logical-Information-Cells decidability parameter (logical leg) — supplies
+structure: a label-free sheaf/kNN "gluing" parameter (geometric leg) and a
+Logical-Information-Cells decidability parameter (logical leg): supplies
 the architecture-universal order parameter for grokking that phase 1
 lacked. 63 deterministic training runs across five architectures, seven
 dated protocol amendments, and gate-validated instruments.
@@ -40,7 +40,7 @@ dated protocol amendments, and gate-validated instruments.
 **Headline result:** grokked modular arithmetic is a *churning,
 strengthening wave code* at every trainable depth and width. The sheaf
 parameter beats the variance incumbent everywhere but leads grokking by
-10-25% — becoming coincident only at narrow width; no logical cell ever
+10-25%: becoming coincident only at narrow width; no logical cell ever
 assembles (units churn, newcomers are always born sinusoidal); depth
 *amplifies* the Fourier code (concentration 0.47 -> 0.54 -> 0.72 across
 1 -> 3 -> 5 ReLUs) instead of extinguishing it, while trainability

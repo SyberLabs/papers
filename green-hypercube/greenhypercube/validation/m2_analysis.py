@@ -16,7 +16,7 @@ KEY_STRATEGIES = ("ecological", "cultural", "sensory")
 
 # Pre-specified SESOI for paired genuine-component TOST (AUDC units).
 # ~25–50% of observed real structured advantage (0.05–0.10) and ~0.5× random
-# replicate SD on full-flora landscapes — below a gain that would alter a
+# replicate SD on full-flora landscapes: below a gain that would alter a
 # fixed-budget screening decision.
 TOST_DELTA_AUDC = 0.03
 TOST_DELTA_RATIONALE = (
@@ -109,7 +109,7 @@ def stratified_bin_diagnostics(
     n_bins: int = 5,
     residual_reward: bool = False,
 ) -> pd.DataFrame:
-    """Within-bin reward variation — distinguishes vacuous vs informative nulls."""
+    """Within-bin reward variation: distinguishes vacuous vs informative nulls."""
     from .residual import rank_residualize
 
     reward = np.asarray(m.reward, dtype=float)
@@ -219,7 +219,7 @@ def high_documentation_stratified_summary(
     top_bins: tuple[int, ...] = (3, 4),
     channels: tuple[str, ...] = ("eco",),
 ) -> pd.DataFrame:
-    """Eco (or other channels) in high-documentation effort bins — label-noise check."""
+    """Eco (or other channels) in high-documentation effort bins: label-noise check."""
     vacuous = set(bin_diag.loc[bin_diag["vacuous"], "bin"].astype(int))
     sub = stratified[
         stratified["bin"].isin(top_bins)

@@ -650,7 +650,7 @@ def render_markdown(
             )
         elif shallow_conc:
             lines.append(
-                "- **D3 (Fourier vanishing)**: unresolvable — no grokked deep "
+                "- **D3 (Fourier vanishing)**: unresolvable: no grokked deep "
                 "runs to compare (all censored)."
             )
         if deep_all and shallow_conc and len(deep_all) != len(deep_grokked):
@@ -771,7 +771,7 @@ def _hypothesis_readout(
             "- H1 requires both MLP and residual families; not both present."
         )
 
-    # H2/H3 (amendment 4, item 5) — adjudicated now that D_logic exists.
+    # H2/H3 (amendment 4, item 5): adjudicated now that D_logic exists.
     has_dlogic = any("D_logic" in e.timings for e in evaluations)
     if not has_dlogic:
         out.append("- **H2, H3: pending** (D_logic not implemented).")

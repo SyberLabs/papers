@@ -1,4 +1,4 @@
-"""CLI rater — same study, same output format as study/rate.html.
+"""CLI rater: same study, same output format as study/rate.html.
 
 Two modes:
   interactive : prompts for each dimension score + 'most alive' pick per item.

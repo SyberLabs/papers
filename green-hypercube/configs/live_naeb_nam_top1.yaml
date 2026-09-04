@@ -1,5 +1,5 @@
 # Enriched NAEB pool at reward_top_frac=1.0 (matches coupling / M2 side-by-side).
-# Same seed as live_naeb_nam.yaml but no sparsification — for genuine-component
+# Same seed as live_naeb_nam.yaml but no sparsification: for genuine-component
 # comparison against Moerman full flora.
 seed: 12345
 output_dir: results/live_naeb_top1

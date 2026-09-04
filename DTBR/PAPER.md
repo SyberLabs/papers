@@ -2,7 +2,7 @@
 
 ### Physical substrate dominates symbolic design in deep-time hazard deterrence: a falsification-oriented Monte Carlo study
 
-*Working paper — DTBR-MC program. Draft for internal review. All quantitative
+*Working paper: DTBR-MC program. Draft for internal review. All quantitative
 claims carry an epistemic-status label (§2); bibliographic details in §References
 require verification against primary sources before any submission.*
 
@@ -14,9 +14,9 @@ For four decades the problem of warning distant-future societies away from burie
 nuclear hazards has been framed as a problem of *signs*: which markers, monuments,
 myths, or institutions could carry meaning across ten millennia. We report a
 falsification-oriented modelling program that began by testing a representative
-hypothesis from that tradition — that below a threshold of interpretive capacity,
+hypothesis from that tradition, that below a threshold of interpretive capacity,
 phenomenological caution (dread-inducing design) deters intrusion more effectively
-than semantic clarity (legible warning) — and ended by relocating the problem
+than semantic clarity (legible warning), and ended by relocating the problem
 entirely. The capacity-threshold hypothesis is shown to be not merely false but
 *unfalsifiable in the model class that motivated it*: in any additive behavioural
 model the relative potency of two communication levers is a ratio of constants,
@@ -33,7 +33,7 @@ imposed by the hazard's own latency and invisibility, and the physical opportuni
 available communicative lever. We argue this convergence reflects a difference of
 logical type rather than magnitude: physical factors enter the harm function as
 *necessary multiplicative gates*, while symbolic factors enter as *modulators*
-within the space those gates permit — and no modulator can move an outcome past a
+within the space those gates permit, and no modulator can move an outcome past a
 gate. We are explicit that the simulator itself is, in its current form, a
 consistency auditor rather than a predictive instrument: a coupling/contagion
 experiment designed as the decisive test of whether the model can produce
@@ -41,8 +41,8 @@ genuinely emergent (non-deductive) behaviour returned a clean negative. The
 contribution is therefore the reframing, audited for internal consistency, not a
 forecast. The practical implication for marker design is direct: the symbolic
 program optimises a second-order term, and the one symbolic move that survives the
-analysis — manufacturing immediate affective certainty of consequence to partly
-bypass the hazard's certainty ceiling — works only for non-acquisitive actors who
+analysis: manufacturing immediate affective certainty of consequence to partly
+bypass the hazard's certainty ceiling: works only for non-acquisitive actors who
 comprehend it, and backfires for the acquisitive few.
 
 ---
@@ -53,7 +53,7 @@ The United States' Waste Isolation Pilot Plant and comparable deep geological
 repositories pose a communication problem with no precedent in human practice: to
 deter intrusion for on the order of ten thousand years, across a gulf in which
 language, writing systems, institutions, and even the cognitive baseline of the
-receiver cannot be assumed stable. The canonical responses are by now familiar —
+receiver cannot be assumed stable. The canonical responses are by now familiar
 the Human Interference Task Force convened to study marker feasibility; Sebeok's
 proposal of a self-renewing "atomic priesthood" to carry interpretive authority;
 the expert panels that produced menacing-earthwork concepts and the now-iconic
@@ -93,22 +93,22 @@ This is not a defect to be hidden but a property to be tracked, and the central
 methodological commitment of this program is that every result is assigned one of
 three labels, and the label travels with the result into every claim:
 
-- **AUDIT** — a deductive consequence of the model's construction. It reveals which
+- **AUDIT**: a deductive consequence of the model's construction. It reveals which
   of the author's assumptions are load-bearing; it makes no claim about the world.
-- **EXTRAPOLATION** — a conditional forecast resting on contemporary measured
+- **EXTRAPOLATION**: a conditional forecast resting on contemporary measured
   primitives, valid only under stated assumptions about their persistence.
-- **CARTOGRAPHY** — a reachability result ("regime *X* obtains when parameter
+- **CARTOGRAPHY**: a reachability result ("regime *X* obtains when parameter
   *Y* exceeds *Y\**"), which asserts possibility, never actuality.
 
 The discipline is not cosmetic. As §4 shows, the program's first apparent
-"finding" — that one communication lever dominated another — was AUDIT mislabelled
+"finding" (that one communication lever dominated another) was AUDIT mislabelled
 as discovery, and recognising this was the hinge of the entire study. We adopt three
 further safeguards. **Pre-registration:** functional forms and falsification
 conditions are fixed before output is inspected; post hoc changes are logged as
 dated amendments and any result obtained under an amended form is reported as
 exploratory. **The anti-tautology rule:** added model structure is licensed only by
 a measured drop-out or sign-flip in the literature, and a built-in mechanism never
-counts as evidence for the hypothesis it encodes — only the *bounded magnitude* at
+counts as evidence for the hypothesis it encodes: only the *bounded magnitude* at
 which it produces the predicted pattern can count. **Identifiability checking:** for
 every contested functional form we implement at least two defensible alternatives;
 if they yield observationally indistinguishable output, we report the
@@ -144,7 +144,7 @@ warning-compliance studies document large stage-wise drop-out (a representative
 sequence falls from roughly nine in ten noticing a warning, to under half reading
 it, to roughly a quarter complying), and a single monotone "drive minus caution"
 equation cannot represent attrition. Comprehension is the only stage gated by
-interpretive capacity — the demotion that H1, as we will see, earns. The appraisal
+interpretive capacity: the demotion that H1, as we will see, earns. The appraisal
 stage is an expected-utility competition, after Becker, between perceived value and
 perceived deterrence; both the backfire channels and the deterrence channels live
 there.
@@ -190,7 +190,7 @@ sequence is the argument.
 The natural first test sweeps each communication lever at fixed interpretive
 capacity and compares the marginal slopes; the quantity of interest is the margin
 *m* = slope(SC) − slope(PC), with *m* > 0 meaning PC is the stronger brake. H1
-predicts *m* > 0 at low capacity and a downward crossing — a threshold — as capacity
+predicts *m* > 0 at low capacity and a downward crossing (a threshold) as capacity
 rises.
 
 In the additive model the margin is flat: identical at every interpretive-capacity
@@ -206,11 +206,11 @@ three behavioural forms (additive brake, prestige-inversion backfire, and a line
 variant) sharpened the point into a non-identifiability result: the three forms
 disagreed even on the *sign* of the capacity-dependence (flat, increasing, and
 decreasing respectively), so "interpretive capacity moderates the lever balance" is
-not a claim the model class can adjudicate — it is a free choice of nonlinearity.
+not a claim the model class can adjudicate: it is a free choice of nonlinearity.
 
 The lesson generalises: **regime and threshold claims are claims about interaction
-terms, and cannot be tested in a model that has none.** This result is AUDIT — a
-property of additive algebra — but it is the most decisive thing the program
+terms, and cannot be tested in a model that has none.** This result is AUDIT: a
+property of additive algebra, but it is the most decisive thing the program
 established, and it redirected everything that followed.
 
 ### 4.2 Relocating the moderator [EXTRAPOLATION from contemporary literature]
@@ -219,24 +219,24 @@ If capacity is the wrong axis, what is the right one? We turned to the literatur
 in which the relevant behaviour is measured rather than imagined.
 
 The nuclear-semiotics canon itself, examined first, proved to be almost entirely
-expert *proposal* and *subjective-probability elicitation* — the Sandia marker
+expert *proposal* and *subjective-probability elicitation*: the Sandia marker
 panels elicited judgments about deterrence efficacy that the panellists themselves
-made conditional on the intruder's motive and the society's technological level —
+made conditional on the intruder's motive and the society's technological level
 and contained the backfire intuition ("why would so much effort defend nothing of
 value?") only as folk reasoning, never as measurement. The field is proposal-rich
 and data-poor precisely where a hypothesis needs data.
 
 The warning-compliance literature supplies the brake: perceived hazard reliably
-raises avoidance, and — directly contradicting the backfire intuition for ordinary
-actors — vivid, fear- and disgust-inducing warnings *increase* protective behaviour
+raises avoidance, and: directly contradicting the backfire intuition for ordinary
+actors: vivid, fear- and disgust-inducing warnings *increase* protective behaviour
 rather than glamorising the hazard. But this literature studies *non-acquisitive*
 actors, people with nothing to gain by intruding. The archaeology of grave-robbing
 supplies the mirror case: across five millennia, inscribed curses and supernatural
 threats did little to deter determined robbers, and increasingly elaborate
 defensive architecture coincided with increasingly thorough looting, the defenses
 themselves reading as evidence of buried value. The reactance and curiosity
-literatures add a third channel — prohibition raises curiosity, robustly and across
-ages, even absent any inferred value — but with a decisive qualification: the effect
+literatures add a third channel: prohibition raises curiosity, robustly and across
+ages, even absent any inferred value, but with a decisive qualification: the effect
 is strong on *curiosity and attention* and attenuates toward null at the level of
 consummatory *behaviour* in field settings.
 
@@ -247,19 +247,19 @@ stage** at which the outcome is measured. The same ominous cue deters the many w
 have nothing to gain and tempts the dedicated few who suspect they do; and the
 curiosity it provokes mostly fails to survive the funnel to action.
 
-### 4.3 Certainty, not severity — and the ceiling that binds [mixed AUDIT/EXTRAPOLATION]
+### 4.3 Certainty, not severity, and the ceiling that binds [mixed AUDIT/EXTRAPOLATION]
 
 The criminology of deterrence supplies the appraisal stage's form. Becker's
 expected-utility account makes intrusion a comparison of reward against the
 *product* of the probability and the severity of consequence; the robust empirical
-deviation from that account — the certainty aphorism — is that perceived *certainty*
+deviation from that account (the certainty aphorism) is that perceived *certainty*
 of consequence deters substantially while *severity* deters only weakly, an
 asymmetry whose magnitude is itself small and contested, and which formally implies
 that those who do offend are disproportionately risk-seeking.
 
 This carries a sharp consequence for the deep-time case that the experiment
 (Experiment 004) makes mechanical. Deterrence in the model runs through a perceived
-certainty of personal consequence that is capped by a *referent ceiling* — a
+certainty of personal consequence that is capped by a *referent ceiling*: a
 property not of the message but of the hazard. A buried radiological hazard is, from
 an intruder's vantage, the worst possible referent on this axis: its harm is
 invisible, latent, and delayed, supplying almost no perceptible certainty of
@@ -269,7 +269,7 @@ reached, and the risk-seeking minority who actually intrude remain weakly deterr
 regardless of marker quality.
 
 We are deliberate about the epistemic status here. That a low ceiling caps
-deterrence is near-analytic — it follows from a minimum operator and is AUDIT. The
+deterrence is near-analytic: it follows from a minimum operator and is AUDIT. The
 empirical content is the single claim that the radiological referent's ceiling *is*
 low, which is reasoned from the physics of latency and invisibility but not
 measured, and is therefore treated as a labelled assumption. The certainty-over-
@@ -281,7 +281,7 @@ fighting a comprehension problem or a phenomenology problem; they are fighting a
 certainty-of-consequence problem against a hazard that intrinsically cannot supply
 certainty.** The much-derided draft inscription insisting that the danger "is still
 present, in your time, as it is in ours" was, on this account, groping toward the
-correct lever — immediacy and certainty — without the theory to know why.
+correct lever (immediacy and certainty) without the theory to know why.
 
 ### 4.4 The brake/backfire crossover, and a logged amendment [EXPLORATORY]
 
@@ -298,7 +298,7 @@ The fix is logged as a dated amendment and is theoretically principled rather th
 tuning convenience: the same cue is split by comprehension, reading as *hazard* to
 those who understand it (a brake, scaling with comprehension) and as *mystery* to
 those who do not (a backfire). Under the amended form the brake-to-backfire
-crossover appears at high acquisitiveness, and — passing the anti-tautology guard — it
+crossover appears at high acquisitiveness, and (passing the anti-tautology guard) it
 appears with the value-signalling coefficient inside its data-bounded range rather
 than only at implausible values. Because the form was shaped after a result, this
 finding is labelled exploratory, not confirmatory. Its interpretation is
@@ -310,14 +310,14 @@ continuous.
 
 A model whose every output is a deductive consequence of its inputs is a consistency
 device, not a simulator. The single source of genuinely non-deductive behaviour
-available to an agent model is *coupling* — feedback in which one agent's action
-alters another's propensity — which can, in principle, produce emergent regime
+available to an agent model is *coupling*: feedback in which one agent's action
+alters another's propensity, which can, in principle, produce emergent regime
 shifts (cascades, tipping, hysteresis) not implied by any individual equation. We
 therefore designed a coupling experiment (Experiment 005) as the decisive test of
 whether the model could graduate from auditor to instrument.
 
 Coupling was introduced as an act-stage social pull routed through the decision's
-nonlinearity — the standard threshold-contagion form, which *can* produce
+nonlinearity: the standard threshold-contagion form, which *can* produce
 bistability. The emergent signature sought was hysteresis: two stable population
 basins reachable from identical parameters depending on initial conditions, a
 property no independent-agent model can reproduce regardless of its marginals, which
@@ -329,7 +329,7 @@ hot-start trajectories always converged together; the result held under two dist
 definitions of the social signal (rare visible excavation versus general
 engagement) and under both mean-field and local-graph topologies. Coupling
 *amplified* the disturbance rate severalfold, but smoothly and reproducibly by a
-shifted-marginal independent model — deductive amplification, not emergence. The
+shifted-marginal independent model: deductive amplification, not emergence. The
 mechanism of the non-result is itself informative: population **heterogeneity**
 suppresses tipping, because a diverse distribution of decision thresholds sums many
 steep individual responses into a gently sloped aggregate with a single fixed point.
@@ -339,23 +339,23 @@ risk-seeking minority cannot ignite a cascade because there is no cascade to ign
 strongly correlated priors could in principle tip, and we have not anchored those.)
 
 Because the coupling strength is unanchored, even a positive result here would have
-been CARTOGRAPHY — a statement of reachability, never of actuality. The negative
+been CARTOGRAPHY: a statement of reachability, never of actuality. The negative
 result is correspondingly clean: the model declined the opportunity to surprise us.
 
 ---
 
 ## 5. The convergent finding: physical substrate is first-order
 
-The experiments above were built to probe different questions — the algebra of
-thresholds, the certainty of deterrence, the dynamics of contagion — yet a single
+The experiments above were built to probe different questions: the algebra of
+thresholds, the certainty of deterrence, the dynamics of contagion, yet a single
 structural fact surfaced independently in three of them, designed into none.
 
 In the foundational sensitivity analysis, the dominant driver of expected harm was
 the hazard's **severity**, a fixed physical property, well above any communication
 lever. In the deterrence experiment, the binding constraint was the **referent
 ceiling**, the hazard's intrinsic inability to make consequence feel certain. In the
-coupling experiment, the disturbance rate was hard-capped by **opportunity** — the
-physical access and technical capability required to excavate — at a level the
+coupling experiment, the disturbance rate was hard-capped by **opportunity**: the
+physical access and technical capability required to excavate: at a level the
 strongest conceivable social pull could not exceed, because most agents simply
 cannot reach a site they cannot get into.
 
@@ -364,11 +364,11 @@ discovery. Two of the three are at least partly AUDIT: severity dominates a
 variance-based index in part because it is a wide-variance direct multiplier in the
 objective, and the opportunity cap follows from opportunity entering as a
 multiplicative gate. The honest and more interesting reading is that the convergence
-reflects a difference of **logical type, not magnitude**. Physical factors —
-severity, the certainty ceiling, opportunity — enter the harm function as *necessary
+reflects a difference of **logical type, not magnitude**. Physical factors
+severity, the certainty ceiling, opportunity: enter the harm function as *necessary
 multiplicative conditions*: gates and caps through which the outcome must pass.
-Symbolic and behavioural factors — clarity, dread, prestige, curiosity, social
-modelling — enter as *modulators* within the space those gates permit. A modulator,
+Symbolic and behavioural factors: clarity, dread, prestige, curiosity, social
+modelling: enter as *modulators* within the space those gates permit. A modulator,
 however well designed, cannot move an outcome past a gate it does not control. That
 the physical factors are gates and the symbolic factors are modulators is itself the
 empirically defensible claim: you cannot excavate a repository you cannot reach, you
@@ -394,24 +394,24 @@ argument about their order of magnitude.
 
 There is, however, one symbolic move the analysis endorses, and it is a specific
 one. The deterrence ceiling binds because the hazard cannot make *cognitive*
-consequence feel certain. Affective dread — visceral, immediate, requiring no
-inference — is the single channel that partly bypasses the ceiling, because it
+consequence feel certain. Affective dread: visceral, immediate, requiring no
+inference: is the single channel that partly bypasses the ceiling, because it
 operates before the cognitive risk appraisal that the latency of radiological harm
 defeats. But dread is double-edged: it brakes the comprehending, non-acquisitive
 majority and signals value to the acquisitive few. The design implication is precise:
 phenomenological warning should aim to manufacture immediate, certain-feeling threat
 (the *certainty* lever, not the *severity* lever) for the ordinary visitor, while
 doing as little as possible to advertise the site as a defended prize to the
-treasure-seeker — and it should expect to fail on the latter, who are better
+treasure-seeker, and it should expect to fail on the latter, who are better
 addressed by the opportunity gate.
 
 ### 6.2 What the simulator was for
 
 The simulator did not predict the future and was never able to. Its function was to
 force a vague hypothesis into a falsifiable form, to make the consequences of each
-modelling commitment inspectable, and — when asked directly, through the coupling
+modelling commitment inspectable, and: when asked directly, through the coupling
 experiment, whether it could generate knowledge not already implicit in its
-construction — to answer honestly that it could not. That negative answer is what
+construction: to answer honestly that it could not. That negative answer is what
 licenses the paper's modest framing: the contribution is a reframing, audited for
 internal consistency against measured contemporary primitives, not a forecast.
 
@@ -447,7 +447,7 @@ all of it lay a single structural fact, arrived at three independent ways: the
 constraints that bind are physical gates, and the signs are modulators within them.
 The deep-time warning problem is, in its first-order structure, a problem of physics
 and access, not of semiotics. The most sophisticated marker imaginable is a
-second-order correction to a containment problem — and the honest task of a model
+second-order correction to a containment problem, and the honest task of a model
 in this domain is to say so, and to show its work.
 
 ---

@@ -1,4 +1,4 @@
-# DTBR-MC v0.2 — H3 Specification (Pre-Registered)
+# DTBR-MC v0.2: H3 Specification (Pre-Registered)
 
 **Status:** pre-registration. Functional forms and falsification conditions below
 are fixed *before* any output is inspected. No parameter, form, or threshold in
@@ -18,11 +18,11 @@ quarantined from the contemporary anchors.
 Every quantity this model emits carries exactly one of three labels, and the
 label travels with the number into every figure, table, and sentence:
 
-- **AUDIT** — a deductive consequence of the construction. Tells us which of our
+- **AUDIT**: a deductive consequence of the construction. Tells us which of our
   assumptions are load-bearing. Makes no claim about the world.
-- **EXTRAPOLATION** — a conditional forecast resting on contemporary measured
+- **EXTRAPOLATION**: a conditional forecast resting on contemporary measured
   primitives, valid only under explicitly stated assumptions.
-- **CARTOGRAPHY** — a possibility result ("regime X is reachable when Y"),
+- **CARTOGRAPHY**: a possibility result ("regime X is reachable when Y"),
   asserting reachability, never actuality.
 
 The v0.1 post-mortem is the reason this section exists: H1's "direction-only"
@@ -42,7 +42,7 @@ be swept, and contaminates any output it touches with the CARTOGRAPHY label.
 
 1. **H1 was unfalsifiable in the model class it was tested in.** In any additive
    intervention model the lever margin (slope_SC − slope_PC) is a quotient of
-   fixed coefficients, hence constant in interpretive capacity — a *theorem*, not
+   fixed coefficients, hence constant in interpretive capacity: a *theorem*, not
    a finding. A capacity threshold requires a non-separable lever×capacity
    interaction the form did not contain. v0.2 must therefore be explicitly
    non-additive and the interaction must be named, not latent.
@@ -95,7 +95,7 @@ H3 decomposes into four sub-claims, each tied to a literature and each with a
 pre-registered falsification condition (§7):
 
 - **H3a (motive moderates sign).** ∂P(act)/∂PC < 0 for low acquisitiveness and
-  > 0 for high acquisitiveness, with a crossover in acquisitiveness — *at
+  > 0 for high acquisitiveness, with a crossover in acquisitiveness: *at
   parameter values bounded by data*, not arbitrary ones.
 - **H3b (reactance is upstream and attenuates).** The reactance contribution is
   large at the notice/appraise stages and ≈0 at the act stage, with a single
@@ -139,7 +139,7 @@ New variables introduced (and *why*, with provenance in §10):
 | variable | meaning | why it exists |
 | --- | --- | --- |
 | `acquisitiveness` | agent's motive to extract value | the empirical sign-flip moderator (warning vs looting) |
-| `signal_certainty` | how strongly markers assert *certain, immediate* consequence | the strong deterrent lever (criminology) — a design choice |
+| `signal_certainty` | how strongly markers assert *certain, immediate* consequence | the strong deterrent lever (criminology): a design choice |
 | `referent_certainty_ceiling` | max achievable perceived certainty given the hazard's nature | encodes that radiological harm is latent/invisible/delayed |
 | `perceived_certainty` | appraised certainty after comprehension, capped by the ceiling | the operative deterrent quantity |
 
@@ -154,7 +154,7 @@ consequence-to-self is a separate, comprehension-gated, certainty-capped quantit
 **Agent (carried from v0.1):** curiosity, risk_tolerance, technical_capability,
 interpretive_capacity (IC), institutional_strength, prestige_sensitivity,
 economic_pressure, ritualization_tendency. **Added:** acquisitiveness.
-Explorer upper-tail minority retained — now interpreted as the *risk-seeking
+Explorer upper-tail minority retained: now interpreted as the *risk-seeking
 offender* subpopulation (Becker: certainty-aphorism ⇒ intruders are risk-seeking),
 and explorer boosts should load on risk_tolerance and acquisitiveness.
 
@@ -165,12 +165,12 @@ prestige_risk, historical_memory, repository_severity (now = harm magnitude).
 LOW for the radiological baseline).
 
 A composite, used below: `defense_level = aggregate(PC, artificial_intentionality,
-prestige_risk, marker effort)` — how heavily the site reads as *defended*. This is
+prestige_risk, marker effort)`: how heavily the site reads as *defended*. This is
 the quantity an acquisitive actor mines for evidence of value.
 
 ---
 
-## 5. Functional forms (FIXED — pre-registered)
+## 5. Functional forms (FIXED: pre-registered)
 
 All forms are configurable in code so the literal/alternative readings remain
 reinstatable (the v0.1 discipline), but the forms below are the registered
@@ -191,7 +191,7 @@ high (warning lit: ~88% notice).
 comprehension c = w_ic·IC + (1−w_ic)·marker_clarity      # default w_ic = 0.7
 ```
 
-**5.3 Appraisal — perceived value (where backfire lives).**
+**5.3 Appraisal: perceived value (where backfire lives).**
 ```
 material_value   = resource_attractiveness · acquisitiveness
 value_signaling  = γ · defense_level · acquisitiveness            # channel 2: defense ⇒ inferred worth
@@ -206,7 +206,7 @@ perceived_value  = material_value + value_signaling + info_reward + reactance_bu
 - `info_reward` + `reactance_bump` are the upstream curiosity channels; they are
   attenuated at the act stage by §5.6.
 
-**5.4 Appraisal — perceived deterrence (certainty, not severity).**
+**5.4 Appraisal: perceived deterrence (certainty, not severity).**
 ```
 perceived_certainty = min( referent_certainty_ceiling,
                            c · (cert_base + κ·signal_certainty) )
@@ -217,7 +217,7 @@ The `min(…, ceiling)` is the apex inference made mechanical: no marker design
 (`signal_certainty`) can push deterrence past what the *referent* can make
 certain. Radiological baseline sets `referent_certainty_ceiling` LOW.
 
-**5.5 Intent — Becker expected utility with risk attitude.**
+**5.5 Intent: Becker expected utility with risk attitude.**
 ```
 EU       = perceived_value − perceived_deterrence − k_cost·(1 − accessibility)
 p_intend = logistic( a·(EU − θ(risk_tolerance)) )
@@ -225,7 +225,7 @@ p_intend = logistic( a·(EU − θ(risk_tolerance)) )
 θ is the decision threshold, *lowered* by risk_tolerance (risk-seeking actors
 intend at lower EU). This is where the explorer/offender minority does its work.
 
-**5.6 Act — stage attenuation of curiosity + social coupling.**
+**5.6 Act: stage attenuation of curiosity + social coupling.**
 ```
 # curiosity channels mostly fail to reach action (media-ratings near-null):
 value_at_act   = perceived_value − (1 − α)·(info_reward + reactance_bump)
@@ -250,7 +250,7 @@ E[H] = P(encounter) · P(reach act ∧ disturb) · repository_severity
 ```
 `repository_severity` here is **harm magnitude only**. It must not appear in any
 deterrence term. The v0.1 sensitivity result (severity dominates E[H]) is expected
-to recur and is to be labeled AUDIT — it is a property of the multiplicative
+to recur and is to be labeled AUDIT: it is a property of the multiplicative
 objective, not a behavioral finding.
 
 ---
@@ -258,9 +258,9 @@ objective, not a behavioral finding.
 ## 7. Falsification conditions (the heart of the pre-registration)
 
 Each sub-claim states what output would prove it WRONG. If the falsifying pattern
-appears, H3 (or that limb) is reported as falsified — no reframing to rescue it.
+appears, H3 (or that limb) is reported as falsified: no reframing to rescue it.
 
-**H3a — motive moderates the sign.**
+**H3a: motive moderates the sign.**
 - *Test:* sweep PC at fixed comprehension across `acquisitiveness` ∈ [0,1], with γ
   fixed at its data-bounded value (§10).
 - *Predicted:* ∂P(act)/∂PC < 0 at low acquisitiveness, > 0 at high, with an
@@ -270,15 +270,15 @@ appears, H3 (or that limb) is reported as falsified — no reframing to rescue i
   data-bounded range. (The second clause is the anti-tautology test: building
   `value_signaling` in does not count as confirming H3a.)
 
-**H3b — reactance is upstream and attenuates.**
+**H3b: reactance is upstream and attenuates.**
 - *Test:* calibrate α so the act-stage reactance contribution matches the field
   near-null; independently check the appraise-stage contribution matches the
   robust curiosity effect.
-- *FALSIFIED if:* no single α reconciles both (robust upstream, null at action) —
+- *FALSIFIED if:* no single α reconciles both (robust upstream, null at action)
   i.e., the funnel cannot simultaneously honor FitzGibbon and the media-ratings
   result. That would mean the staged structure is wrong.
 
-**H3c — certainty ≻ severity; ceiling binds.**
+**H3c: certainty ≻ severity; ceiling binds.**
 - *Test:* compare |∂P(act)/∂signal_certainty| vs |∂P(act)/∂perceived_consequence|;
   sweep signal_certainty above and below the ceiling; run the radiological
   (low-ceiling) parameterization against the risk-seeking minority.
@@ -288,7 +288,7 @@ appears, H3 (or that limb) is reported as falsified — no reframing to rescue i
   radiological case is nonetheless easily deterred (would refute the apex
   inference that the referent, not the message, is the binding constraint).
 
-**H3d — coupling yields genuine emergence.**
+**H3d: coupling yields genuine emergence.**
 - *Test:* every regime shift (any qualitative change in the disturbance surface)
   is re-run against a coupling-free null with matched stage marginals (λ = 0,
   marginals frozen).
@@ -374,12 +374,12 @@ and rationale.*
 
 ---
 
-## Amendment 1 (2026-06-15) — phenomenological caution needs a brake pathway
+## Amendment 1 (2026-06-15): phenomenological caution needs a brake pathway
 
 **Trigger:** first run of the H3a motive-moderator test. Under the pre-registered
 §5.3–5.4 form, `phenomenological_caution` (PC) fed *only* the value/backfire
 channels (defense-signaling, mystery, reactance) and entered no deterrence term.
-Result: `slope_pc > 0` at every acquisitiveness level — PC could not brake, so the
+Result: `slope_pc > 0` at every acquisitiveness level: PC could not brake, so the
 predicted brake→backfire crossover was structurally impossible. The registered
 form was under-specified relative to the warning-label anchor (comprehended
 hazard deters).
@@ -390,7 +390,7 @@ is added to `perceived_deterrence` (both deterrence forms), weighted by
 stays on the backfire side. Same cue, opposite effect by comprehension: dread for
 those who understand it, mystery for those who don't. The dread channel is also
 the one route that partly bypasses the certainty ceiling (immediate affect rather
-than cognitive risk appraisal) — which is what phenomenological warnings are for.
+than cognitive risk appraisal), which is what phenomenological warnings are for.
 
 **Status of results obtained after this amendment:** EXPLORATORY, not
 confirmatory. Post-amendment H3a shows a brake→backfire crossover at

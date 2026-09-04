@@ -203,7 +203,7 @@ def build_model(arch: str, modulus: int, embed_dim: int, hidden_dim: int) -> nn.
     if arch == "deep5":
         return DeepRose(modulus, embed_dim, hidden_dim, n_hidden=5)
     if arch == "deepnarrow":
-        # Amendment 7: the pinned narrow arm — LIC-faithful depth (3) at
+        # Amendment 7: the pinned narrow arm: LIC-faithful depth (3) at
         # width 64; isolates width at fixed depth vs the amendment-5 arm.
         return DeepRose(modulus, embed_dim, 64, n_hidden=3)
     raise ValueError(

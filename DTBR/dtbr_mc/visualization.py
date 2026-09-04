@@ -209,7 +209,7 @@ def plot_h1_margin(h1_table: pd.DataFrame, outdir: str,
         axes[0].annotate(f"IC* ≈ {threshold:.3f}", xy=(threshold, 0),
                          xytext=(threshold, axes[0].get_ylim()[1] * 0.6),
                          fontsize=9, ha="center")
-    fig.suptitle("H1 test — does PC out-brake SC, and only below a capacity threshold?")
+    fig.suptitle("H1 test: does PC out-brake SC, and only below a capacity threshold?")
     return _save(fig, os.path.join(outdir, "h1_margin.png"))
 
 

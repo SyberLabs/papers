@@ -3,8 +3,8 @@
 Status: pre-registration draft, 2026-07. No confirmatory analysis has been run.
 Companion to phase 1 (`paper/OFFICIAL_GROKKING_RESEARCH_PAPER.md`,
 `paper/BETA_BOTTLENECK_SECTION.md`). This document fixes hypotheses, metrics,
-and decision rules *before* implementation so that outcomes — including null
-results — are interpretable rather than chosen post hoc.
+and decision rules *before* implementation so that outcomes: including null
+results: are interpretable rather than chosen post hoc.
 
 ## 0. One-Paragraph Summary
 
@@ -13,10 +13,10 @@ three latent variables (memorization M, rule structure R, deployment D). Its
 open frontier is that D has no architecture-universal operationalization: the
 variance-based D(t) times grokking in MLPs but not residuals. Phase 2 asks
 whether the *categorical* structure of the network supplies a better D. We
-build two order parameters from two independent categorical lineages —
+build two order parameters from two independent categorical lineages
 a geometric one (cellular-sheaf distance-to-global-section, Hansen-Ghrist /
 Bodnar-Bronstein) and a logical one (decidability of the layer's logical
-cells, Belfiore-Bennequin) — and test them against each other and against
+cells, Belfiore-Bennequin), and test them against each other and against
 the existing variance D on the phase-1 traces. This is a measurement study,
 not a training study: it runs on existing runs plus a small confirmatory
 sweep, and it is designed to be able to fail.
@@ -31,7 +31,7 @@ Two publicly verifiable artifacts anchor the categorical view of DNNs:
   (arXiv 2106.14587): every DNN is an object in a Grothendieck topos;
   learning is a flow of morphisms; layer invariances are Giraud stacks;
   semantic functioning is the ability to express theories in an internal
-  language. This is a *statics* of semantics — structure at a functioning
+  language. This is a *statics* of semantics: structure at a functioning
   point, with no account of the transition to that point.
 - Belfiore, Bennequin & Giraud, *Logical Information Cells I*
   (arXiv 2108.04751, public): an *empirical* companion. Trains small MLPs
@@ -43,8 +43,8 @@ Two publicly verifiable artifacts anchor the categorical view of DNNs:
   score for groups of cells that correlates with the L1 norm of their
   output weights ("weights precisely perform the proofs").
 
-The companions cited by (ii) — *Logico-probabilistic Information* (2020)
-and *Logical Information Cells II* (2021) — remain internal Huawei technical
+The companions cited by (ii): *Logico-probabilistic Information* (2020)
+and *Logical Information Cells II* (2021): remain internal Huawei technical
 reports and are not used here. We use only the public measurement.
 
 ### 1.2 The cautionary structure
@@ -52,7 +52,7 @@ reports and are not used here. We use only the public measurement.
 The Huawei topos program is a five-year, deep, descriptive effort whose most
 ambitious computational deliverables stayed internal, which is cited downstream
 as an ancestor rather than deployed as a method, and whose visible 2025
-output is Lean formalization of topos theory — moving toward formal math,
+output is Lean formalization of topos theory: moving toward formal math,
 away from ML measurement. The failure mode phase 2 must avoid is doing topos
 theory *about* grokking instead of extracting a *measurement* from categorical
 structure. The line adjacent to Belfiore-Bennequin that did become method is
@@ -104,7 +104,7 @@ Two variants are pre-registered, and they make different claims.
 Conflating them was an error in draft v1 of this document; they are now
 separated explicitly (see amendment log, Section 7).
 
-**Variant A (label-built, fixed sheaf — diagnostic only).** Graph from class
+**Variant A (label-built, fixed sheaf: diagnostic only).** Graph from class
 labels as above, identity restriction maps onto a shared subspace. Then the
 sheaf Laplacian L_F is *constant in time* and only the section
 s_t (s_t(x) = phi(x, t)) evolves. Define
@@ -119,7 +119,7 @@ kept because it is nearly free to compute and calibrates the pipeline.
 Because L_F is fixed, its spectrum does not evolve; Variant A **cannot**
 support any spectral-gap hypothesis.
 
-**Variant B (representation-built, time-dependent sheaf — the categorical
+**Variant B (representation-built, time-dependent sheaf: the categorical
 claim).** At each checkpoint t, build the graph as k-nearest-neighbors in
 representation space (no labels), and learn restriction maps from the local
 representation geometry (Hansen-Ghrist smooth-signal estimation). This yields
@@ -137,10 +137,10 @@ that emerges aligns with rule classes (fraction of H^0(t) explained by the
 class partition). This label-free construction is what dissolves the
 circularity threat of Section 5.
 
-Spectral note (the phase-1 / phase-2 bridge — Variant B only): L_F(t) is a
+Spectral note (the phase-1 / phase-2 bridge: Variant B only): L_F(t) is a
 diffusion operator whose spectrum now legitimately evolves. The claim that
 connects the two phases is that D_sheaf_B crossing threshold coincides with
-the spectral gap lambda_1(t) of L_F(t) opening — grokking as a heat equation
+the spectral gap lambda_1(t) of L_F(t) opening: grokking as a heat equation
 on the (representation-derived) example graph acquiring a harmonic section.
 This is where phase-1 thermodynamics and phase-2 category theory share one
 object.
@@ -212,7 +212,7 @@ Discriminating outcomes (pre-registered):
   the *Logical Information Cells* task family.
 - H2 true, H1 false: decidability leads; sheaf energy is a lagging correlate.
 - H1 and H2 true, H3 false: two distinct transitions exist and the "single
-  order parameter" goal is mistaken — also a substantive result.
+  order parameter" goal is mistaken: also a substantive result.
 - All false (H0): categorical structure adds no measurement power beyond
   variance statistics on these tasks. Report it plainly.
 
@@ -243,7 +243,7 @@ Discriminating outcomes (pre-registered):
   etc.) and trace paths; per-example phi(x, t) must be present or regenerated.
   Where only scalar traces exist, D_var and D_logic-lite (using the scalar
   Fourier/mode fields) are still computable, but D_sheaf needs per-example
-  states — so a small confirmatory sweep (4.3) is required regardless.
+  states, so a small confirmatory sweep (4.3) is required regardless.
 - All machine-local trace paths must be relativized first (the phase-1 loader
   fix already tolerates absence; phase 2 needs the actual arrays).
 
@@ -345,7 +345,7 @@ built so the data, not the author, decides which.
   passed: planted-transition timing recovered within 0.4% across seeds
   (R^2 = 1.00), shuffled-label alignment at chance, collapse flagged
   degenerate. Under 3x noise the timing estimate degrades gracefully
-  (+8% bias) rather than failing silently — noted as a known bias source
+  (+8% bias) rather than failing silently: noted as a known bias source
   for low-SNR traces.
 
 - **2026-07, amendment 3 (post methodological review; before analysis of the
@@ -385,7 +385,7 @@ built so the data, not the author, decides which.
      over the executed MLP (SoftRose) and adds a linear bypass; both have
      exactly one ReLU in the hidden stack, so the contrast is
      bypass+parameters, NOT nonlinearity depth. Control: **NoSkipRose**,
-     hidden = ReLU(W2 W1 e) — parameter-identical to ResidualRose,
+     hidden = ReLU(W2 W1 e): parameter-identical to ResidualRose,
      function-class-identical to SoftRose (W2 W1 collapses to one matrix).
      9 runs (p in {59, 97, 113} x 3 seeds, wd = 1.0, same protocol).
      Decision rule: if NoSkipRose's D_sheaf_B is unclassifiable (SoftRose-
@@ -397,7 +397,7 @@ built so the data, not the author, decides which.
      only after the primary arm is analyzed.
   6. **Regime scope correction.** The fresh sweep shows grok time
      decreasing monotonically from p=59 to p=113 in both families under
-     the local protocol — the sweep sits in the inverted-scaling
+     the local protocol: the sweep sits in the inverted-scaling
      (transition) regime, not the Fourier regime as section 4.3 assumed.
      Section 4.3's "avoiding the transition zone" rationale is void; all
      H1-H4 conclusions from this sweep are scoped to the inverted regime
@@ -419,7 +419,7 @@ built so the data, not the author, decides which.
      (a) low-order Fourier sign propositions
      `cos(2 pi k c / p) > 0` and `sin(2 pi k c / p) > 0` for k = 1..4
      (8 propositions), and (b) the quadratic-residue proposition
-     `c in QR(p)`, c=0 excluded from QR (1 proposition) — the multiplicative
+     `c in QR(p)`, c=0 excluded from QR (1 proposition): the multiplicative
      stand-in for the coset leg. Lean, fixed, and it preserves the
      Fourier-vs-logical split as the contrast between legs (a) and (b).
   2. **Ceiling normalization.** The 9-proposition signature partitions the
@@ -434,7 +434,7 @@ built so the data, not the author, decides which.
   3. **Logical-unit criterion.** Per-checkpoint per-unit standardization;
      ternary states with bins (-1/3, +1/3); purity 0.80 in one outer bin on
      the P-conditioned side (all per section 2.3, fixed pre-data).
-     Added: a **two-sided informativeness condition** — the unit must also
+     Added: a **two-sided informativeness condition**: the unit must also
      concentrate (>= 0.80) in the *opposite* outer bin on the
      not-P-conditioned side. A unit saturated in one bin regardless of P is
      logical for every proposition under the one-sided rule and carries no
@@ -490,7 +490,7 @@ built so the data, not the author, decides which.
   one-nonlinearity families). This arm is the experiment that null points
   to: crossing the *Logical Information Cells* depth bifurcation
   (arXiv 2108.04751: quantized logical cells at ~3 hidden layers, Fourier
-  vanishing) to test whether cells — and a functioning D_logic — appear at
+  vanishing) to test whether cells, and a functioning D_logic: appear at
   depth. This also instantiates the depth axis of the depth x modulus
   phase diagram promised in section 1.3.
 
@@ -506,12 +506,12 @@ built so the data, not the author, decides which.
      declared optional, to be run only if D1 is positive and the param
      confound is contested.
   2. **Design.** p in {59, 97, 113} x 3 seeds = 9 runs; wd = 1.0,
-     lr = 1e-3, AdamW, train_fraction 0.45, tau threshold 90 — identical to
+     lr = 1e-3, AdamW, train_fraction 0.45, tau threshold 90: identical to
      prior arms. Budget 60,000 epochs (vs 40k), fixed in advance because
      optimization difficulty at depth is unknown and censoring at 40k would
      be ambiguous between "depth impedes grokking" and "budget too small".
      Censored runs are first-class: their traces are still analyzed for
-     cell formation (cells may form without deployment — itself
+     cell formation (cells may form without deployment: itself
      informative); timing metrics are skipped where tau is undefined.
   3. **Multi-layer logging (false-null guard).** Cells may form in any
      hidden layer, so all three are logged: final hidden layer (feeding the
@@ -533,7 +533,7 @@ built so the data, not the author, decides which.
        are adjudicated per amendment-4 item 5, restricted to the depth
        family and so scoped.
      - **D3 (Fourier vanishing, LIC's second prediction).** Metric:
-       `fourier_concentration` — per unit, the class-conditional mean
+       `fourier_concentration`: per unit, the class-conditional mean
        activation profile m(c) is Fourier-analyzed; concentration = max
        non-DC harmonic power / total non-DC power; reported as the mean
        over units with non-trivial profile variance, and the 90th
@@ -558,12 +558,12 @@ built so the data, not the author, decides which.
 - **2026-07, amendment 6 (sharpening test + deeper arm; before either).**
   Disclosure: at amendment time the 36-run results were known, including
   finding 13 (aggregate Fourier concentration AND purity rise together at
-  depth — the "sharpening" signature) and finding 12 (depth-graded purity,
+  depth: the "sharpening" signature) and finding 12 (depth-graded purity,
   no coverage). What has NOT been examined anywhere is the *unit-level*
   structure of that rise; all Part A statistics operate at that unexamined
   level and their thresholds are fixed here.
 
-  **Part A — the sharpening-hypothesis test (existing traces only; no new
+  **Part A: the sharpening-hypothesis test (existing traces only; no new
   training).** Competing worlds for the depth-induced rise:
   - *Sharpening (continuous)*: individual units morph sinusoid -> square;
     the same units carry structure throughout.
@@ -607,19 +607,19 @@ built so the data, not the author, decides which.
      touched. All prior gates must still pass.
      Gate-forced refinements (recorded before any real-trace computation;
      three SG iterations): (i) the synthetic transition occupies the middle
-     third of the trace so the early/late windows are clean — a crossfade
+     third of the trace so the early/late windows are clean: a crossfade
      already underway at the early window is an ill-posed turnover test;
      (ii) S2a's retention mask is conc >= 0.5 (structured), because a
      fading unit's noise-dominated checkpoints inflate P3/P1 and fake a
      morph; (iii) the sharpening/replacement split on S2a is effect-size
      based: the median slope must be MATERIAL (>= 1/4 of the square-wave
-     overtone, i.e. >= 0.0278) as well as statistically positive — SNR
+     overtone, i.e. >= 0.0278) as well as statistically positive: SNR
      creep produces significant-but-immaterial slopes (~1% of the
      sine->square change) in pure-replacement worlds.
   6. Deliverables: `src/grokking_scaling_theory/sharpening.py`,
      `analysis/SHARPENING_RESULTS.md`.
 
-  **Part B — the deeper arm (after Part A reports).** [Adjudicated
+  **Part B: the deeper arm (after Part A reports).** [Adjudicated
   2026-07-07: D1 negative 0/9, purity ladder stalled, D3 reversed at
   +0.25, D4 unmeasurable, churn replicated; 4/9 censored. See
   `analysis/DEEP5_RESULTS.md`. The contingent narrow arm below is thereby
@@ -637,7 +637,7 @@ built so the data, not the author, decides which.
 
 - **2026-07, amendment 7 (the narrow arm, pinning the amendment-6
   contingency; before any run).** Disclosure: the deep5 adjudication was
-  known (D1 negative — the authorizing condition — plus the purity stall,
+  known (D1 negative (the authorizing condition) plus the purity stall,
   the D3 dose-response, and the trainability collapse). The contingency
   left the narrow arm's depth unpinned; it is fixed here with rationale:
   1. **Architecture: DeepRose, n_hidden = 3, hidden width 64** (embedding
@@ -648,19 +648,19 @@ built so the data, not the author, decides which.
      confound a cell null with an optimization failure. This isolates
      WIDTH at fixed depth: deep3@256 (done) vs deep3@64 (this arm). The
      hypothesis it tests: narrowness concentrates representational
-     pressure per unit and forces quantization — the last LIC-faithful
+     pressure per unit and forces quantization: the last LIC-faithful
      corner (their nets were small and narrow) not yet explored.
   2. **Design:** p in {59, 97, 113} x 3 seeds = 9 runs; wd 1.0, lr 1e-3,
      train_fraction 0.45, tau threshold 90; budget 60,000 epochs (deep3
-     grokked within 8.6k at width 256; narrowness may slow grokking —
+     grokked within 8.6k at width 256; narrowness may slow grokking
      headroom without deep5's ambiguity). Aux l1-l2 at 100-epoch cadence,
      final at 20. Censored runs analyzed structurally as before.
   3. **Rules:** D1 (>= 5/9 any-layer coverage), D2, D3 (fourier
      concentration vs the shallow pool, grokked-only primary), D4
-     (reported), and the Part A S-statistics as replication — all
+     (reported), and the Part A S-statistics as replication: all
      unchanged, all fits under the amendment-4 sanity gate.
   4. **Interpretive frame, fixed in advance:** D1 positive here =>
-     narrowness, not depth, is the missing LIC ingredient — the cell
+     narrowness, not depth, is the missing LIC ingredient: the cell
      regime exists on this task and the program continues into it. D1
      negative => every registered corner of the LIC architecture space
      (deep, deeper, narrow-deep) is exhausted on this task family; the

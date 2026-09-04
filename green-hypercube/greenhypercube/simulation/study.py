@@ -71,7 +71,7 @@ def run_study(cfg: Config, force: bool = False) -> dict:
     }
 
 
-# Nulls that only permute reward — safe to apply to one cached cue manifold.
+# Nulls that only permute reward: safe to apply to one cached cue manifold.
 REWARD_ONLY_NULLS = frozenset({"permute_reward", "permute_reward_within_effort"})
 
 

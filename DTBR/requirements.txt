@@ -1,4 +1,4 @@
-# DTBR-MC v0.1 — runtime dependencies.
+# DTBR-MC v0.1: runtime dependencies.
 # Version floors reflect the environment the simulator was developed and tested
 # against. No ML frameworks, no external APIs (per spec).
 numpy>=2.0

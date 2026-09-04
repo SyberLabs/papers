@@ -2,7 +2,7 @@
 
 ## 1. Core Synthesis: Abstraction via Interference Collapse
 
-The acquisition of generalizable structure—in biological, artificial, or cultural systems—is not a constructive process of "building" rules, but a subtractive process of **collapsing the interference of the particular**.
+The acquisition of generalizable structure: in biological, artificial, or cultural systems: is not a constructive process of "building" rules, but a subtractive process of **collapsing the interference of the particular**.
 
 In the dynamical geometry of learning, grokking is the transition from a **Memorization Attractor ($M$)** down a low-dimensional **Execution Manifold** to an **Algorithmic Attractor ($R$)**.
 

@@ -176,7 +176,7 @@ def _build_reward_depth(
     NAEB landscapes store a ``reward_depth`` table at ingest (total uses, tribes,
     sources). ChEMBL landscapes derive depth from chemistry-bridge breadth (Duke +
     LOTUS compound counts). Used only by the coupling instrument for symmetric
-    confound control — never by search strategies.
+    confound control: never by search strategies.
     """
     if cache.has(schema.REWARD_DEPTH_NAME):
         df = cache.read_table(schema.REWARD_DEPTH_NAME).sort_values("species_id")

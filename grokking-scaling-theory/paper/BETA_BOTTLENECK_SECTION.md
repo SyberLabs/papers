@@ -78,15 +78,15 @@ Local pairwise slopes from trace-backed runs
 
 Architecture summary:
 
-- residual: `beta_eff = 0.998 +/- 0.033` (n=3) — cleanup-limited (M-gated)
-- mlp (local): `beta_eff = 0.775 +/- 0.100` (n=7, incl. published pairs) —
+- residual: `beta_eff = 0.998 +/- 0.033` (n=3): cleanup-limited (M-gated)
+- mlp (local): `beta_eff = 0.775 +/- 0.100` (n=7, incl. published pairs)
   crossover
 
 Two independent lines of evidence now converge on the residual story. The
 trace diagnostics of Section 6 show residual networks forming early rule
 structure and early prototypes while grokking lags (early-R, late-D). The
 exponent measurement, computed with no reference to any trace, lands on
-`beta_eff = 1` to within 4 percent — the exact M-gated prediction. Neither
+`beta_eff = 1` to within 4 percent: the exact M-gated prediction. Neither
 measurement was fit to the other.
 
 ## Predictions
@@ -102,7 +102,7 @@ measurement was fit to the other.
   drifts across a wide wd ladder. A genuinely fractional mechanism
   (heterogeneous dissipation spectrum, the "broad cleanup spectrum" of
   Section 10) predicts `beta_eff` stable across decades. The published
-  p=97 ladder spans two decades and is flat (0.602, 0.699) — weak evidence
+  p=97 ladder spans two decades and is flat (0.602, 0.699): weak evidence
   for the fractional account *in that protocol*, and tension with the
   crossover account, which expects `beta_eff -> 1` as `wd -> 0` makes
   cleanup the binding clock. Decisive experiment: one architecture, one

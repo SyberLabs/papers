@@ -1,4 +1,4 @@
-# Vital Language — Interim Findings
+# Vital Language: Interim Findings
 
 *Status: exploratory, single-machine, small base models (Qwen2.5-0.5B / 1.5B,
 CPU). The headline caveat below governs everything.*
@@ -7,7 +7,7 @@ CPU). The headline caveat below governs everything.*
 
 **All human-judgment data is n=1, and that rater is the assistant model itself**
 (the same system generating hypotheses). PCA on those ratings shows PC1 = 85% of
-variance — a near-unidimensional "good↔bad" gradient consistent with a halo
+variance: a near-unidimensional "good↔bad" gradient consistent with a halo
 effect. Therefore every claim below that involves *felt vitality* is a
 **hypothesis about sign**, not an established fact, until independent human
 raters are collected. Claims about **coherence / degeneracy** are
@@ -31,7 +31,7 @@ embedding trajectory metrics; and a blind human-rating harness.
 The MFDFA tool was **validated on real literature**: on sentence-length series,
 Joyce *Ulysses* width ≈ 5.0, Woolf ≈ 6.3, Austen ≈ 0.25 (SoC ≈ 20× conventional
 prose), and a **shuffle surrogate** collapses Joyce 5.0→0.35 but barely moves
-Austen — confirming the multifractality is in temporal ordering, not the value
+Austen: confirming the multifractality is in temporal ordering, not the value
 distribution. The instrument works; the question is what it measures on
 small-model output.
 
@@ -45,12 +45,12 @@ across ε=0→4); chaotic modulation at the same ε stays legible (~10). A 17×
 coherence gap from identical perturbation magnitude, differing only in temporal
 structure. Unstructured noise ≠ structure.
 
-### F2. Chaos beats matched-noise on surprisal-width, but not plain sampling (solid stat, hollow meaning — see F4)
+### F2. Chaos beats matched-noise on surprisal-width, but not plain sampling (solid stat, hollow meaning: see F4)
 Paired ε-sweep (0.5B, 6 prompts × 3 seeds, legibility-gated, bootstrap CIs):
 chaos > matched-OU on surprisal MFDFA width at ε=1.5 (+0.35*), 2.0 (+0.46*),
 3.0 (+0.14*). **But chaos vs. plain sampling is null at every ε.** Replicated in
 direction (not amplified) on 1.5B. So: chaos moves surprisal-structure beyond
-its matched-randomness control — a real deterministic-vs-stochastic effect — but
+its matched-randomness control (a real deterministic-vs-stochastic effect) but
 not beyond ordinary sampling.
 
 ### F3. The literary (sentence-length) multifractal signal is NULL on our output
@@ -59,18 +59,18 @@ shuffle surrogate (drop 0.05) → not genuine long-range structure. The signal
 needs hundreds of sentences; small base models degenerate before sustaining
 them. **The literary-multifractality question is not well-posed at this scale.**
 
-### F4. Surprisal-width does NOT track felt vitality — because width is a degeneracy proxy (the pivotal result)
+### F4. Surprisal-width does NOT track felt vitality: because width is a degeneracy proxy (the pivotal result)
 Raw: width vs. vitality = **−0.51**. This looked like "our target metric has the
 wrong sign." It does not survive scrutiny:
 - partial, controlling a template/quiz/loop **degeneracy flag**: −0.40
 - **among clean (non-degenerate) passages only: −0.135** (collapses).
 
 So **width was largely detecting collapse into training substrate** (math word
-problems, multiple-choice quizzes, code scaffolds) — which inflates MFDFA width
+problems, multiple-choice quizzes, code scaffolds), which inflates MFDFA width
 *and* reads as dead. The founding multifractal intuition is not refuted; it is
 **untestable at this scale** because the substrate is dominated by collapse.
 (Eyeball confirms: the highest-width passages are candle/ship arithmetic
-problems.) Method note: **the clean-subset test is the project's backbone — it
+problems.) Method note: **the clean-subset test is the project's backbone: it
 impartially killed our metric, GPT's metric, and the advisor's metrics.**
 
 ### F5. What DOES track (n=1) vitality among coherent passages: semantic travel
@@ -89,7 +89,7 @@ coherence**, NOT multifractality / entropy / recurrence / concreteness.
 
 ### F6. The reliable lever is prompt-level agency, and it buys non-collapse (solid)
 Agency test (persistent-speaker scaffold vs. chaos vs. matched vs. plain):
-- **degeneracy: agency 0/18 vs plain 3/18 vs chaos/matched 2/18** — the cleanest,
+- **degeneracy: agency 0/18 vs plain 3/18 vs chaos/matched 2/18**: the cleanest,
   most reliable effect in the project. A "one remembering speaker" prompt keeps
   the model from falling out of first-person into substrate.
 - but **agency does NOT raise the vitality proxy** (agency−plain global_range =
@@ -97,17 +97,17 @@ Agency test (persistent-speaker scaffold vs. chaos vs. matched vs. plain):
 - **chaos *lowers* semantic breadth vs plain** (plain−chaos = +0.051*). Token
   chaos is, on the surviving proxy, counterproductive.
 - eyeball caveat: among already-clean passages, the agency scaffold can trade
-  *strangeness for blandness* (Hallmark-inspirational drift) — a possible new
+  *strangeness for blandness* (Hallmark-inspirational drift): a possible new
   dead-end, the "machine basin" we set out to escape.
 
 ---
 
 ## Where the center of gravity has moved
 
-The founding bet inverted. **Token-level chaos is the wrong intervention** — it
+The founding bet inverted. **Token-level chaos is the wrong intervention**: it
 doesn't beat sampling on anything meaningful and *reduces* the surviving vitality
 proxy. The intervention that reliably *works* is **higher-layer (prompt/agency)**,
-and what it buys is **non-collapse**, not multifractal vitality — exactly where
+and what it buys is **non-collapse**, not multifractal vitality: exactly where
 the theoretical advisor pointed ("vitality lives above the token layer; the
 reachable object may be non-collapse").
 
@@ -138,7 +138,7 @@ generic perturbation). Pre-registered abandon criterion: if no level beats
 baseline on (human) vitality within the coherence band, and directed ≈ random,
 the "semantic travel is injectable vitality" direction is falsified.
 
-## F7. THE UNIFYING RESULT — at this scale, the only large axis of quality variation is collapse-vs-coherence
+## F7. THE UNIFYING RESULT: at this scale, the only large axis of quality variation is collapse-vs-coherence
 
 After the reverse (literature-first) approach produced metrics that order the SOC
 tradition (F3 concrete⇄abstract oscillation: Lispector 0.154 > Joyce 0.136 >
@@ -152,7 +152,7 @@ degenerate passages carry nearly all the variance.
 
 UNIFYING STATEMENT: *At 0.5–1.5B scale, the only large, reliable axis of variation
 in felt quality is collapse-vs-coherence. Among coherent passages the model emits
-a narrow band of competent-but-flat prose with little vitality variance — so every
+a narrow band of competent-but-flat prose with little vitality variance, so every
 "vitality metric" that appeared to work (width, recurrence, advance, F3, imagery)
 was detecting DEGENERACY, not discriminating aliveness.* This explains the entire
 project: why metrics kept being degeneracy proxies, why the agency scaffold's real
@@ -163,11 +163,11 @@ SPEC): intrinsic (Lispector, measurable but barely present in our outputs) vs
 relational (Joyce allusion/phonetics, out of scale entirely).
 
 Caveat unchanged: vitality ratings are n=1/self. But this result makes the missing
-human study LESS likely to rescue the vitality axis — the variance to explain is
+human study LESS likely to rescue the vitality axis: the variance to explain is
 small in the clean band regardless of rater. The robust, rater-independent finding
 stands: agency-framing prevents collapse (F6).
 
-## F8. FRONTIER IMITATION — vitality is a structural discipline, not a nameable register (the literary-arc capstone)
+## F8. FRONTIER IMITATION: vitality is a structural discipline, not a nameable register (the literary-arc capstone)
 
 If vitality barely varies in *small*-model output (F7), the next question is
 whether *frontier* models (which hold the cultural manifold) can produce it. We
@@ -175,35 +175,35 @@ tested this by imitation, treating "can a frontier model become author X" as a
 probe of WHAT in literary vitality is reachable. Design: Sonnet 4.6 generated, per
 author (Woolf / Joyce / Lispector), an **imitation** AND a **matched control**
 (same scene, no author named, "good normal prose"). We measured the distance
-traveled — `imitation − control` — against where the real author sits relative to
+traveled (`imitation − control`) against where the real author sits relative to
 conventional prose (`real − Austen`), on all channels (semantic & imagistic
 trajectories, F3 oscillation, sentence rhythm, phonetic flow). Prompts never named
 the features measured (naming a metric turns a score into mere compliance).
 
-**The three authors split by reachability — and the split is the result.**
+**The three authors split by reachability, and the split is the result.**
 
-- **Woolf — CAPTURED.** The imitation moves toward real Woolf on every measurable
+- **Woolf: CAPTURED.** The imitation moves toward real Woolf on every measurable
   axis (semantic drift/range, sentence-rhythm), often *overshooting* the
   tradition gap. Her perception⇄memory glide is an intrinsic, register-level
   signature a frontier model reaches.
 
-- **Joyce — SURFACE captured, DEPTH not.** Trajectory metrics moved toward Joyce,
+- **Joyce: SURFACE captured, DEPTH not.** Trajectory metrics moved toward Joyce,
   and the model reproduced his late-style **run-on so completely the imitation is
-  one 1088-word sentence** (it broke our sentence splitter — extreme surface
+  one 1088-word sentence** (it broke our sentence splitter: extreme surface
   fidelity). But the *referential* depth is a different story (see allusion probe
   below).
 
-- **Lispector — FAILED, and instructively.** Her structural signature is
+- **Lispector: FAILED, and instructively.** Her structural signature is
   counterintuitive: **high semantic drift / LOW imagistic drift** (meaning churns
   while one image-field is held still). Measured sem/img ratio: real Lispector
   **5.67**; Sonnet's generic control **5.93**; Sonnet's *deliberate imitation*
   **4.45**. By full-signature distance the imitation is CLOSER to its own generic
   control (0.124) than to real Lispector (0.182). **Asked to imitate her, the
-  model moved AWAY** — it added imagistic variety (its notion of "poetic"), the
+  model moved AWAY**: it added imagistic variety (its notion of "poetic"), the
   opposite of her held-image discipline. The CLIP imagistic channel was the
   discriminator that exposed this; semantic geometry alone could not see it.
 
-### Allusion probe (the relational/Joyce depth) — blind, cross-model, with a confound we caught
+### Allusion probe (the relational/Joyce depth): blind, cross-model, with a confound we caught
 
 A capable model first close-read the Joyce imitation and found it allusively rich
 (Proust, Synge, Ecclesiastes, Eliot, Bergson, Baudelaire, Plato, Irish-ballad,
@@ -222,11 +222,11 @@ Densities (P1=control, P2=real Joyce, P3=imitation):
 
 **CONTAMINATION (caught): all three judges RECOGNIZED the real Joyce as "Oxen of
 the Sun"** (named the episode + characters). You cannot blind-probe canonical text
-for depth — the model has it memorized, so its high score is partly *recall*, not
+for depth: the model has it memorized, so its high score is partly *recall*, not
 reading. So "real > imitation" is NOT cleanly established from this.
 
-**The contamination-FREE signal — the imitation is novel, unrecognizable:** the
-judges SPLIT hard on it (Grok 0.29 high; Gemini 0.074 and ChatGPT 0.02 — *below
+**The contamination-FREE signal: the imitation is novel, unrecognizable:** the
+judges SPLIT hard on it (Grok 0.29 high; Gemini 0.074 and ChatGPT 0.02: *below
 the plain control*). The split is principled: Grok counted Joycean *mode/technique*
 as resonance; Gemini & ChatGPT required *specific nameable external references* and
 found almost none. ChatGPT: "almost all significance generated internally, not
@@ -240,8 +240,8 @@ resonance.
 Lispector (image-discipline) and Joyce (allusive pointing) converge, by
 independent methods, on one statement:
 
-> **Frontier models reproduce the nameable STYLE REGISTER of literary vitality —
-> the glide, the run-on, the lyrical-modernist surface — but not its STRUCTURAL
+> **Frontier models reproduce the nameable STYLE REGISTER of literary vitality
+> the glide, the run-on, the lyrical-modernist surface, but not its STRUCTURAL
 > DISCIPLINE: Lispector's image held still under churning meaning, Joyce's
 > load-bearing reference into a shared manifold. Asked to "be" an author, the
 > model reaches for the recognizable register and defaults to its own generic
@@ -251,7 +251,7 @@ independent methods, on one statement:
 
 This reframes the relational/intrinsic boundary (LIVING_LANGUAGE_SPEC) one final
 time: the boundary is **register (imitable) vs. discipline (not imitable on
-command)** — orthogonal to model scale. A bigger model gets a richer register, not
+command)**: orthogonal to model scale. A bigger model gets a richer register, not
 the discipline.
 
 ### Method lessons (durable)

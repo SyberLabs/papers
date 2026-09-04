@@ -10,8 +10,8 @@ python -m grokking_scaling_theory.survival_fit
 
 `fit_competition` drops censored runs. A censored run is the one-sided
 observation `tau > T_budget`, not missing data. The only censored run
-(p=31, `tau > 20000`) sits at the small-p edge of the transition zone —
-exactly where the inverted-scaling claim is decided — so excluding it
+(p=31, `tau > 20000`) sits at the small-p edge of the transition zone
+exactly where the inverted-scaling claim is decided, so excluding it
 biases the zone's exponent toward zero.
 
 ## Model

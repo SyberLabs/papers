@@ -35,7 +35,7 @@ reproduce exactly.
    early). D_sheaf_B improves on it in every family (raw: 0.080 vs 0.460 in
    MLP; 0.224 vs 0.369 in residual; 0.192 vs 0.323 in noskip). Categorical
    structure does add timing power over variance statistics on these tasks
-   — it just does not reach the absolute within-W standard H1 demanded.
+: it just does not reach the absolute within-W standard H1 demanded.
    Note this also breaks H1's stated premise ("D_var succeeds only in
    MLPs"): under the registered timing metric D_var succeeds nowhere.
 
@@ -45,11 +45,11 @@ reproduce exactly.
    within-class variance collapse (structure/R-like) precedes representation-
    graph gluing, which precedes deployment (D). The sheaf transition is a
    *leading indicator* of grokking (typically -10 to -25%), not a coincident
-   order parameter — a substantive, unanticipated characterization.
+   order parameter: a substantive, unanticipated characterization.
 
 5. **Control-arm adjudication (amendment 3, item 5): the linear bypass is NOT
-   load-bearing; parametrization is.** NoSkipRose — parameter-identical to
-   ResidualRose but function-class-identical to SoftRose — shows fully
+   load-bearing; parametrization is.** NoSkipRose: parameter-identical to
+   ResidualRose but function-class-identical to SoftRose: shows fully
    classifiable sheaf transitions (9/9, amplitudes 0.086-0.264 on the raw
    leg), i.e. residual-like, not MLP-like. Per the pre-declared decision
    rule, the robust sheaf signal follows the factorized two-matrix
@@ -65,7 +65,7 @@ reproduce exactly.
 
 7. **Threshold sensitivity (pre-declared, tau_95 pass):** the single cell
    meeting the registered standard at tau_90 (MLP raw, 0.080) moves to 0.134
-   under tau_95 — above the 0.10 line. Verdicts are rendered by the primary
+   under tau_95: above the 0.10 line. Verdicts are rendered by the primary
    pass, and H1 fails either way, but the "sheaf times grokking in MLPs"
    reading is threshold-sensitive and must not be quoted without this caveat.
 
@@ -77,24 +77,24 @@ reproduce exactly.
 9. **Amplitude disclosure did its job (amendment 3, item 3).** Three MLP
    PCA-64 fits at p=59 pass the R^2 gate region with pathological parameters
    (fitted amplitudes 63-92 on an O(1)-normalized quantity; one transition
-   epoch at -32180, rel.err 8.48 — inflating that family's PCA-64 median).
+   epoch at -32180, rel.err 8.48: inflating that family's PCA-64 median).
    These are degenerate logistic fits on shallow drifts, exposed by the
    mandatory amplitude column. The two-sided sanity gate they motivated is
    now registered (amendment 4, item 6) and applies to all fits from that
-   amendment onward — including every D_logic fit below — but is NOT applied
+   amendment onward (including every D_logic fit below) but is NOT applied
    retroactively to the four pre-amendment order parameters.
    Control-arm amplitude gate (< 0.05 excluded from within-W counting):
    affects exactly one control fit (noskip p=59 s1 PCA-64, amplitude 0.031,
-   nominally within W at rel.err 0.005) — noskip PCA-64 within-W is 3/9
+   nominally within W at rel.err 0.005): noskip PCA-64 within-W is 3/9
    under the gate, not 4/9. The raw-leg adjudication in (5) is unaffected
    (all raw amplitudes >= 0.086).
 
-10. **D_logic (amendment 4): a complete, uniform, measured null — no logical
+10. **D_logic (amendment 4): a complete, uniform, measured null: no logical
     cells exist in any of the 27 networks.** All 27 D_logic fits are
     degenerate-gated (flat-zero series); zero of 9 propositions are covered
     by a conclusive group in any family at any checkpoint. The threshold-free
     diagnostic is decisive: the best (unit, proposition) two-sided purity is
-    0.42-0.43 in every family, far from the 0.80 logical-cell criterion —
+    0.42-0.43 in every family, far from the 0.80 logical-cell criterion
     a categorical absence, not a near-miss. Consequently **H2 and H3 are
     unresolvable on these data** (no run has both categorical legs
     classifiable) and are reported, not adjudicated, per the registered
@@ -111,10 +111,10 @@ reproduce exactly.
     residual >> mlp in classifiability and amplitude) leaves the logical-cell
     diagnostic untouched (max purity 0.43 / 0.43 / 0.42). kNN-legible
     representation geometry and axis-aligned quantized cells are distinct
-    phenomena with different causes — geometry follows parametrization;
+    phenomena with different causes: geometry follows parametrization;
     cells (per LIC) require nonlinear depth that no family here has.
 
-12. **Depth arm (amendment 5): D1 NEGATIVE — but with a depth-graded purity
+12. **Depth arm (amendment 5): D1 NEGATIVE, but with a depth-graded purity
     gradient, the pre-registered middle outcome.** All 9 DeepRose runs
     grokked (0 censored; slower and with larger seed variance than shallow,
     e.g. p=59: 3920-8600). Zero propositions covered in any of the three
@@ -131,21 +131,21 @@ reproduce exactly.
     gradient (l1 -> l2 -> l3) mirrors the LIC claim that cells live in
     deeper layers.
 
-13. **D3 REVERSED: Fourier does not vanish at depth — it sharpens.** The
+13. **D3 REVERSED: Fourier does not vanish at depth: it sharpens.** The
     grokked-deep final-layer Fourier concentration is HIGHER than the
     shallow pooled baseline (median 0.54 vs 0.47; difference +0.06,
-    bootstrap 95% CI [+0.04, +0.14], excluding 0 from below — the opposite
+    bootstrap 95% CI [+0.04, +0.14], excluding 0 from below: the opposite
     sign of the LIC prediction). Concentration and purity rising together
     is precisely the signature the amendment's limitation note anticipated:
     units become MORE class-structured and more saturated/quantized at
-    depth — a gradual sharpening of sinusoids toward square-wave cells —
+    depth: a gradual sharpening of sinusoids toward square-wave cells
     rather than Fourier analysis being replaced by a discrete logical code.
     On modular addition at these depths, the Fourier -> logical transition
     looks continuous, not a replacement.
 
 14. **The spectral gap (H4) wakes at depth.** After 27/27 unclassifiable
     spectral fits in the shallow families, 4/9 deep runs produce
-    classifiable lambda_gap transitions (R^2 0.81-0.94) — the first
+    classifiable lambda_gap transitions (R^2 0.81-0.94): the first
     spectral signal in the study. All fire well before tau (rel.err
     0.28-0.87, 0/9 within W), so H4 remains unsupported as a coincident
     marker, but the deep representation graph is the first whose spectrum
@@ -158,44 +158,44 @@ reproduce exactly.
     earlier than in shallow families (median rel.err 0.42-0.44 vs
     0.19-0.22): at depth, representation-graph gluing completes long before
     deployment. One deep D_var fit (p=59 s0: t=22, amplitude 1.625) is
-    pathological in the finding-9 class — visible in the amplitude column,
+    pathological in the finding-9 class: visible in the amplitude column,
     ungated by non-retroactivity.
 
 16. **Sharpening test (amendment 6, Part A): BOTH unit-level mechanisms
-    ruled out — the code churns.** On the stored traces, structured units
+    ruled out: the code churns.** On the stored traces, structured units
     turn over almost completely (S1 identity overlap median 0.17; deep
     0.06), survivors never morph (S2a immaterial in 45/45 rows), and
     newly structured units are born sinusoidal (S2b onset overtone max
     0.032 vs square reference 0.111; 0/45 above threshold). Registered
-    verdict: mixed/unresolved 18/18 — with both worlds failing their own
+    verdict: mixed/unresolved 18/18: with both worlds failing their own
     signatures decisively. Post hoc reading (labeled): the depth-rise of
     finding 13 is population-composition drift over churning,
-    ever-sinusoidal units — no stable quantized unit-level logic forms at
+    ever-sinusoidal units: no stable quantized unit-level logic forms at
     any depth measured. Details: `analysis/SHARPENING_RESULTS.md`.
 
 17. **Deep5 arm (amendment 6, Part B): the approach to the bifurcation
-    STALLS while the wave code strengthens — and grokking itself
+    STALLS while the wave code strengthens, and grokking itself
     collapses.** Five hidden ReLUs: 4/9 runs censored at 80k epochs (val
     11-54%); the 5 grokkers took 11.7k-50.1k epochs (vs 2.8-8.6k at depth
     3, 1.8-5k shallow). D1 NEGATIVE again (0/9 coverage in any of five
     layers). The depth-3 purity gradient does NOT continue: per-layer
-    purity plateaus at ~0.45-0.71 with a maximum of 0.71 — BELOW
+    purity plateaus at ~0.45-0.71 with a maximum of 0.71: BELOW
     depth-3's 0.80. D3 reversed more strongly: grokked-deep5 Fourier
     concentration 0.72 vs shallow 0.47 (+0.25, CI [+0.09, +0.33]),
     completing a monotone dose-response 0.47 (1 ReLU) -> 0.54 (3) -> 0.72
     (5): depth AMPLIFIES the wave code. D4 is unmeasurable at this depth:
     every timing fit is pathological (amplitudes ~10^3, half-max outside
-    the data span — the finding-9 class, exposed by the mandatory
+    the data span: the finding-9 class, exposed by the mandatory
     amplitude column), i.e. no logistic-shaped internal transition exists
     on these traces; qualitatively the order-parameter series saturate
     within the first few percent of training while deployment takes
     10-40x longer. The churn signature replicates at depth 5 (S2b onset
-    overtone <= 0.021 in 18/18 rows — newcomers still born sinusoidal;
+    overtone <= 0.021 in 18/18 rows: newcomers still born sinusoidal;
     S1 low in grokked runs; the censored runs show frozen structured
-    populations — no churn where there is no learning progress).
+    populations: no churn where there is no learning progress).
     Details: `analysis/DEEP5_RESULTS.md`.
 
-18. **Narrow arm (amendment 7): D1 NEGATIVE — the loop closes — but
+18. **Narrow arm (amendment 7): D1 NEGATIVE (the loop closes) but
     narrowness is the strongest quantization pressure found, and it
     produces the study's first coincident order-parameter timings.**
     DeepRose depth-3 at width 64 (~36-47k params): 8/9 grokked
@@ -206,11 +206,11 @@ reproduce exactly.
     (a) individual units cross the 0.80 logical-cell purity criterion
     for the FIRST time in the study (0.81, 0.82, 0.88 in three runs) yet
     never assemble into decision-grade conclusive groups (balanced
-    accuracy 0.90) — the purity-max ladder across the program is
+    accuracy 0.90): the purity-max ladder across the program is
     shallow 0.43 -> deep3 0.80 -> deep5 0.71 -> narrow-deep3 0.88, making
     WIDTH, not depth, the dominant driver of unit quantization;
     (b) at p in {97, 113}, D_sheaf_B lands WITHIN the +/-10% window in
-    3 runs (rel.err 0.049-0.092, with D_var close behind) — the first
+    3 runs (rel.err 0.049-0.092, with D_var close behind): the first
     near-coincident internal timings anywhere in the study: narrowness
     couples internal reorganization to deployment. D3 reversed again
     (+0.18 [+0.14, +0.27]); churn replicates (S2b <= 0.026, 18/18).
@@ -224,21 +224,21 @@ parameter beats the variance incumbent everywhere but is a *leading*
 indicator, not a coincident one (H0-comparative rejected, H1 failed);
 (ii) its strength follows parametrization (5) and depth (12-14), never
 the function class; (iii) the logical-cell regime is NOT reached on this
-task under standard training — and, decisively, it is not even approached
+task under standard training, and, decisively, it is not even approached
 monotonically: the depth-3 purity gradient stalls and retreats at depth 5
 (17) while grokking itself collapses (4/9 censored, tau up to 50k), so
-the bifurcation region — if it exists here — lies beyond the reach of the
+the bifurcation region (if it exists here) lies beyond the reach of the
 training process, which dies first; (iv) depth AMPLIFIES the Fourier code
 monotonically (0.47 -> 0.54 -> 0.72) instead of extinguishing it, the
 clean opposite of the LIC prediction, and the unit population churns with
-newcomers always born sinusoidal (16, 17) — grokked modular arithmetic is
+newcomers always born sinusoidal (16, 17): grokked modular arithmetic is
 a drifting, strengthening wave code at every trainable depth; (v) the
 inverted-scaling regime is architecture-universal under this protocol;
 (vi) H2/H3 close as principled nulls: the quantity they require (D_logic)
 is unmeasurable on this task family for a measured, mechanistic reason.
 The narrow arm (18) closed the registered architecture space: D1 negative
 in all three arms (deep3, deep5, narrow-deep3), so the END STATE declared
-by amendment 7 item 4 is in force — the wave-code conclusion is final for
+by amendment 7 item 4 is in force: the wave-code conclusion is final for
 modular arithmetic under standard training. The program's honest summary
 is richer than either registered hypothesis: a robust geometric leading
 indicator that becomes COINCIDENT at narrow width and larger modulus (18b);

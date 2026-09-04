@@ -37,8 +37,8 @@ tau = 23.9 * p^2 / (log(p)^2 * wd^0.65)
 | Published all | 1.95 | 0.64 | 8.79% |
 | Published measured only | 1.58 | 0.63 | 14.16% |
 | Pooled (21 points) | 3.00* | 0.68 | 41.32% |
-| Local MLP only | 3.00* | — | 58.95% |
-| Local Residual only | 3.00* | — | 60.87% |
+| Local MLP only | 3.00* | - | 58.95% |
+| Local Residual only | 3.00* | - | 60.87% |
 
 *Hit boundary constraint
 
@@ -110,7 +110,7 @@ Networks with different scaling should show weaker/absent Fourier structure.
 **Implication**: Rather than seeking a universal scaling law, the goal becomes:
 *identify the algorithmic family, then predict its scaling.*
 
-The (M, R, D) framework remains valid across families—what changes is γ_R(p),
+The (M, R, D) framework remains valid across families: what changes is γ_R(p),
 which encodes the coordination structure of the specific algorithm being learned.
 
 **The published-only dataset (n=7) still shows q≈2 with 4.6% error.**

@@ -100,7 +100,7 @@ if files:
             table[name] = m
             print(f"{name:32s} " + " ".join(f"{m[c]:9.3f}" for c in cols))
 else:
-    print("\n(no frontier output files yet — drop <model>_<author>_<condition>.txt here)")
+    print("\n(no frontier output files yet: drop <model>_<author>_<condition>.txt here)")
 
 # key contrast: imitation moved toward author (vs control)?
 print("\n--- KEY CONTRAST (per author, per model): does imitation move toward real? ---")

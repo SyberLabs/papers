@@ -1,6 +1,6 @@
-# TOK Atlas Results v1 — Full 12-System Corpus (HPC)
+# TOK Atlas Results v1: Full 12-System Corpus (HPC)
 
-**Status:** Results of record — first full 7-regime corpus run.
+**Status:** Results of record: first full 7-regime corpus run.
 **Production Effect:** `none_research_only`
 **Bundles:** `admissibility_atlas_v0/generated/admissibility_bundle_v1.json`
 (`hash 9ac7c426…`), `collapse_atlas_v0/generated/collapse_bundle_v1.json`
@@ -21,7 +21,7 @@ Corpus (all 7 regimes): smooth (lv, sir, coupled), chaotic (lorenz, rossler),
 relaxation (vdp, fhn), delayed (forrester), stochastic (ou), hybrid (hybrid),
 sparse/real held-out (hudson_bay, gause).
 
-## 2. Headline — the LTC result is now regime-complete
+## 2. Headline: the LTC result is now regime-complete
 
 Across **all 12 systems and all 7 regimes**, on the envelope verdict (fraction of
 cells reaching Level ≥ 3):
@@ -34,12 +34,12 @@ cells reaching Level ≥ 3):
 
 **LTC reaches Level 3 in exactly zero cells across 116,640 fits.** The
 "dense continuous-time fits never achieve sparse topological preservation" result is
-no longer a 5-system artifact — it is **regime-complete**, holding through delayed,
+no longer a 5-system artifact: it is **regime-complete**, holding through delayed,
 stochastic, hybrid, and real-data-shaped systems. This is the strongest form of the
 finding: measured, falsifiable, and now robust across the full taxonomy.
 
 SINDy and Handshake clear Level 3 only on **Lorenz** (and SINDy marginally on the
-real Gause series) — i.e. sparse structure is recoverable mainly in the clean
+real Gause series): i.e. sparse structure is recoverable mainly in the clean
 low-dimensional chaotic case, and essentially nowhere else under this grid.
 
 ### Per-system frac of cells reaching Level ≥3
@@ -52,12 +52,12 @@ ltc          0.0    0.0    0.0   0.0    0.0   0.0   0.0   0.0   0.0   0.0    0.0
 handshake    0.1    0.3    0.0   0.0    0.0   0.0   0.0   0.0   0.0   0.0    0.0    0.0
 ```
 
-## 3. Collapse — boundaries across the full corpus
+## 3. Collapse: boundaries across the full corpus
 
 24 transitions catalogued, **16 cliffs**, **13 non-monotone transects** (over half).
 
 The new **delayed_memory** system (Forrester) produces the sharpest boundaries in the
-whole corpus — SINDy on Forrester cliffs from Level 4 at the slightest degradation on
+whole corpus: SINDy on Forrester cliffs from Level 4 at the slightest degradation on
 *every* axis:
 
 | System/Procedure | Axis | Cliff |
@@ -69,7 +69,7 @@ whole corpus — SINDy on Forrester cliffs from Level 4 at the slightest degrada
 
 This is consistent with the admissibility finding that Forrester is recoverable *only*
 in the clean instantaneous case (SINDy's `x` term carries the loop) and shatters the
-instant observability degrades — exactly the delayed_memory hazard the taxonomy named.
+instant observability degrades: exactly the delayed_memory hazard the taxonomy named.
 
 That **13/144 transects are non-monotone** is reported, not hidden: collapse is
 frequently seed-sensitive with dips/recoveries rather than a clean slide.
@@ -78,7 +78,7 @@ frequently seed-sensitive with dips/recoveries rather than a clean slide.
 
 - The capability-matrix contradiction is now **regime-complete**: the hand-authored
   taxonomy's "LTC broadly supported" is measured-Dangerous across all 7 regimes.
-- Sparse topological recovery (Level ≥3) is the *exception*, not the rule — confined
+- Sparse topological recovery (Level ≥3) is the *exception*, not the rule: confined
   largely to clean chaotic Lorenz. This is a strong, sobering admissibility result.
 - The boundary cards (collapse onsets per procedure × axis × system) are now a
   full-corpus asset for the Evidence Transition Gate.
@@ -94,5 +94,5 @@ frequently seed-sensitive with dips/recoveries rather than a clean slide.
   is the obvious v2 widening.
 - These are the current single-cell NumPy LTC (Euler forward pass). An RK4/integrator
   upgrade should be measured as a *parallel 4th procedure* (`ltc_rk4`), not swapped
-  in — so the upgrade earns its place by changing the measured envelope, not by
+  in, so the upgrade earns its place by changing the measured envelope, not by
   assumption.

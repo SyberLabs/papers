@@ -8,7 +8,7 @@ The grokking transition is a COARSE-GRAINING phase transition in weight space.
 As training progresses, the effective loss landscape is renormalized by
 integrating out high-frequency weight modes.
 
-The key insight: g3(t) is not a constant—it FLOWS under renormalization.
+The key insight: g3(t) is not a constant: it FLOWS under renormalization.
 
 RG FLOW EQUATION:
     dg3/d(log l) = beta_3(g3, g4, lambda)

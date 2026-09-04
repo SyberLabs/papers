@@ -13,7 +13,7 @@ broken:
   (preserves the tree metric, destroys reward's phylogenetic arrangement).
   Targets phylogenetic generalization.
 - ``permute_reward_within_effort`` : shuffle reward within effort strata only
-  (M2 rung 2 — preserves reward–effort link, destroys feature/topology coupling).
+  (M2 rung 2: preserves reward–effort link, destroys feature/topology coupling).
 - ``permute_features`` : shuffle observable cue matrix across species (M2 rung 3).
 - ``all``             : all three at once.
 """
@@ -41,7 +41,7 @@ def effort_index(m: Manifold) -> np.ndarray:
     Combines cue-side coverage (occ_count, interaction_count, chem_count) and
     reward-side depth (NAEB documentation + has_chem_record when present).
     Used by ``permute_reward_within_effort`` (M2 ladder) and depth-stratified
-    coupling — chemistry missingness enters strategy-side effort stratification
+    coupling: chemistry missingness enters strategy-side effort stratification
     as well as coupling-side residualization.
     """
     parts: list[np.ndarray] = []

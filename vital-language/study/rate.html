@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Vital Language — Blind Rating</title>
+<title>Vital Language: Blind Rating</title>
 <style>
   :root { --bg:#16161a; --panel:#1f1f26; --ink:#e8e8ea; --mut:#9a9aa6; --acc:#7aa2f7; }
   * { box-sizing:border-box; }
@@ -39,14 +39,14 @@
 </head>
 <body>
 <header>
-  <h1>Vital Language — Blind Rating</h1>
+  <h1>Vital Language: Blind Rating</h1>
   <span id="prog"></span>
 </header>
 <div class="wrap" id="app"></div>
 
 <script>
 const DIMS = [
-  ["vitality","Vitality — does the language feel alive, not inert?"],
+  ["vitality","Vitality: does the language feel alive, not inert?"],
   ["originality","Originality"],
   ["coherence","Coherence / legibility"],
   ["reread","Desire to reread"],
@@ -109,7 +109,7 @@ function renderItem(){
     card.id = "card_"+p.uid;
     let dimHtml = DIMS.map(([k,lab])=>{
       const v = r.scores[k]??50;
-      return `<div class="dim"><label title="${lab}">${lab.split(" —")[0].split(" (")[0]}</label>
+      return `<div class="dim"><label title="${lab}">${lab.split("")[0].split(" (")[0]}</label>
         <input type="range" min="0" max="100" value="${v}" data-uid="${p.uid}" data-k="${k}">
         <output>${v}</output></div>`;
     }).join("");

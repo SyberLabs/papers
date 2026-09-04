@@ -87,7 +87,7 @@ def _use_counts(external_dir: str | Path, drug_only: bool) -> dict[int, int]:
 def documentation_depth(external_dir: str | Path, name_to_id: dict[str, int]) -> pd.DataFrame:
     """Per-species NAEB documentation depth (reward-side confound covariates).
 
-    Columns: species_id, total_uses, n_tribes, n_sources, drug_uses — counts of
+    Columns: species_id, total_uses, n_tribes, n_sources, drug_uses: counts of
     all documented uses, distinct reporting groups, distinct literature sources,
     and Drug-category uses. Used to residualize NAEB reward before coupling tests.
     """

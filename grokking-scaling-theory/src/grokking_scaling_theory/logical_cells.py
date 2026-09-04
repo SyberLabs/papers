@@ -361,7 +361,7 @@ def _planted_logic_trace(
     Design note: D_logic is a THRESHOLDED detector (units count only once
     purity crosses 0.80), so a slow sigmoid schedule makes it fire at the
     detectability threshold (s ~ 0.1 at these amplitudes), far from the
-    schedule midpoint — that is a property of any threshold detector, not a
+    schedule midpoint, that is a property of any threshold detector, not a
     timing error. The gate therefore plants a fast onset, and the truth the
     fit must recover is the schedule's own half-maximum. With
     fourier_only=True the QR proposition is never encoded (Gate L3)."""

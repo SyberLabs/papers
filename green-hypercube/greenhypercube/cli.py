@@ -258,7 +258,7 @@ def coupling(
 
     With ``--residual-reward`` it removes the component of reward predictable
     from reward-side documentation depth (NAEB uses/tribes/sources; ChEMBL
-    compound-bridge counts) before measuring coupling — the symmetric counterpart
+    compound-bridge counts) before measuring coupling: the symmetric counterpart
     to ``--control``.
 
     With ``--multivariate`` it tests whether sensory, phylo, eco, and bio cues
@@ -344,10 +344,10 @@ def m2_ladder_cmd(
 
     Runs four landscape conditions on cached data:
 
-    1. **real** — observed pool
-    2. **permute_reward** — destroys all reward-linked signal (leakage audit)
-    3. **permute_reward_within_effort** — preserves reward–effort link (effort-tracking test)
-    4. **permute_features** — shuffles observable cues (feature-linked signal test)
+    1. **real**: observed pool
+    2. **permute_reward**: destroys all reward-linked signal (leakage audit)
+    3. **permute_reward_within_effort**: preserves reward–effort link (effort-tracking test)
+    4. **permute_features**: shuffles observable cues (feature-linked signal test)
 
     Also adds **degree_random** (topology-weighted baseline, rung 4) and reports
     depth-stratified coupling tables for the ChEMBL identifiability check.
@@ -382,7 +382,7 @@ def m2_ladder_cmd(
     from .validation.m2_analysis import TOST_DELTA_AUDC, TOST_DELTA_RATIONALE
 
     typer.echo("\n=== Genuine component: paired(real - effort-stratified null) ===")
-    typer.echo(f"TOST delta (SESOI): {TOST_DELTA_AUDC} AUDC — {TOST_DELTA_RATIONALE}")
+    typer.echo(f"TOST delta (SESOI): {TOST_DELTA_AUDC} AUDC: {TOST_DELTA_RATIONALE}")
     typer.echo(results["genuine_component"].to_string(index=False))
 
     typer.echo("\n=== Depth-bin reward diagnostics (vacuity check) ===")
@@ -440,7 +440,7 @@ def matched_genuine_cmd(
     summary.to_csv(out_dir / "matched_genuine_summary.csv", index=False)
 
     typer.echo("\n=== P8: Genuine component at matched reward_top_frac ===")
-    typer.echo(f"TOST delta: {TOST_DELTA_AUDC} — {TOST_DELTA_RATIONALE}")
+    typer.echo(f"TOST delta: {TOST_DELTA_AUDC}: {TOST_DELTA_RATIONALE}")
     typer.echo(genuine.to_string(index=False))
     typer.echo("\n=== Summary (sensory focus) ===")
     typer.echo(summary.to_string(index=False))

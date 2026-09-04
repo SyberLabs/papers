@@ -2,7 +2,7 @@
 #
 # Unlike live_naeb_nam.yaml (199/200 pre-enriched medicinal), this seeds an
 # unfiltered North American flora from GBIF and labels reward from NAEB Drug
-# records — the classic used-vs-available estimand (Moerman 1979).
+# records: the classic used-vs-available estimand (Moerman 1979).
 #
 # Requires data_external/naeb_src/ and data_external/duke_src/.
 # First run is network-heavy (GBIF region seed + OTL + GloBI bbox + Duke offline).

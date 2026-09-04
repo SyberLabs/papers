@@ -89,7 +89,7 @@ for a in ["woolf","joyce","lispector"]:
             m = metrics(open(fn,encoding="utf-8").read(), eng)
             lab = f"{a} {'CONTROL' if cond else 'IMITATION'}"
             if m is None:
-                print(f"{lab:26s}  (too few splittable sentences — likely one long flow)")
+                print(f"{lab:26s}  (too few splittable sentences: likely one long flow)")
                 continue
             T[f"{a}_{cond or 'imit'}"]=m
             print(f"{lab:26s} " + " ".join(f"{m[c]:9.3f}" for c in cols))

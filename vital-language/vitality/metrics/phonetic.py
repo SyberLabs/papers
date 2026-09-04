@@ -1,7 +1,7 @@
-"""Phonetic-flow metrics — the third channel (Semantic x Imagistic x PHONETIC).
+"""Phonetic-flow metrics: the third channel (Semantic x Imagistic x PHONETIC).
 
 Hypothesis (user/GPT): SOC, Joyce especially, is driven partly by SOUND, not only
-meaning — "thought rides sound." Machine prose optimizes next-token meaning/syntax
+meaning: "thought rides sound." Machine prose optimizes next-token meaning/syntax
 and lets phonetic momentum die, producing the "airless" quality: every sentence
 MEANS, nothing RESONATES. We measure hidden musicality, not poetry.
 
@@ -11,10 +11,10 @@ ENGLISH ONLY, original-language only. Uses CMUdict (via `pronouncing`). OOV word
 Sub-measures (per passage, over the token sequence):
   alliteration_density : rate of shared word-initial consonant in nearby windows
   phoneme_recurrence   : how much a word's phoneme set overlaps the PRECEDING
-                         word's — sonic carry-forward (the "drift rides sound")
+                         word's: sonic carry-forward (the "drift rides sound")
   vowel_continuity     : similarity of stressed-vowel sequences between adjacent
                          words (assonance / vowel-pattern continuity)
-  stress_variance      : variance of per-word stress-pattern length/shape — rhythm
+  stress_variance      : variance of per-word stress-pattern length/shape: rhythm
                          irregularity (uniform = metronomic machine cadence)
   phonetic_flow        : composite = recurrence + alliteration carried ACROSS
                          positions (the momentum signal), the headline number

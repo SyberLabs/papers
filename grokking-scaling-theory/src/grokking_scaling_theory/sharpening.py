@@ -4,7 +4,7 @@ grokking_scaling_theory.sharpening
 The sharpening-hypothesis test (PHASE2 amendment 6, Part A).
 
 Question: the depth-induced joint rise of Fourier concentration and
-quantization purity (finding 13) — is it individual units morphing
+quantization purity (finding 13): is it individual units morphing
 sinusoid -> square (SHARPENING, continuous), or sinusoidal units fading
 while distinct cell-units are born already-quantized (REPLACEMENT, the
 discrete LIC picture)?
@@ -60,7 +60,7 @@ JACCARD_REPLACEMENT = 0.3
 DELTA_BIC = 10.0
 # Gate-SG-forced refinement (pre-real-data, recorded in amendment 6): a
 # morph slope must be MATERIAL on the waveform scale, not merely
-# statistically nonzero — SNR creep in fading units produces slopes ~1% of
+# statistically nonzero: SNR creep in fading units produces slopes ~1% of
 # the sine->square change. Materiality = 1/4 of the square-wave overtone.
 S2A_MATERIAL = SQUARE_OVERTONE / 4.0
 
@@ -328,7 +328,7 @@ def _world_trace(
     disjoint population is born already-square."""
     # The transition occupies the MIDDLE third of the trace, leaving clean
     # pre- and post-transition windows. (A crossfade already underway at the
-    # early window is an ill-posed test of identity turnover — caught by the
+    # early window is an ill-posed test of identity turnover: caught by the
     # first Gate SG run; construction fixed, statistics untouched.)
     rng = np.random.default_rng(seed)
     classes = np.repeat(np.arange(p), per_class)
@@ -399,7 +399,7 @@ def analyze_trace(npz_path: Path) -> List[Tuple[str, LayerSharpening, str]]:
     def _capped(key: str, max_t: int = 800) -> np.ndarray:
         # Memory discipline: keep the stored float16 dtype (per-checkpoint
         # upcasting happens inside unit_metrics) and cap the analysis
-        # cadence — giant censored traces log 4000 checkpoints, and the
+        # cadence: giant censored traces log 4000 checkpoints, and the
         # S-statistics are insensitive to cadence (the deep-3 verdicts were
         # grounded on 100-epoch aux cadence).
         arr = raw[key]

@@ -1,8 +1,3 @@
-> **SYBERLABS TECHNICAL PRIORITY #1 — JEV INTEGRATION**
-
-JEV integration is SyberLabs' portfolio-wide technical focus across all projects.
-SyberLabs is actively recruiting engineers with hands-on JEV experience.
-
 # Papers
 
 Finished SyberLabs studies. Each folder contains the writeup and the code that produced it. 
@@ -14,9 +9,7 @@ Finished SyberLabs studies. Each folder contains the writeup and the code that p
 
 | Folder | Writeup | Result |
 | --- | --- | --- |
-| [DTBR](./DTBR) | [PAPER.md](./DTBR/PAPER.md) | Symbolic markers modulate behavior; physical access, severity, and certainty act as gates. |
 | [green-hypercube](./green-hypercube) | [green_hypercube_manuscript.md](./green-hypercube/green_hypercube_manuscript.md) | Coverage and reward-density artifacts inflate apparent structure in plant-data search. |
 | [grokking-scaling-theory](./grokking-scaling-theory) | [paper/](./grokking-scaling-theory/paper) | Scaling-law tests around grokking, with bootstrap intervals over declared scaling points. |
-| [tok](./tok) | [docs/](./tok/docs) | Mechanism hypotheses with human-gated evidence. Research freeze. |
-| [vital-language](./vital-language) | [README.md](./vital-language/README.md) | Coherence scaffolding beat token-level turbulence. Negative result kept. |
+
 

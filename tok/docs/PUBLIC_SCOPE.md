@@ -7,7 +7,7 @@ full internal research engine is open sourced here.
 
 ## What This Package Includes
 
-- Portfolio-facing overview and architecture documentation.
+- Public overview and architecture documentation.
 - Public summaries for the Paper 1 / Paper 3 benchmark freeze.
 - Public summaries for the Paper 2 dynamics atlas freeze.
 - Public Demo Freeze v0 replay artifacts from a research cockpit session.

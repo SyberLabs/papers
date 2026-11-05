@@ -40,9 +40,8 @@ The project is not trying to make an AI system "discover truth" by itself. It
 is building a governed workflow where model-assisted reasoning can be inspected,
 replayed, audited, and stopped before it crosses from hypothesis into evidence.
 
-That makes TOK useful as a portfolio artifact because it shows systems thinking
-across software architecture, benchmark hygiene, simulation methodology, and
-AI-safety boundaries.
+TOK shows how a governed research workflow handles software architecture,
+benchmark hygiene, simulation methodology and AI-safety boundaries.
 
 ## System Architecture
 

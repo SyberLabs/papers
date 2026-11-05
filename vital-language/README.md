@@ -94,4 +94,4 @@ The included results should be read as an empirical research trail, not a finish
 
 ## Current Status
 
-Vital Language is best presented as an exploratory research system with a high standard for self-correction. Its most portfolio-relevant value is the combination of experimental design, metric construction, falsification controls, and honest narrowing of claims after the evidence did not support the original story.
+Vital Language is best presented as an exploratory research system with a high standard for self-correction. Its main value is the combination of experimental design, metric construction, falsification controls, and honest narrowing of claims after the evidence did not support the original story.
